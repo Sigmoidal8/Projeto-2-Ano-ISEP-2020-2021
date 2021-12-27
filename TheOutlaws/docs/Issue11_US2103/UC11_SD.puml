@@ -1,0 +1,101 @@
+@startuml
+
+
+participant FactoryBootstrapper as FB
+participant TeamBootstrapper as BC
+participant TeamTypeBootstrapper as BS
+participant CollaboratorBootstrapper as CB
+participant TeamController as ControllerC 
+participant TeamTypeController as ControllerS 
+participant CollaboratorController as ControllerCO 
+participant PersistenceContext as Persistence 
+participant Team as CA
+participant TeamType as SE 
+participant Collaborator as C
+database RepositoryFactory as Factory 
+database TeamsRepository as Repository
+database TeamTypesRepository as Repository2
+database CollaboratorRepository as Repository3
+
+
+activate FB
+FB -> BC : create()
+activate BC
+FB -> BC : execute()
+
+
+BC -> BC : register(String unique)
+activate ControllerC
+BC -> ControllerC : create()
+
+
+ControllerC -> Persistence : repositories()
+
+
+Persistence -> Factory : create()
+database Repository 
+Factory -> Repository : create()
+
+BC -> ControllerC : RegisterTeam(all parameters)
+ControllerC -> CA : newTeam = create(all parameters)
+
+
+
+ControllerC -> Repository : save(newTeam)
+deactivate ControllerC
+deactivate BC 
+
+
+FB -> BS : create()
+activate BS
+FB -> BS : execute()
+
+BS -> BS : register(String Code)
+activate ControllerS
+BS -> ControllerS : create()
+
+
+ControllerS -> Persistence : repositories()
+
+
+Persistence -> Factory : create()
+database Repository 
+Factory -> Repository2 : create()
+
+BS -> ControllerS : RegisterTeamType(all parameters)
+ControllerS -> SE : newTeamType = create(all parameters)
+
+
+ControllerS -> Repository2 : save(newTeamType)
+deactivate ControllerS
+deactivate BS 
+
+
+FB -> CB : create()
+activate CB
+FB -> CB : execute()
+
+CB -> CB : register(Long mecanographicNumber)
+activate ControllerCO
+CB -> ControllerCO : create()
+
+
+ControllerCO -> Persistence : repositories()
+
+
+Persistence -> Factory : create()
+database Repository 
+Factory -> Repository3 : create()
+
+CB -> ControllerCO : RegisterCollaborator(all parameters)
+ControllerCO -> C : newCollaborator = create(all parameters)
+
+
+ControllerCO -> Repository3 : save(newCollaborator)
+deactivate ControllerCO
+deactivate CB 
+deactivate FB
+
+
+
+@enduml

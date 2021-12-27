@@ -1,0 +1,50 @@
+@startuml
+
+participant doPendingTasksUI as UI <<presentation>>
+participant doPendingTasksController as Controller <<application>>
+participant "PersistenceContext" as PersistenceContext <<Persistence>>
+database RepositoryFactory as RepositoryFactory <<repository>>
+database ColaboratorRepository as ColaboratorRepository <<repository>>
+database TaskRepository as TR <<repository>>
+
+activate UI
+
+UI->Controller : create()
+activate Controller
+UI -> Controller : listpendingTasks()
+
+Controller -> PersistenceContext: repositories()
+activate PersistenceContext
+
+PersistenceContext -> RepositoryFactory : create()
+deactivate PersistenceContext
+activate RepositoryFactory
+
+RepositoryFactory -> ColaboratorRepository : create()
+deactivate RepositoryFactory
+activate ColaboratorRepository
+
+Controller -> ColaboratorRepository: findColaboratorByEmail(email)
+ColaboratorRepository -> Controller: colaborator
+deactivate ColaboratorRepository
+
+Controller -> PersistenceContext: repositories()
+activate PersistenceContext
+
+PersistenceContext -> RepositoryFactory : create()
+deactivate PersistenceContext
+activate RepositoryFactory
+
+RepositoryFactory -> TR : create()
+deactivate RepositoryFactory
+activate TR
+Controller -> TR: findPendingTasksColaborator(colaborator)
+TR -> Controller: tasks
+deactivate TR
+
+Controller -> UI : tasks
+
+UI -> UI :doShow
+
+deactivate Controller
+deactivate UI

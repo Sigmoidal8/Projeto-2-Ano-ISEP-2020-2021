@@ -1,0 +1,69 @@
+@startuml
+
+actor HRR as Actor
+participant RegisterCollaboratorUI as UI <<presentation>>
+participant CreateTeamController as ControllerT <<application>>
+participant RegisterCollaboratorController as Controller <<application>>
+participant "ScriptPassword" as script <<domain>>
+participant "Collaborator:Collaborator" as Domain <<domain>>
+participant PersistenceContext as Persistence <<persistence>>
+participant RepositoryFactory as Factory <<factory>>
+database CollaboratorsRepository as Repository <<repository>>
+
+Actor --> UI: Add Collaborator
+activate UI
+    UI -> Controller: create
+    UI --> Actor: Ask collaborator information
+    Actor --> UI: Short Name, Complete Name,\n E-Mail, Mechanographic Number,\n MobilePhone, Birth Date, Address
+
+    opt
+    UI --> Actor: Show List\nof Role functions
+    Actor --> UI: Role Type
+    end
+
+    opt
+    UI --> Actor: Show List\nof Collaborators
+    Actor --> UI: RRH
+    end
+    
+    UI -> ControllerT: getTeamsList
+    
+    opt [option!=0]
+    loop
+    UI --> Actor: Show List\nof Teams
+    Actor --> UI: Team
+    end
+    end
+
+    UI -> Controller: addCollaborator(Short Name, Complete Name,\n E-Mail, Mechanographic Number,\n MobilePhone, Birth Date, Address, TeamList)
+
+    activate Controller
+        Controller -> script: createPassword()
+        activate script
+         script -> Controller: password()
+         deactivate script
+            Controller -> Domain: create (Short Name, Complete Name,\n E-Mail, Mechanographic Number,\n MobilePhone, Birth Date, TeamList, password)
+            activate Domain
+            Domain->Controller: Collaborator
+            deactivate Domain
+            
+
+        Controller -> Persistence: repositories()
+        activate Persistence
+            Persistence -> Factory: create
+            Persistence -> Controller: factory
+        deactivate Persistence
+
+        Controller -> Factory: Collaborators()
+        activate Factory
+            Factory -> Repository: create
+            Factory -> Controller: CollaboratorRepository
+        deactivate Factory
+
+        Controller->Repository:save(Collaborator)
+        Controller->UI: Collaborator
+    deactivate Controller
+
+        UI-->Actor: displayCollaboratorsInfo
+deactivate UI
+@enduml

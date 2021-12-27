@@ -1,0 +1,30 @@
+@startuml
+
+RegisterCatalogUI -> RegisterCatalogController : create
+
+RegisterCatalogUI -> RegisterCatalogController : getCollaborators
+RegisterCatalogController -> PersistenceContext : repositories()
+PersistenceContext -> RepositoryFactory : create
+RepositoryFactory -> CollaboratorRepository : create
+RegisterCatalogController -> CollaboratorRepository : findAll
+RegisterCatalogController --> RegisterCatalogUI: Collaborators
+loop while option !=0
+RegisterCatalogUI -> RegisterCatalogController : getTeams
+RegisterCatalogController -> PersistenceContext : repositories()
+PersistenceContext -> RepositoryFactory : create
+RepositoryFactory -> TeamRepository : create
+RegisterCatalogController -> TeamRepository : findAll
+RegisterCatalogController --> RegisterCatalogUI: Teams
+
+RegisterCatalogUI -> RegisterCatalogUI : doShow()
+end loop
+
+RegisterCatalogUI -> RegisterCatalogController : registerCatalog(identifier, title, briefDescription,\n completeDescription, icone, collaborator, teamType)
+RegisterCatalogController -> Criteria : criteria=create(teams)
+RegisterCatalogController -> Catalog : newCatalog=create(identifier, title, briefDescription,\n completeDescription, icone, collaborator, criteria)
+RegisterCatalogController -> PersistenceContext : repositories()
+PersistenceContext -> RepositoryFactory : create
+RepositoryFactory -> CatalogRepository : create
+RegisterCatalogController -> CatalogRepository : save(newCatalog)
+
+@enduml

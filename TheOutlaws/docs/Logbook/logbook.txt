@@ -1,0 +1,192 @@
+21-04-2021
+
+Hoje estivemos a rever os UCS e a atribuí-los a cada membro da equipa.
+
+23-04-2021
+
+Na reunião de ontem toda a equipa expôs o ponto de situação do seu trabalho e ficou registado que o José Silva fez os requisitos e a análise do UC-3 e 4, Registar Colaborador e Definir Níveis de criticidade, respetivamente. O José Forno fez os requisitos e a análise do UC-2 Criação de Equipa. O Raúl Coelho fez os requisitos e a análise do  UC5-Registar Catálogo. O Tiago Magalhães fez UC-7 e 8 - Especificação de serviço e Associar/Remover colaborador de uma equipa, respetivamente
+
+23-04-2021
+
+Na reunião de hoje ficou registado que o José Forno e fez os requisitos e análise do UC-1 Pesquisar Catálogo Disponível. O Raúl Coelho fez os requisitos e análise do UC-6 Registar Tipo de Equipa.
+
+26-01-2021
+Na reunião de hoje ficou registado que o José Silva fez os requisitos e análise do UC-11 inicializaçãoOrganização . O Raúl Coelho fez o design do UC-5 e 6 RegistarCatálogo e RegistarTipoEquipa e os requisitos e análise do UC10 InicializaçãoCatalogosServiços.
+
+27-04-2021
+Na reunião de hoje toda a equipa expôs o ponto de situação do seu trabalho e ficou registado que o José Silva fez o design do UC-3 Registar Colaborador. O José Forno fez o design UC-2 Criação de Equipa. O Raúl Coelho fez os testes UC5-Registar Catálogo. O Tiago Magalhães fez o design UC e 8 - Associar/Remover colaborador de uma equipa, respetivamente
+
+28-04-2021
+
+Neste dia ficou registado que o Raúl Coelho iniciou a implementação da UC5, alterações ao SD da UC6 e alterações ao MD, o Tiago Magalhães fez alterações ao design da UC8, o Miguel Silva finalizou o design e fez os testes da UC3 e o José Forno fez o design do UC1 e os testes da UC2.
+
+29-04-2021
+
+Neste dia ficou registado que o Raúl Coelho criou o controller da UC5, alterou as Base Roles e criou o TeamType, o Miguel Silva fez a implementação da classe Collaborator, Factory e Repository deste mesmo e criação do esqueleto da equipa, o José Forno implementou a classe Team e o Tiago Magalhães fez os testes da UC8.
+
+30-04-2021
+
+Neste dia ficou registado que não houve avanços no projeto.
+
+04-05-2021
+Neste dia ficou registado que o Raúl Coelho criou o UI da UC5, o Miguel Silva fez a implementação UI da Uc3, o José Forno implementou a UI da UC2 classe Team e o Tiago Magalhães começou a implementação da UC8.
+
+05-05-2021
+
+Neste dia ficou registado que o Tiago Magalhães fez o controller e UI do uc8 e uma correção no MD, o José Miguel continuou o UI e o controller do UC3, o José Forno continuou o controller e o UI do UC-2 e o Raúl Coelho fez as precondições da UC5 e UC6.
+
+06-05-2021
+
+Neste dia ficou registado que o Tiago Magalhães avançou com o desenvolvimento da apresentação, o Raúl Coelho fez a UI de registar tipo de equipa e implementou os teste de registar tipo de equipa e registar catalogo, o José Forno continuou a implementação do UC criação de equipa e o José Silva implementou a UI de registar colaborador, fez o design de definir nível de criticidade e fez os testes de registar colaborador e definir nivel de criatividade.
+
+07-05-2021
+
+Neste dia ficou registado que o José Miguel fez a implementação da isssue 4 definir níveis de criticidade e os testes unitários de registar colaborador, o Raúl Coelho fez o bootstrap de teamtype e melhoramento as ui de registar catalogo, o José Forno fez alterações ao issue 2 criar uma equipa e a implementação total do issue 1 pesquisar catalogo e o Tiago Magalhães continuou o desenvolvimento da apresentação.
+
+11-05-2021
+
+Neste dia ficou registado que toda a equipa reuniu-se e organizou o planeamento e a divisão de tarefas para o desenvolver do Sprint C. Todos os objetivos a atingir foram registados nos Issues assim como foi estabelecido o seu representante.
+
+12-05-2021
+
+Neste dia ficou registado que todos os elementos do grupo procederam à realização dos Requisitos e da Análise de todos os Issues a si atribuídos, sendo que a sua maioria se encontra já concluída.
+
+13-05-2021
+
+Neste dia ficou registado que o José Miguel elaborou os designs relativos aos Issue20_US3021 - consultar tarefa e Issue27_US2012 - Atribuir nível de criticidade, o Raul Coelho realizou o design do Issue17- Completar Serviço incompleto, o José Forno deu inicio ao design do Issue18_US3002 - Solicitar pedido e o Tiago Magalhães deu inicio ao design do Issue21_US3022 - Consultar tarefas pendentes
+
+16-05-2021
+
+Neste dia ficou registado que o José Miguel implementou, relativamente ao Issue20, a classe tarefa e o seu repositório, a UI, a persistence e o seu Controller, o Raul Coelho criou a classe de Workflow e a sua associação ao serviço, assim como continuou a implementação da UI i do Controller da UC “Especificar serviço”, e o José Forno realizou alterações no design do Issue18 “Solicitar pedido” .
+
+17-05-2021
+
+Neste dia ficou registado que o José Forno trabalhou no Issue18_US3002, implementando a classe Pedido, o controller, o seu repositório e a persistence, o José Silva finalizou a implementação do Issue27_US2012 e elaborou o Controller do Issue18_US3002, o Tiago Magalhães realizou correções na análise dos Issues18, Issues23 e Issues24, assim como iniciou a Issue21 elaborando a UI, o Controller e no repositorio, e o Raul Coelho procedeu à correção de melhorias na UI relativa ao registo de um serviço.
+
+18-05-2021
+
+Neste dia ficou registado que o Raul Coelho realizou alterações na persistência relativa ao workflow, na UI e controller relativas ao registar Serviço e na classe Task, o Miguel Silva procedeu à configuração da base de dados remota e implementação das filtragens nas tarefas, o Tiago Magalhães implementou a Issue21_US3022, faltando apenas a persistência e o José Forno implementou alterações no Issue18_US3002 relativamente ao SD e aos metodos de pesquisa e desenvolveu de UI e controller da Issue18_US3002.
+
+19-05-2021
+
+Neste dia ficou registado que o José Forno realizou alterações no controller relativo ao Issue18_US3002, nos ValueObject da classe Team e Request e na análise do Issue18_US3002, o Tiago Magalhães realizou alterações nos ValuesObjects da classe Service e os seus derivados, o Raul Coelho realizou alterações nos ValueObjects relativas à classe Catalog e TeamType e o Miguel Silva realizou alteração dos ValueObjects do colaborador e da criticidade assim como realizou a implementação do site html de exemplo apenas para testes relativa ao Issue19_US3011.
+
+20-05-2021
+
+Neste dia ficou registado que o Raul Coelho realizou alterações na classe Task para subclasses Automatic e Manual Task, adicionou-as ao persistence, alterou o controller relativo à Task e a UI de especificar Serviço, alterou o bootstrap relativo ao Colaborador, alterou o controller de especificar o controller para adicionar uma approval task, adicionou a ApprovalTask à persistence e adicionou a biblioteca de tipos de tarefas, o Tiago Magalhães procedeu à alteração de Value Objects das Classes derivadas da Classe Service e trabalhou na alteração da análise e desing do Issue21_US3022, o Miguel Silva procedeu à alteração dos atributos que passam por paramtetro dos metodos de ordenação das tarefas e à implementação dos métodos de ordenação das tarefas pelos respetivos tipos, realizou a bootstrap da Criticidade e do Serviço assim como trabalhou na implementação do controller e da UI do dashboard e implementou pequenas correções em variadas classes, o José Forno corrigiu métodos na classe Catalogo, realizou alterações no SD do Issue18_US3002, criou o metodo de retorno do tipo de colaborador, definiu o colaborador responsável por task execution no controller de solicitar um serviço, alterou aos atributos de criação de um request, alterou a UI relativa a preencher um formulário e implementou a verificção das datas no Issue18_US3002.
+
+21-05-2021
+
+Neste dia ficou registado que o Miguel Silva trabalhou na UI dashboard para abrir automaticamente o site e procedeu à correção do numero de sockets.
+
+22-05-2021
+
+Neste dia ficou registado que o Miguel Silva adicionou os ficheiros relativos à dashboard, incluindo o html, o Tiago Magalhães realizou correções no Issue18_US3002 e o José Forno realizou correções no Issue18_US3002.
+
+23-05-2021
+
+Neste dia ficou registado que o Raul Coelho trabalhou na linguagem de validação do formulário, realizou alterações na classe Catalog e no bootstrap da classe Service, o José Silva alterou o método de chamada do bootstrap da criticidade e o José Forno realizou uma pequena alteração no controller do Issue18_US3002.
+
+24-05-2021
+
+Neste dia ficou registado que o Raul Coelho adicionou o Antlr ao ficheiro pom, implementou as classes referentes à linguagem de validação do formulário, adicionou dois scripts para serem usados no teste da linguagem, realizou alterações na análise e no design do US1005, US2003 e US2104 e alterou a UI relativa ao especificar serviço.
+
+25-05-2021
+
+Neste dia ficou registado que o Tiago Magalhães trabalhou na análise do Issue28_US2105, realizou alterações na análise do Issue23_US4002 e realizou alterações no controller e na UI do Issue21_US3022, o Miguel Silva realizou alterações na análise do Issue16_UC1006, Issue19_UC3011 e Issue27_UC2012 e o Raul Coelho procedeu à inclusão do daemon do workflow e pom.xml, trabalhou no server do daemon do workflow, adicionou o daemon da execução de tarefas automáticas criou a classe server de executor de tarefas e corrigiu as UI para obter duas aplicações separadas.
+
+26-05-2021
+
+Neste dia ficou registado que o Raul Coelho realizou alterações na classe TaskExecutor e server, continuou a trabalhar no daemon do fluxo de atividades, implementou o workflow para verificar os fluxos, o retorno do status da taskExecution, o metode q devolve o estado de um pedido, o metodo para alterar o status na classe taskExecution e o metodo que devolve o type relativo a uma Task, o José Forno realizou pequenas alterações no design e testes no Issue18_US3002, realizou alterações a construtor de TaskExecution, nos metodos que pesquisam os requests e no SD do Issue18_US3002, o Tiago Magalhães alterou o jpaTaskRepository e o Miguel Silva elaborou o código do dashboard eimplementou do metodo de busca das tasks pendentes de um colaborador.
+
+‌27-05-2021
+
+Neste dia ficou registado que o Miguel Silva elaborou o método que retorna o pedido de uma task, implementou correções no ‘Bootstrap’ do colaborador, modificou a UI relativa à solicitação de um serviço e corrigiu o método de conversão de datas, o Raul Coelho elaborou o script que permite correr o workflow e alterou a UI do workflow server, o José Forno realizou alterações na UI relativa à procura de um catálogo e implementou testes relativos à classe Request e o Tiago Magalhães alterou o SD relativo ao Issue21_US3022.
+
+28-05-2021
+
+Neste dia ficou registado que o Raul Coelho continuou a implementação do fluxo de atividades, elaborou o script de execução do executor de tarefas e executou alterações no workflow server e nas classes de Controller e Bootstrap de serviço, o Miguel Silva criou os métodos que atualizam a dashbord do utilizador e obtém o utilizador atual e realizou alterações ao formato do site e o José Forno realizou os testes da classe TaskExecution.
+
+29-05-2021
+
+Neste dia ficou registado que o Miguel Silva implementou métodos de retorno de informação sobre um colaborador na classe Collaborator, efetuou correções nos métodos de ordenação das “tasks executions”, implementou métodos de ordenações de tarefas, de apresentação de tarefas na Dashboard e implementou a ligação com o servidor para obter os dados, o Raul Coelho alterou o Bootstrap do serviço e métodos relativos à classe TaskExecutor, elaborou alterações ao workflow a funcionar como servidor, implementou testes relativos à classe Service e Task e adicionou os scripts aos resources dos testes e o José Forno elaborou a linguagem da execução automática de tarefas.
+
+30-05-2021
+
+Neste dia ficou registado que o Raul Coelho realizou alterações à classe daemon do workflow, , ao workflowServer, ao taskExecutor, ao bootstrap do serviço, ao gestor do fluxo, a métodos de procura na classe TaskExecution, adicionou as classes que validam a linguagem do script de tarefas automáticas e o bootstraper da criticidade e procedeu a diversas correções ao longo do programa, o Miguel Silva alterou os métodos dos ‘sockets’ e a query relativo à TaskExecution, criou de métodos de ordenação, de apresentação das tarefas na dashboard, de acesso ao html e procedeu a diversas correções ao longo do programa, o Tiago Magalhães realizou correções dos métodos de pesquisa e ordenação de tarefas, elaborou as tabelas com os valores dos codigos de mensagens, corrigiu a análise feita à US 5001 e procedeu a correções ao longo do programa e o José Forno realizou alterações à linguagem do script de tarefas automáticas, ao design da US 1004, à análise da US 4001 e procedeu a diversas correções ao longo do programa.
+
+31-05-2021
+
+Neste dia ficou registado que toda a equipa procedeu à criação das pastas dos US do Sprint D e o Tiago Magalhães atualizou os dados do planeamento global e individual.
+
+01-06-2021
+
+Neste dia ficou registado que o Miguel Silva realizou alterações na UI do Catalog e do ClaimTask, na dashboard e no html e criou o método de ordenação pela deadline no controller da dashboard, o Raul Coelho criou as classes para dashboard do fluxo de atividades, o seu controller, implementou os métodos que devolvem o request do fluxo, de javascript e de html e a classe WorkflowStateUI assim como corrigiu alguns erros, o Tiago Magalhães implementou os requisitos do Issue33_US5003, Issue31_US4003 e Issue38_US9002 e o José Forno realizou os requisitos e análise dos Issue19_US1007, Issue30_US3003, Issue36_US4052 e Issue44_US2102.
+
+02-06-2021
+
+Neste dia ficou registado que o Miguel Silva realizou os requisitos, análise e design do Issue40_US3031, corrigiu o método que devolve os requests de um colaborador, implementou a UI do Issue40_US3031, o Raul Coelho realizou o design da US relativa a visualizar o estado do gestor de fluxos, realizou alterações ao controller, ao ajax e ao html da dashboard, implementou a análise e requisitos dos US4071, 4051 e 3051 e o José Forno continuou a análise dos Issue36_US4052 e Issue44_US2102 .
+
+03-06-2021
+
+Neste dia ficou registado que o Miguel Silva realizou os requisitos e análise dos Issue42_US2013 e Issue39_US3023 e finalizou a implementação do UI e do Controller do Issue40_US3031 e o José Forno continuou a análise do Issue29_US1007.
+
+04-06-2021
+
+Neste dia ficou registado que o Raul Coelho adicionou as keys SSL/TLS, implementou o SSL/TLS nas comunicações via socket, alterou o TaskExecutor e do Workflow para utilzarem SSL/TLS e realizou o Design da US4051.
+
+05-06-2021
+
+Neste dia ficou registado que o Raul Coelho adicionou as keys de ambas as dashboards à respetiva pasta, alterou a dashboard de tarefas do colaborador para SSL/TLS e a dashboard do estado do workflow para SSL/TLS.
+
+07-06-2021
+
+Neste dia ficou registado que o Raul Coelho realizou o Design da US3051, alterou a classe “Metrics“ e “Request“, criou o controller para o feedback, o UI para o feedback e para o RequestPrinter e adicionou ao menu uma nova opção para dar feedback, o Tiago Magalhães alterou os métodos de procura de tarefas possíveis de reivindicar por um colaborador no JPA, no InMemory, no Repository e no Controller, trabalhou na análise do Issue31_US4003 e Issue37_US5002, e adicionou tarefas ao bootstrap e o José Silva realizou métodos de procura de pedidos entre datas, de catálogos de um pedido, implementou o método que devolve o tempo de execução de uma tarefa e criou o controller e a UI da listagem de SLA’s.
+
+08-06-2021
+
+Neste dia ficou registado que o Raul Coelho alterou a linguagem de validação de um formulário, as classes geradas pelo antlr, criou o visitor de validação do formulário, e implementou o visitor da linguagem de tarefas automáticas, o José Forno alterou a linguagem das tarefas automáticas, o Tiago Magalhães deu início à apresentação e à análise SWOT e o Miguel Silva alterou o método de refresh da dashboard e corrigiu vários erros pela aplicação.
+
+09-06-2021
+
+Neste dia ficou registado que o Raul Coelho alterou os Scripts, alterou o bootstrap para os serviços pedidos, alterou o UI do SearchCatalog, e procedeu à correção de vários erros ao longo do programa, o Miguel Silva realizou o design do Issue42_US2013, alterou o Controller e o UI do ShowSLA e alterou o menu para esta funcionalidade e o Tiago Magalhães finalizou o modelo SWOT
+
+10-06-2021
+
+Neste dia ficou registado que o José Forno realizou o design e testes do Issue30_US3003, corrigiu a linguagem de validação de um formulário, e alterou as classes necessárias para interpretar a linguagem de tarefas automáticas, o Miguel Silva realizou o design do Issue39_US3023, alterou o Controller e o UI da ShowSLA, implementou o novo método que pesquisa as tarefas de um colaborador, alterou o WorkflowServer para inicializar os tempos de resolução de um tarefa e elaborou o controller e a UI do Issue39_US3023 e o Raul Coelho alterou a classe da linguagem de validação de formulários, corrigiu o visitor relativo à validação de um formulário e corrigiu o bootstrap .
+
+11-06-2021
+
+Neste dia ficou registado que o Miguel Silva alterou o design do US3023, continuou a implementação do Controller e do UI do US3023, alterou a UI e o controller da criticality e associou a criticidade a um serviço, o Tiago Magalhães realizou os designs dos Issue31_US4003 e Issue33_US5003, realizou avanços na apresentação e acrescentou o ficheiro de autoavaliação, o Raul Coelho criou as classses do task executor e implementou o algoritmo de atribuição de tarefa automática e o José Forno continuou a implementação do visitor, criou o método que chama a realização da execução de um script de realização automática de tarefas, continuou a análise do Issue14_US1004.
+
+12-06-2021
+
+Neste dia ficou registado que o Raul Coelho realizou alterações nas portas da dashboard, no gestor de fluxos, no executor de tarefas automáticas e nos scripts, o Miguel Silva realizou alterações à dashboard e ao html, e o José Forno corrigiu erros nos métodos de filtragem e ordenação relativos à ClaimTask e SearchTask.
+
+13-06-2021
+
+Neste dia ficou registado que o Raul Coelho efetuou alterações ao TaskExecutor, ao gestor de Workflow, ao algoritmo de atribuição de tarefas automáticas, ao executor de tarefas automáticas e no feedback, continuou a implementação do controller do doTask e elaborou os testes da US3051, o José Silva alterou a UI do catálogo e alguns métodos da dashboard, o José Forno corrigiu erros nos métodos de reivindicar tarefas, de associar criticidade de filtragem e ordenação, e o Tiago Magalhães efetuou correções nos metodos de reivindicar tarefas
+
+14-06-2021
+
+Neste dia ficou registado que o Raul Coelho definiu os ficheiros de propriedades para definir os task executors, implementou os métodos de leitura de dados das propriedades e para controlo de acesso das thread à memória, alterou a classe Feedback, alterou o md do US4051 e as classes da linguagem e a linguagem em si, o José Forno realizou o design do Issue36_US4052 e alterou o design do Issue30_US3003, o Tiago Magalhães continuou a implementação do Issue38 e realizou alterações no taskExecution e no claimTaskController para guardar a data de reivindicação, e o Miguel Silva elaborou o método que retornam o tempo médio de resolução da tarefa, os algoritmos de execução de tarefas automáticas e corrigiu os algoritmos da atribuicao de tarefas a colaboradores.
+
+16-06-2021
+
+Neste dia ficou registado que o Miguel Silva realizou alterações no WorkflowDaemon e ao workflow server, adicionou o cascade à lista de serviços, alterou a apresentação dos Sla’s e na lista do Controller, alterou uma query e a UI da showSla, o Tiago Magalhães avançou no Issue38_US9002 e adicionou funcionalidades da aplicação e ficheiros de demonstração, o José Forno realizou correções no visitor da automaticTask, e o Raul Coelho alterou a gramática de tarefas automáticas e as suas devidas classes e o script do serviço 4, implementou o método para mandar email nas tarefas automáticas, o método que chama o TaskExecutor, criou o ficheiro xml e alterou a linguagem de tarefas automáticas.
+
+17-06-2021
+
+Neste dia ficou registado que o Raul Coelho alterou o script do serviço 4, alterou o ficheiro xml, a linguagem das tarefas automáticas, o método de envio de emails, o visitor das tarefas automáticas e o script do serviço 2, o Tiago Magalhães implementou as funcionalidades do GSH e RRH no US9002 e alterou o modelo swot, alterou o md do US5002, US4003 e US5003, o Miguel Silva alterou os métodos de ordenação da dashboard, alterou a UI do Executar Tarefas, o md do US3101 e US4072, e o José Forno alterou as permissões de login na aplicação portal, alterou a análise dos US1007, US3052 e US2102.
+
+18-06-2021
+
+Neste dia ficou registado que o Raul Coelho realizou alterações ao controller e UI da TaskExecution, ao controller de executar uma tarefa, ao UI de pesquisar serviços, ao bootstrap de serviços, ao script 2, à linguagem de tarefas automáticas, de validação de formulários e scripts, ao gestor de fluxos e ao visitor das tarefas automáticas, realizou o Estudo do algoritmo da atribuição de tarefas automáticas e os testes da US4051, o Miguel Silva realizou alterações no UI e no Controller do DoPendingTasks, ao design do US4072, adicionou uma query q devolve todas as tarefas de um colaborador, alterou o Algoritmo FCFS e o workflow, o Tiago Magalhães adicionou o ficheiro contendo o logbook das reuniões de trabalho, e o José Forno realizou testes do Issue36_US4052
+
+19-06-2021
+
+Neste dia ficou registado que o Miguel Silva realizou o Estudo dos algoritmos do US 4072 e o seu design, os testes da US 3031, US 2013 e da US 3023, implementou s Listener da linguagem dos forms e do automatictask, o José Forno continuou o design do Issue14_US1004 e realizou os testes dos Issue29_US1007 e Issue30_US3003, o Raul Coelho realizou alterações nos scripts, e o Tiago Magalhães adicionou os testes dos Issues 31, 33 e 37.
+
+20-06-2021
+
+Neste dia ficou registado que se deu a conclusão e entrega do projeto, registando-se apenas pequenas alterações finais.

@@ -1,0 +1,5 @@
+search file xmls/produtos.xml : products/product/id={Form Request 1} : price;
+calculation : { File 1 } * {Form Request 2};
+calculation : { Calculation 1 } * 1 / 100;
+calculation : { Calculation 1 } - { Calculation 2};
+send email | Avaliacao de cotacao | O valor da compra original seria {Calculation 1} mas com o desconto ficou a {Calculation 3};

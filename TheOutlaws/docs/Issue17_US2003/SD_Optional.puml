@@ -1,0 +1,117 @@
+@startuml
+
+actor GSH as Actor
+participant SpecifyServiceUI as UI <<presentation>>
+participant SpecifyServiceController as Controller <<application>>
+participant ServiceBuilder as Builder <<builder>>
+
+activate UI
+
+opt
+UI-->Actor: ask for brief description
+Actor-->UI: Enter the data
+
+UI-->Controller: specifyBriefDescription(briefDescription)
+activate Controller
+
+Controller-->Builder: specifyBriefDescription(briefDescription)
+activate Builder
+
+deactivate Builder
+deactivate Controller
+
+end
+
+opt
+UI-->Actor: ask for complete description
+Actor-->UI: Enter the data
+
+UI-->Controller: specifyCompleteDescription(completeDescription)
+activate Controller
+
+Controller-->Builder: specifyCompleteDescription(CompleteDescription)
+activate Builder
+deactivate Builder
+deactivate Controller
+
+end
+
+opt
+UI-->Actor: ask for type
+Actor-->UI: Enter the data
+
+UI-->Controller: specifyType(type)
+activate Controller
+
+Controller-->Builder: specifytype(type)
+activate Builder
+
+deactivate Builder
+deactivate Controller
+
+end
+
+opt
+UI-->Actor: ask for keywords
+Actor-->UI: Enter the data
+
+UI-->Controller: addKeyWords(keywords)
+activate Controller
+
+Controller-->Builder: addKeyWords(keywords)
+activate Builder
+
+deactivate Builder
+deactivate Controller
+
+end
+
+opt
+UI-->Actor: ask for icon
+Actor-->UI: Enter the data
+
+UI-->Controller: specifyIcon(icon)
+activate Controller
+
+Controller-->Builder: specifyIcon(icon)
+activate Builder
+
+deactivate Builder
+deactivate Controller
+
+end
+
+opt
+UI-->Actor: ask for form
+Actor-->UI: Enter the data
+
+UI-->Controller: validadeForm(form)
+activate Controller
+deactivate Controller
+UI-->Controller: addForm(form)
+activate Controller
+Controller-->Builder: addForm(form)
+activate Builder
+
+deactivate Builder
+deactivate Controller
+
+end
+
+opt
+UI-->Actor: ask for workflow
+Actor-->UI: Enter the data
+
+UI-->Controller: specifyWorkflow(workflow)
+activate Controller
+Controller-->Builder: specifyWorkflow(workflow)
+activate Builder
+
+deactivate Builder
+deactivate Controller
+
+end
+
+deactivate UI
+
+@enduml

@@ -1,0 +1,22 @@
+1 is obligatory;
+2 is obligatory;
+3 is obligatory;
+9 is obligatory;
+
+if 5 : empty then
+	6 : filled;
+;
+
+if 6 : empty then
+	5 : filled;
+;
+
+if 4 == "Unica" then
+	7 is obligatory;
+	8 : empty;
+;
+
+if 4 == "Ate Data Limite" then
+	8 is obligatory;
+	7 : empty;
+;

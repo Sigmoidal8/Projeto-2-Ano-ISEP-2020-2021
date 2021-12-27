@@ -1,0 +1,58 @@
+@startuml
+
+participant CreateTeamUI as CreateTeamUI <<presentation>>
+participant CreateTeamController as CreateTeamController <<application>>
+participant PersistenceContext as PersistenceContext <<persistence>>
+participant RepositoryFactory as RepositoryFactory <<factory>>
+database CollaboratorRepository as CollaboratorRepository <<repository>>
+database TeamTypeRepository as TeamTypeRepository <<repository>>
+participant Team as Team <<domain>>
+database TeamRepository as TeamRepository <<repository>>
+
+
+CreateTeamUI -> CreateTeamController : create
+activate CreateTeamController
+
+
+CreateTeamUI -> CreateTeamController : getTeamTypes
+CreateTeamController -> PersistenceContext : repositories()
+activate PersistenceContext
+PersistenceContext -> RepositoryFactory : create
+activate RepositoryFactory
+RepositoryFactory -> TeamTypeRepository : create
+activate TeamTypeRepository
+CreateTeamController -> TeamTypeRepository : findAll
+deactivate TeamTypeRepository
+CreateTeamController --> CreateTeamUI: TeamTypes
+
+CreateTeamUI -> CreateTeamUI : doShow()
+
+
+loop
+CreateTeamUI -> CreateTeamController : getCollaborators
+CreateTeamController -> PersistenceContext : repositories()
+PersistenceContext -> RepositoryFactory : create
+RepositoryFactory -> CollaboratorRepository : create
+activate CollaboratorRepository
+CreateTeamController -> CollaboratorRepository : findAll
+deactivate CollaboratorRepository
+CreateTeamController --> CreateTeamUI: Collaborators
+
+CreateTeamUI -> CreateTeamUI : doShow()
+end
+
+
+CreateTeamUI -> CreateTeamController : createTeam(uniqueCode, acronym, designation, teamType, colaborators)
+CreateTeamController -> Team : newTeam=create(uniqueCode, acronym, designation, teamType, colaborators)
+CreateTeamController -> PersistenceContext : repositories()
+PersistenceContext -> RepositoryFactory : create
+deactivate PersistenceContext
+RepositoryFactory -> TeamRepository : create
+deactivate RepositoryFactory
+activate TeamRepository
+
+CreateTeamController -> TeamRepository : save(newTeam)
+deactivate TeamRepository
+deactivate CreateTeamController
+
+@enduml

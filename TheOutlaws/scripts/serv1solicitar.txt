@@ -1,0 +1,3 @@
+if 3 == "Justificada" then
+	4 is obligatory;
+;

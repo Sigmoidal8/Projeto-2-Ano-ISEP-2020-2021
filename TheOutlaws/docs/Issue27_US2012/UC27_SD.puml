@@ -1,0 +1,47 @@
+@startuml
+actor GSH as Actor
+participant AssignCriticalyUI as UI <<presentation>>
+participant AssignCriticalyController as Controller <<application>>
+participant "catalog:Ctalog" as Domain <<domain>>
+participant "PersistenceContext" as PersistenceContext <<Persistence>>
+database CatalogRepository as RepositoryCatalog <<repository>>
+
+
+activate UI
+ref over UI, Controller : ShowAllCatalogs_SD
+
+UI --> Actor: Ask to choose a Catalog
+Actor --> UI: Select the Catlog
+
+UI --> Controller: selectCatalog()
+activate Controller
+
+Controller --> RepositoryCatalog : theCatalog = findCatalog()
+activate RepositoryCatalog
+deactivate Controller
+deactivate RepositoryCatalog
+
+ref over UI, Controller : ShowAllCriticalityLevels_SD
+
+
+UI-->Actor: Ask to choose the citicality
+Actor-->UI: Select a citicality
+
+
+UI --> Controller : assignCriticalityCatalog(theCatalog, theCriticality)
+activate Controller
+
+Controller --> Domain : addcriticality(theCriticality)
+activate Domain
+deactivate Domain
+
+Controller->RepositoryCatalog:save(theCatalog)
+activate RepositoryCatalog
+deactivate RepositoryCatalog
+
+Controller->UI: theCatalog
+deactivate Controller
+
+UI-->Actor: back to menu
+deactivate UI
+@enduml

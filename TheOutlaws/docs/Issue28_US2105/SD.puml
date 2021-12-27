@@ -1,0 +1,28 @@
+@startuml
+
+
+participant FactoryBootstrapper as FB
+participant CriticalityBootstrapper as SB
+participant RegisterCriticalityServiceController as SS
+participant CriticalityRepository as SR
+participant Criticality as Service
+
+activate FB
+FB -> SB : create()
+activate SB
+FB -> SB : execute()
+
+
+SB -> SB : register()
+SB -> SS : create()
+activate SS
+
+SS -> SR : create()
+activate SR
+deactivate SR
+
+SS -> Service : registerCriticality(all parameters)
+activate Service
+Service --> SR : save(criticality)
+
+@enduml

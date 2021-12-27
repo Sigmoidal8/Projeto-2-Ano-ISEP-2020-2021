@@ -1,0 +1,39 @@
+@startuml
+
+
+actor User as Actor
+participant SearchTaskUI as UI <<presentation>>
+participant SearchTaskController as Controller <<application>>
+participant PersistenceContext as PersistenceContext <<persistence>>
+participant RepositoryFactory as RepositoryFactory <<factory>>
+database TaskRepository as TaskRepository <<repository>>
+
+Actor -> UI : asks for your pending tasks
+activate UI
+UI -> Controller : create
+activate Controller
+
+
+UI -> Controller : getTasks()
+
+
+Controller -> PersistenceContext : repositories()
+activate PersistenceContext
+PersistenceContext -> RepositoryFactory : create
+deactivate PersistenceContext
+activate RepositoryFactory
+RepositoryFactory -> TaskRepository : create
+deactivate RepositoryFactory
+
+activate TaskRepository
+
+Controller -> TaskRepository : tasks(collaborator)
+deactivate TaskRepository
+Controller -> UI: Tasks
+
+
+UI -> UI : doShow()
+
+UI --> Actor: Show pending Tasks
+deactivate UI
+@enduml

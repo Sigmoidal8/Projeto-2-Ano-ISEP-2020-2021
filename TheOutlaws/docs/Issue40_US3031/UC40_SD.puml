@@ -1,0 +1,37 @@
+actor User as Actor
+participant ShowRequestUI as UI <<presentation>>
+participant ShowRequestController as Controller <<application>>
+participant PersistenceContext as PersistenceContext <<persistence>>
+participant RepositoryFactory as RepositoryFactory <<factory>>
+database RequestRepository as RequestRepository <<repository>>
+
+Actor -> UI : asks for your pending requests
+activate UI
+UI -> Controller : create
+activate Controller
+
+
+UI -> Controller : getRequests()
+
+
+Controller -> PersistenceContext : repositories()
+activate PersistenceContext
+PersistenceContext -> RepositoryFactory : create
+deactivate PersistenceContext
+activate RepositoryFactory
+RepositoryFactory -> RequestRepository : create
+deactivate RepositoryFactory
+
+activate RequestRepository
+
+Controller -> RequestRepository : requests(collaborator)
+deactivate RequestRepository
+Controller -> UI: requests
+deactivate Controller
+
+
+UI -> UI : doShow()
+
+UI --> Actor: Show pending Requests
+deactivate UI
+@enduml

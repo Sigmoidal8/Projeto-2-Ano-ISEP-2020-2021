@@ -1,0 +1,37 @@
+@startuml
+
+participant UI as UI <<presentation>>
+control Controller as Controller <<application>>
+participant "PersistenceContext" as PersistenceContext <<Persistence>>
+database RepositoryFactory as RepositoryFactory <<repository>>
+database CatallogRepository as RepositoryCatallogs <<repository>>
+
+activate UI
+
+UI->Controller : create()
+activate Controller
+UI -> Controller : listCatallogos()
+
+Controller -> PersistenceContext: repositories()
+activate PersistenceContext
+
+PersistenceContext -> RepositoryFactory : create()
+activate RepositoryFactory
+
+deactivate PersistenceContext
+
+RepositoryFactory -> RepositoryCatallogs : create()
+deactivate RepositoryFactory
+
+activate RepositoryCatallogs
+
+Controller -> RepositoryCatallogs : findAll()
+
+RepositoryCatallogs --> Controller :allCatallogs()
+deactivate RepositoryCatallogs
+
+Controller--> UI:
+deactivate Controller
+
+UI-> UI:show()
+@enduml

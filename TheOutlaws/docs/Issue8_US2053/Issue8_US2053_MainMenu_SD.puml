@@ -1,0 +1,22 @@
+@startuml
+actor RRH as Actor
+participant MainMenu as UI <<presentation>>
+
+activate UI
+UI->Actor: Ask if want to add or remove a Collaborator
+Actor->UI: Choose an option
+
+alt Add Collaborator
+
+ref over UI: AddCollaborator_SD
+
+else Remove Collaborator
+
+ref over UI: RemoveCollaborator_SD
+
+end
+
+
+UI-->Actor: back to menu
+deactivate UI
+@enduml

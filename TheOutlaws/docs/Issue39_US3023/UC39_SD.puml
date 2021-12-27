@@ -1,0 +1,74 @@
+@startuml
+autonumber
+
+actor User as Actor
+participant doPendingTasksUI as UI <<presentation>>
+participant doPendingTasksController as CTRL <<application>>
+participant FormValidator as FV <<application>>
+participant TaskExecution as T <<Domain>>
+participant Request as R <<Domain>>
+database TaskRepository as TR <<repository>>
+
+
+
+Activate Actor
+Actor -> UI : ask for all your pending tasks 
+activate UI
+ref over UI, CTRL : findPendingTasks_SD
+UI -> Actor : pending tasks
+
+Actor -> UI : choose one tasks to be done 
+
+UI -> CTRL : checkTaskType(task)
+activate CTRL
+deactivate CTRL
+
+loop until all data is valid
+UI -> FV : verifyData(script,formsData,atributes)
+activate FV
+deactivate FV
+end loop
+
+opt  if it is an approval task 
+
+UI -> CTRL : doApprovalTask(task, formsData, isTaskApproved)
+activate CTRL
+CTRL -> T : updateFormsData(formsData)
+activate T
+deactivate T
+
+alt isTaskApproved : true
+CTRL -> T : changeTaskStatus(COMPLETED)
+activate T
+deactivate T
+else isTaskApproved : false
+CTRL -> R : changeRequestStatus(REJECTED)
+activate R
+deactivate R
+end opt
+CTRL -> TR : save(Tarefa)
+activate TR
+deactivate TR
+deactivate CTRL
+end opt
+
+opt  if it is an resolution task 
+
+UI -> CTRL : doResolutionTask(task, formsData)
+activate CTRL
+CTRL -> T : updateFormsData(formsData)
+activate T
+deactivate T
+CTRL -> T : changeTaskStatus(COMPLETED)
+activate T
+deactivate T
+CTRL -> TR : save(Tarefa)
+activate TR
+deactivate TR
+deactivate CTRL
+end opt
+
+UI -> Actor : inform that task has successfully completed
+deactivate UI
+deactivate Actor
+@enduml

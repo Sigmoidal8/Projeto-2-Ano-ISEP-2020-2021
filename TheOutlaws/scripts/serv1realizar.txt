@@ -1,0 +1,11 @@
+1 is obligatory;
+2 is obligatory;
+3 is obligatory;
+4 is obligatory;
+5 is obligatory;
+6 is obligatory;
+7 is obligatory;
+8 is obligatory;
+9 is obligatory;
+10 is not obligatory;
+3 == 1 + 2;

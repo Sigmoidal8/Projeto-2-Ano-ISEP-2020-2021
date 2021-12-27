@@ -1,0 +1,9 @@
+1 is obligatory;
+
+if 2 : filled then 
+	3 is not obligatory;
+;
+
+if 3 : filled then
+	2 is not obligatory;
+;

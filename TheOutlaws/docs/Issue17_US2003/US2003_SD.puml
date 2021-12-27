@@ -1,0 +1,81 @@
+@startuml
+
+actor GSH as Actor
+participant SpecifyServiceUI as UI <<presentation>>
+participant SpecifyServiceController as Controller <<application>>
+participant ServiceBuilder as Builder <<builder>>
+participant "theService:Service" as Domain <<domain>>
+database ServicesRepository as Repository <<repository>>
+
+
+
+Actor --> UI: Specify uncompleted service
+activate UI
+
+UI-->Controller: uncompleteServices()
+activate Controller
+
+Controller->Repository: findUnfinishedServiceByCollaborator(user)
+activate Repository
+deactivate Repository
+
+deactivate Controller
+
+UI-->Actor: ask to choose a service
+
+loop while option !=0
+Actor-->UI: choose one
+
+ref over UI: Optional_SD
+
+end
+
+opt completed
+
+Actor->UI: finish and save service
+UI->Controller: finishService()
+activate Controller
+Controller->Builder: build()
+activate Builder
+
+Builder->Domain: theService = service(briefDescription,\ncompleteDescription, type, keywords, icone, forms,workflow)
+activate Domain
+deactivate Domain
+deactivate Builder
+
+Controller->Repository: save(theService)
+activate Repository
+deactivate Repository
+
+UI --> Actor : says the service is complete and has been saved
+
+deactivate Controller
+
+else uncompleted
+Actor->UI: save uncompleted service
+UI->Controller: finishService()
+activate Controller
+Controller->Builder: build()
+activate Builder
+
+Builder->Domain: theService = service(briefDescription,\ncompleteDescription, type, keywords, icone, forms,workflow)
+activate Domain
+deactivate Domain
+Builder-->Controller: incompleteInformation
+deactivate Builder
+
+Controller->Repository: save(theService)
+activate Repository
+deactivate Repository
+Controller-->UI: incompleteInformation
+deactivate Controller
+
+UI --> Actor : says the service is incomplete, shows incomplete\ninformation and says information has been saved
+
+end
+
+UI-->Actor: back to menu
+
+deactivate UI
+
+@enduml

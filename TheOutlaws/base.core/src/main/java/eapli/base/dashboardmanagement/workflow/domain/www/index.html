@@ -1,0 +1,58 @@
+<html>
+<script src="rcomp-ajax.js"></script>
+<head><title>DASHBOARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="rcomp-ajax.js"></script>
+</head>
+<body onload="refreshVotes(); refreshPersonalInfo(); refreshRequests(); drawClock()">
+<div class="context">
+    <h1>WELCOME TO YOUR ONLINE DASHBOARD</h1>
+</div>
+<div class="area">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="topnav" id="personalInfo">
+    <a class="active" href="#home">Personal Information</a>
+    <a href="#news">Name: </a>
+</div>
+<div class="box" id="requestsdiv">
+    <div class="insideBox">
+        <div class="title">
+            <p>Requests</p>
+        </div>
+        <div class="table-wrapper">
+            <div class="table-scroll">
+                <table class="styled-table">
+                    <thead>
+                    <tr>
+                        <th>Request Code</th>
+                        <th>Request Date</th>
+                        <th>Pretended Deadline</th>
+                        <th>Service Type</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Service Code</th>
+                        <th>Requester</th>
+                    </tr>
+                    </thead>
+                    <tbody id="requests">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+send email | Pedido de desconto | Pedido de desconto foi avaliado e o pedido foi {Decision} e o desconto foi {Form Approval 2} {Form Approval 3} ;

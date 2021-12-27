@@ -1,0 +1,111 @@
+<html>
+    <head><title>DASHBOARD</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="rcomp-ajax.js"></script>
+    </head>
+    <body onload="refreshVotes(); refreshPersonalInfo(); refreshTasksByPriority(); refreshTasksByCriticality();refreshTasksByRequestDate() ;drawClock()">
+        <div class="context">
+            <h1>WELCOME TO YOUR ONLINE DASHBOARD</h1>
+        </div>
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="topnav" id="personalInfo">
+            <a class="active" href="#home">Personal Information</a>
+            <a href="#news">Name: </a>
+        </div>
+        <div class="box">
+            <div class="insideBox">
+                <div class="title">
+                    <p>Tasks By Criticality Level</p>
+                </div>
+                <div class="table-wrapper">
+                    <div class="table-scroll">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Task Type</th>
+                                    <th>Service Code</th>
+                                    <th>Request ID</th>
+                                    <th>Request Date</th>
+                                    <th>Priority</th>
+                                    <th>Criticality (value)</th>
+                                    <th>Requester</th>
+                                    <th>Ending Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tasksOrderByCriticality"> 
+                            </tbody> 
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="insideBox">
+                <div class="title">
+                    <p>Tasks By Priority Level</p>
+                </div>
+                <div class="table-wrapper">
+                    <div class="table-scroll">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Task Type</th>
+                                    <th>Service Code</th>
+                                    <th>Request ID</th>
+                                    <th>Request Date</th>
+                                    <th>Priority</th>
+                                    <th>Criticality (value)</th>
+                                    <th>Requester</th>
+                                    <th>Ending Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tasksOrderByPriority">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="insideBox">
+                <div class="title">
+                    <p>Tasks By Date</p>
+                </div>
+                <div class="table-wrapper">
+                    <div class="table-scroll">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Task Type</th>
+                                    <th>Service Code</th>
+                                    <th>Request ID</th>
+                                    <th>Request Date</th>
+                                    <th>Priority</th>
+                                    <th>Criticality (value)</th>
+                                    <th>Requester</th>
+                                    <th>Ending Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tasksOrderByRequestDate"> 
+                            </tbody> 
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+@startuml
+
+
+participant FactoryBootstrapper as FB
+participant CatalogBootstrapper as BC
+participant ServiceBootstrapper as BS
+participant CatalogController as ControllerC 
+participant ServiceController as ControllerS 
+participant PersistenceContext as Persistence 
+participant Catalog as CA
+participant Service as SE
+database RepositoryFactory as Factory 
+database CatalogsRepository as Repository
+database ServicesRepository as Repository2
+
+
+activate FB
+FB -> BC : create()
+activate BC
+FB -> BC : execute()
+
+
+BC -> BC : register(Long identifier)
+activate ControllerC
+BC -> ControllerC : create()
+
+
+ControllerC -> Persistence : repositories()
+
+
+Persistence -> Factory : create()
+database Repository 
+Factory -> Repository : create()
+
+BC -> ControllerC : RegisterCatalog(all parameters)
+ControllerC -> CA : newCatalog = create(all parameters)
+
+
+
+ControllerC -> Repository : save(newCatalog)
+deactivate ControllerC
+deactivate BC 
+
+
+FB -> BS : create()
+activate BS
+FB -> BS : execute()
+
+BS -> BS : register(String uniqueCode)
+activate ControllerS
+BS -> ControllerS : create()
+
+
+ControllerS -> Persistence : repositories()
+
+
+Persistence -> Factory : create()
+database Repository 
+Factory -> Repository2 : create()
+
+BS -> ControllerS : RegisterService(all parameters)
+ControllerS -> SE : newService = create(all parameters)
+
+
+ControllerS -> Repository2 : save(newService)
+deactivate ControllerS
+deactivate BS 
+deactivate FB
+
+
+
+@enduml

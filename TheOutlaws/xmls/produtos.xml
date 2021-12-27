@@ -1,0 +1,32 @@
+<products>
+    <product>
+        <id>1</id>
+        <name>Product One</name>
+        <description>This is the description for product one.</description>
+        <price>19.99</price>
+    </product>
+    <product>
+        <id>2</id>
+        <name>Product Two</name>
+        <description>This is the description for product two.</description>
+        <price>19.99</price>
+    </product>
+    <product>
+        <id>3</id>
+        <name>Product Three</name>
+        <description>This is the description for product three.</description>
+        <price>19.99</price>
+    </product>
+    <product>
+        <id>4</id>
+        <name>Product Four</name>
+        <description>This is the description for product four.</description>
+        <price>19.99</price>
+    </product>
+    <product>
+        <id>5</id>
+        <name>Product Five</name>
+        <description>This is the description for product five.</description>
+        <price>19.99</price>
+    </product>
+</products>

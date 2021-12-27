@@ -1,0 +1,50 @@
+@startuml
+actor GSH as Actor
+participant ShowSlaUI as UI <<presentation>>
+participant ShowSlaController as Controller <<application>>
+participant "PersistenceContext" as PersistenceContext <<Persistence>>
+participant RepositoryFactory as RepositoryFactory <<factory>>
+database CatalogRepository as CatalogRepository <<repository>>
+
+
+activate Actor
+UI --> Actor: Ask for the time interval
+activate UI
+Actor --> UI: Introduce the time interval
+
+ref over UI, Controller : getRequestsBetweenDates_SD
+activate Controller
+
+loop [ Scroll through the request list ]
+Controller -> PersistenceContext : repositories()
+activate PersistenceContext
+PersistenceContext -> RepositoryFactory : create
+deactivate PersistenceContext
+activate RepositoryFactory
+RepositoryFactory -> CatalogRepository : create
+deactivate RepositoryFactory
+
+activate CatalogRepository
+
+Controller -> CatalogRepository : catalog = findByService()
+CatalogRepository -> Controller: catalog
+deactivate CatalogRepository
+
+Controller -> Controller : verifySla()
+
+alt successful case
+Controller -> Controller : addRequestsWithApprovalSla(request)
+else some kind of failure
+Controller -> Controller : addRrequestsWithoutApprovalSla(request)
+end
+end loop
+
+UI -> Controller : requestsWithApprovalSla();
+Controller -> UI : requestsapproved;
+UI -> Controller : requestsWithoutApprovalSla();
+Controller -> UI : requestsdisapproved;
+
+UI -> Actor : showSla();
+
+deactivate UI
+@enduml

@@ -1,0 +1,40 @@
+@startuml
+
+activate WorkflowServer
+WorkflowServer -> WorkflowServer : managingRequests
+WorkflowServer -> System : checkAlgorithm()
+activate System
+System --> WorkflowServer : algorithm
+deactivate System
+
+alt FCFS
+WorkflowServer -> WorkflowServer : verifyLastTaskExecutorToReceiveTask
+else Other
+WorkflowServer -> TaskExecutorOne : askHowManyTasksRunning()
+activate TaskExecutorOne
+deactivate TaskExecutorOne
+WorkflowServer -> TaskExecutorTwo : askHowManyTasksRunning()
+activate TaskExecutorTwo
+deactivate TaskExecutorTwo
+end
+WorkflowServer -> WorkflowServer : callTaskExecutor(request, task, requestRepository)
+note left : new thread
+WorkflowServer -> TaskExecutorOne : sendData(data)
+activate TaskExecutorOne
+TaskExecutorOne -> TaskExecutorOne : executesTask(data)
+TaskExecutorOne --> WorkflowServer : respondsToRequest(concluded)
+deactivate TaskExecutorOne
+WorkflowServer -> Metrics : create(executionTime)
+activate Metrics
+deactivate Metrics
+WorkflowServer -> TaskExecution : inputMetrics(metrics)
+activate TaskExecution
+deactivate TaskExecution
+WorkflowServer -> Request : changeConclusionDate(conclusionDate)
+activate Request
+deactivate Request
+WorkflowServer -> RequestRepository : save(request)
+activate RequestRepository
+deactivate RequestRepository
+
+@enduml

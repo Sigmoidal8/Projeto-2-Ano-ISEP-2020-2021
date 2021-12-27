@@ -1,0 +1,58 @@
+@startuml
+
+participant RequestServiceUI as UI <<presentation>>
+participant RequestServiceController as Controller <<application>>
+participant PersistenceContext as PersistenceContext <<persistence>>
+participant RepositoryFactory as RepositoryFactory <<factory>>
+participant Request as Request <<domain>>
+participant TaskExecution as TaskExecution <<domain>>
+participant Service as Service <<domain>>
+participant Workflow as Workflow <<domain>>
+database RequestRepository as RequestRepository <<repository>>
+database TaskExecutionRepository as TaskExecutionRepository <<repository>>
+
+
+UI -> Controller : create
+activate Controller
+
+
+
+UI -> Controller : requestService(priority, deadline, files, service)
+
+note left: can be saved as draft or as request
+
+Controller -> Service : workflows()
+
+Controller -> Workflow : tasks()
+
+Controller -> TaskExecution : newTaskExecution=create(task, status)
+
+Controller -> PersistenceContext : repositories()
+activate PersistenceContext
+PersistenceContext -> RepositoryFactory : create
+deactivate PersistenceContext
+activate RepositoryFactory
+RepositoryFactory -> TaskExecutionRepository : create
+deactivate RepositoryFactory
+activate  TaskExecutionRepository
+
+Controller -> TaskExecutionRepository : save(newTaskExecution)
+deactivate TaskExecutionRepository
+
+Controller -> Request : newRequest=create(uniqueCode, service, collaborator,dateOfRequest, type, priority, deadline, files,status,isDraft,formResponse,taskExecutions)
+Controller -> PersistenceContext : repositories()
+activate PersistenceContext
+PersistenceContext -> RepositoryFactory : create
+deactivate PersistenceContext
+activate RepositoryFactory
+RepositoryFactory -> RequestRepository : create
+deactivate RepositoryFactory
+activate  RequestRepository
+
+Controller -> RequestRepository : save(newRequest)
+deactivate RequestRepository
+
+
+deactivate Controller
+
+@enduml

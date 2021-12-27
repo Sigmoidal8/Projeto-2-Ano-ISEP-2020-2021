@@ -1,0 +1,108 @@
+@startuml
+
+actor GSH as Actor
+participant SpecifyServiceUI as UI <<presentation>>
+participant SpecifyServiceController as Controller <<application>>
+participant ServiceBuilder as Builder <<builder>>
+participant "theService:Service" as Domain <<domain>>
+database ServicesRepository as Repository <<repository>>
+
+
+
+Actor --> UI: Specify service
+activate UI
+
+UI --> Actor: Ask if want to creat\na new one or continue\nan incompleted
+
+Actor-->UI: Option
+
+opt new
+
+ref over UI: ShowAllCatallogs_SD
+
+UI-->Actor: ask to choose a catalogue
+Actor-->UI: choose
+
+UI-->Actor: ask for title
+Actor-->UI: Enter the data
+
+UI-->Controller: specifyUniqueCode(uniqueCode)
+activate Controller
+
+Controller->Builder:specifyUniqueCode(uniqueCode)
+activate Builder
+deactivate Builder
+
+deactivate Controller
+
+UI-->Actor: ask for unique code
+Actor-->UI: Enter the data
+
+UI-->Controller: specifyTitle(title)
+activate Controller
+
+Controller->Builder:specifyTitle(title)
+activate Builder
+deactivate Builder
+
+deactivate Controller
+
+ref over UI: OptionalInformation_SD
+
+UI->Controller: finishService()
+activate Controller
+
+Controller->Builder: build()
+activate Builder
+
+Builder->Domain: theService = service(uniqueCode, title,\nbriefDescription, completeDescription, type,\nkeywords, icone, forms)
+activate Domain
+deactivate Domain
+deactivate Builder
+
+Controller->Repository: save(theService)
+activate Repository
+deactivate Repository
+
+deactivate Controller
+
+else continue old one
+
+UI->Controller: uncompleteServices()
+activate Controller
+
+Controller->Repository: findUnfinishedServiceByCollaborator(user)
+activate Repository
+deactivate Repository
+
+deactivate Controller
+
+UI-->Actor: ask to choose a service
+Actor-->UI: choose one
+
+ref over UI: OptionalInformation_SD
+
+UI->Controller: finishService()
+activate Controller
+
+Controller->Builder: build()
+activate Builder
+
+Builder->Domain: theService = service(briefDescription,\ncompleteDescription, type, keywords, icone, forms)
+activate Domain
+deactivate Domain
+deactivate Builder
+
+Controller->Repository: save(theService)
+activate Repository
+deactivate Repository
+
+deactivate Controller
+
+end
+
+UI-->Actor: back to menu
+
+deactivate UI
+
+@enduml

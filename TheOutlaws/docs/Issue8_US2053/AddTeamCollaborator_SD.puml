@@ -1,0 +1,49 @@
+@startuml
+actor RRH as Actor
+participant AddTeamCollaboratorUI as UI <<presentation>>
+control AddTeamCollaboratorController as Controller <<application>>
+participant "theTeam:Team" as Domain <<domain>>
+participant "PersistenceContext" as PersistenceContext <<Persistence>>
+database TeamRepository as RepositoryTeams <<repository>>
+
+
+activate UI
+ref over UI, Controller : ShowAllTeams_SD
+
+UI --> Actor: Ask to choose a team
+Actor --> UI: Select the team
+
+UI --> Controller: selectTeam()
+activate Controller
+
+Controller --> RepositoryTeams : theTeam = findTeam()
+activate RepositoryTeams
+deactivate Controller
+deactivate RepositoryTeams
+
+ref over UI, Controller : ShowAllCollaborators_SD
+
+loop
+
+UI-->Actor: Ask to choose the collaborators
+Actor-->UI: Select a collaborator
+
+end loop
+
+UI --> Controller : addTeamCollaborator(theTeam, theCollaborators)
+activate Controller
+
+Controller --> Domain : add(collaborator)
+activate Domain
+deactivate Domain
+
+Controller->RepositoryTeams:save(theTeam)
+activate RepositoryTeams
+deactivate RepositoryTeams
+
+Controller->UI: theTeam
+deactivate Controller
+
+UI-->Actor: back to menu
+deactivate UI
+@enduml

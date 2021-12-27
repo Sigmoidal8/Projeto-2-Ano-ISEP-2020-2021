@@ -1,0 +1,34 @@
+@startuml
+
+participant AssignCriticityUI as UI <<presentation>>
+participant AssignCriticallyController as Controller <<application>>
+participant "PersistenceContext" as PersistenceContext <<Persistence>>
+database RepositoryFactory as RepositoryFactory <<repository>>
+database CatalogRepository as CatalogRepository <<repository>>
+
+activate UI
+
+UI->Controller : create()
+activate Controller
+UI -> Controller : listCriticalityLevels()
+
+Controller -> PersistenceContext: repositories()
+activate PersistenceContext
+
+PersistenceContext -> RepositoryFactory : create()
+deactivate PersistenceContext
+activate RepositoryFactory
+
+RepositoryFactory -> CatalogRepository : create()
+deactivate RepositoryFactory
+activate CatalogRepository
+
+Controller -> CatalogRepository: findAll()
+CatalogRepository -> Controller: allCriticalityLevels()
+deactivate CatalogRepository
+
+Controller -> UI
+
+UI -> UI :doShow
+
+deactivate CatalogRepository

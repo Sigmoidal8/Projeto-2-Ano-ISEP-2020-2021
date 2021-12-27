@@ -1,0 +1,14 @@
+@startuml
+
+RegisterTeamTypeUI -> RegisterTeamTypeController : create
+RegisterTeamTypeController -> PersistenceContext : repositories()
+PersistenceContext -> RepositoryFactory : create
+RepositoryFactory -> TeamTypeRepository : create
+RegisterTeamTypeUI -> RegisterTeamTypeUI : doShow()
+
+RegisterTeamTypeUI -> RegisterTeamTypeController : registerTeamType(teamTypeCode, description, red,\n green, blue, colorName)
+RegisterTeamTypeController -> Color : color = create(red, green, blue, colorName)
+RegisterTeamTypeController -> TeamType : newTeamType = create(teamTypeCode, description, color)
+RegisterTeamTypeController -> TeamTypeRepository : save(newTeamType)
+
+@enduml

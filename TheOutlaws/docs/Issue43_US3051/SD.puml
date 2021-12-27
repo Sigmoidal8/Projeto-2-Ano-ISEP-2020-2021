@@ -1,0 +1,36 @@
+@startuml
+
+GiveFeedbackUI -> GiveFeedbackController : create
+activate GiveFeedbackUI
+activate GiveFeedbackController
+
+GiveFeedbackUI -> GiveFeedbackController : availableRequestsFeedback
+GiveFeedbackController -> PersistenceContext : repositories()
+activate PersistenceContext
+PersistenceContext -> RepositoryFactory : create
+deactivate PersistenceContext
+activate RepositoryFactory
+RepositoryFactory -> RequestsRepository : create
+deactivate RepositoryFactory
+activate RequestsRepository
+GiveFeedbackController -> RequestsRepository : findRequestsAvailableFeedback()
+GiveFeedbackController --> GiveFeedbackUI: availableRequests
+
+deactivate RequestsRepository
+deactivate GiveFeedbackController
+
+GiveFeedbackUI -> GiveFeedbackController : giveFeedback(request, value)
+activate GiveFeedbackController
+GiveFeedbackController -> Feedback : feedback=create(value)
+activate Feedback
+deactivate Feedback
+GiveFeedbackController -> Request : request=changeFeedback(feedback)
+activate Request
+deactivate Request
+GiveFeedbackController -> RequestsRepository : save(request)
+activate RequestsRepository
+deactivate RequestsRepository
+deactivate GiveFeedbackController
+deactivate GiveFeedbackUI
+
+@enduml

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>eapli</groupId>
+    <artifactId>base</artifactId>
+    <version>1.3.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <eapli.framework.version>16.3.1</eapli.framework.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>11</java.version>
+    </properties>
+
+    <modules>
+        <module>base.app.backoffice.console</module>
+        <module>base.app.user.console</module>
+        <module>base.app.other.console</module>
+        <module>base.app.common.console</module>
+        <module>base.app.bootstrap</module>
+        <module>base.bootstrappers</module>
+        <module>base.core</module>
+        <module>base.persistence.impl</module>
+        <module>base.daemon.workflowserver</module>
+        <module>base.daemon.automatictaskexecutor</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-maven-plugin</artifactId>
+                <version>4.9.2</version>
+                <executions>
+                    <execution>
+                        <id>antlr</id>
+                        <goals>
+                            <goal>antlr4</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>eapli</groupId>
+            <artifactId>eapli.framework.core</artifactId>
+            <version>${eapli.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>eapli</groupId>
+            <artifactId>eapli.framework.infrastructure.authz</artifactId>
+            <version>${eapli.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>eapli</groupId>
+            <artifactId>
+                eapli.framework.infrastructure.pubsub
+            </artifactId>
+            <version>${eapli.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version>
+            <scope>runtime</scope>
+        </dependency>	
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>4.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-maven-plugin</artifactId>
+            <version>4.9.2</version>
+            <type>maven-plugin</type>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20210307</version>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency><!--Necessary to avoid drop-and-create failure with latest spring boot version-->
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>5.4.14.Final</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>jfrog-pagsousa</id>
+            <url>https://pagsousa.jfrog.io/artifactory/default-maven-virtual</url>
+        </repository>
+    </repositories>
+</project>

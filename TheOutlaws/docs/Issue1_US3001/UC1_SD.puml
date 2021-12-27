@@ -1,0 +1,49 @@
+@startuml
+
+
+actor User as Actor
+participant SearchCatalogUI as UI <<presentation>>
+participant SearchCatalogController as Controller <<application>>
+participant PersistenceContext as PersistenceContext <<persistence>>
+participant RepositoryFactory as RepositoryFactory <<factory>>
+database CatalogRepository as CatalogRepository <<repository>>
+database TeamRepository as TeamRepository <<Repository>>
+
+UI -> Controller : create
+activate Controller
+
+
+UI -> Controller : getCatalogs
+
+
+Controller -> PersistenceContext : repositories()
+activate PersistenceContext
+PersistenceContext -> RepositoryFactory : create
+deactivate PersistenceContext
+activate RepositoryFactory
+RepositoryFactory -> CatalogRepository : create
+deactivate RepositoryFactory
+
+activate CatalogRepository
+
+Controller -> TeamRepository : teams(collaborator)
+activate TeamRepository
+deactivate TeamRepository
+
+Controller -> CatalogRepository : catalogs(teams)
+deactivate CatalogRepository
+Controller -> UI: Catalogs
+
+
+UI -> UI : doShow()
+
+Actor --> UI: Select a search method
+UI --> Actor: Ask to insert keyword/title
+
+UI -> Controller : search()
+
+Controller -> UI : catalogs
+
+deactivate Controller
+
+@enduml

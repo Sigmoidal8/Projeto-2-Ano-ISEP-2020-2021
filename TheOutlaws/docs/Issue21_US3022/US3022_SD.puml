@@ -1,0 +1,88 @@
+@startuml
+
+
+actor User as Actor
+participant ClaimTaskUI as UI <<presentation>>
+participant ClaimTaskController as Controller <<application>>
+participant Task as Domain <<Domain>>
+participant PersistenceContext as PersistenceContext <<persistence>>
+participant RepositoryFactory as RepositoryFactory <<factory>>
+database TaskRepository as TaskRepository <<repository>>
+
+Actor -> UI : wants to claim a task
+activate UI
+UI -> Controller : create
+activate Controller
+
+
+UI -> Controller : getAvailableTasks()
+
+
+Controller -> PersistenceContext : repositories()
+activate PersistenceContext
+PersistenceContext -> RepositoryFactory : create
+deactivate PersistenceContext
+activate RepositoryFactory
+RepositoryFactory -> TaskRepository : create
+deactivate RepositoryFactory
+
+activate TaskRepository
+
+Controller -> TaskRepository : tasks()
+deactivate TaskRepository
+Controller -> UI: Tasks
+deactivate Controller
+
+UI -> UI : doShow()
+
+loop
+
+UI-->Actor: ask if want to order, filter or claim tasks
+Actor-->UI: Choose the option
+
+
+opt order
+
+UI-->Actor: ask the parameter
+Actor-->UI: choose the parameter
+
+UI-->Controller: orderByPriority(tasks, parameter)
+activate Controller
+UI-->Controller: orderByCriticality(tasks, parameter)
+UI-->Controller: orderByCompletationDeadline(tasks, parameter)
+deactivate Controller
+
+else filter
+
+UI-->Actor: ask the parameter
+Actor-->UI: choose the parameter
+
+UI-->Controller: filterByPriority(tasks, parameter)
+activate Controller
+UI-->Controller: filterByCriticality(tasks, parameter)
+UI-->Controller: filterByCompletationDeadline(tasks, parameter)
+deactivate Controller
+
+else claim
+
+UI --> Actor: Show pending Tasks
+
+Actor --> UI: claims one task
+
+UI ->Controller: claimTask(task)
+activate Controller
+
+Controller --> TaskRepository: save(task)
+activate TaskRepository
+deactivate TaskRepository
+
+deactivate Controller
+
+end
+
+end opt
+
+UI --> Actor : back to menu
+
+deactivate UI
+@enduml

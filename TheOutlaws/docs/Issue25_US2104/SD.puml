@@ -1,0 +1,28 @@
+@startuml
+
+
+participant FactoryBootstrapper as FB
+participant ServiceBootstrapper as SB
+participant SpecifyServiceController as SS
+participant ServiceRepository as SR
+participant Service as Service
+
+activate FB
+FB -> SB : create()
+activate SB
+FB -> SB : execute()
+
+
+SB -> SB : register()
+SB -> SS : create()
+activate SS
+
+SS -> SR : create()
+activate SR
+deactivate SR
+
+SS -> Service : registerService(all parameters)
+activate Service
+Service --> SR : save(service)
+
+@enduml

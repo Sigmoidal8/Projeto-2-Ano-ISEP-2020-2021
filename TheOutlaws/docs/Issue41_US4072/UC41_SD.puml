@@ -1,0 +1,50 @@
+@startuml
+
+activate WorkflowServer
+WorkflowServer -> WorkflowServer : managingRequests
+WorkflowServer -> System : callTaskExecutorAlgoritms(task)
+activate System
+System --> WorkflowServer : algorithm
+deactivate System
+
+alt FCFS
+WorkflowServer -> TaskExecutionRepository : request = findRequestTasks(task)
+activate TaskExecutionRepository
+deactivate TaskExecutionRepository
+
+WorkflowServer -> catalogRepository : catalog = findByService(request)
+activate catalogRepository
+deactivate catalogRepository
+
+WorkflowServer -> WorkflowServer : 
+note right : check the next collaborator in the queue
+
+else Other
+WorkflowServer -> TaskExecutionRepository : request = findRequestTasks(task)
+activate TaskExecutionRepository
+deactivate TaskExecutionRepository
+
+WorkflowServer -> catalogRepository : catalog = findByService(request)
+activate catalogRepository
+deactivate catalogRepository
+
+WorkflowServer -> WorkflowServer : 
+note right : runs through the list of teams in that catalog and for each team \nuns through all its collaborators. For each collaborator, get their \npending tasks and check which one has the lowest average time of all tasks
+
+end
+
+
+WorkflowServer -> TaskExecution : changeClaimTaskDate(d)
+activate TaskExecution
+deactivate TaskExecution
+
+WorkflowServer -> TaskExecution : changeResponsibleCollaborator(assignCollaborator)
+activate TaskExecution
+deactivate TaskExecution
+
+WorkflowServer -> TaskExecutionRepository : save(task)
+activate TaskExecutionRepository
+deactivate TaskExecutionRepository
+
+deactivate WorkflowServer
+@enduml

@@ -1,0 +1,44 @@
+@startuml
+
+actor GSH as Actor
+participant DefineCriticityUI as UI <<presentation>>
+participant DefineCriticityController as Controller <<application>>
+participant "Criticity:Criticity" as Domain <<domain>>
+participant PersistenceContext as Persistence <<persistence>>
+participant RepositoryFactory as Factory <<factory>>
+database CriticityRepository as Repository <<repository>>
+
+Actor --> UI: Add CriticityLevel
+activate UI
+    UI -> Controller: create()
+    UI --> Actor: Ask Criticity information
+    Actor --> UI: Color, Value, Label, Objectives
+
+    UI -> Controller: addCriticity(Color, Value, Label, Objectives)
+
+    activate Controller
+        Controller -> Domain: create (Color, Value, Label, Objectives)
+        activate Domain
+        Domain->Controller: Criticity
+        deactivate Domain
+            
+
+        Controller -> Persistence: repositories()
+        activate Persistence
+            Persistence -> Factory: create
+            Persistence -> Controller: factory
+        deactivate Persistence
+
+        Controller -> Factory: Criticity()
+        activate Factory
+            Factory -> Repository: create
+            Factory -> Controller: CriticityRepository
+        deactivate Factory
+
+        Controller->Repository:save(Criticity)
+        Controller->UI: Criticity
+    deactivate Controller
+
+        UI-->Actor: displayCriticityInfo
+deactivate UI
+@enduml
