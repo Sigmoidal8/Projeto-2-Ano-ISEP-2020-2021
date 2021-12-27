@@ -1,0 +1,21 @@
+@startuml
+autonumber
+actor "Administrator" as UNR
+
+activate UNR
+UNR -> ":System" : wants to add a scooter to the available scooter list of one pharmacy
+activate ":System"
+":System" --> UNR : shows the list of scooters registered, but with no pharmacy related
+deactivate ":System"
+UNR -> ":System" : selects the scooter he wants to add
+activate ":System"
+":System" --> UNR :shows the list of pharmacys and asks to choose the one\n he wants to add a scooter
+deactivate ":System"
+UNR -> ":System" : inserts the pharmacy id where he wants to add the scooter choosen
+activate ":System"
+":System" --> UNR :  adds the scooter choosen to the pharmacy choosen
+deactivate ":System"
+
+
+deactivate UNR
+@enduml

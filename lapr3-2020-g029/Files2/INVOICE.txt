@@ -1,0 +1,6 @@
+Invoice(String id,Date dateInvoice,double price,Client client)
+
+INV/09/18/2020/11/30/00;35.00;09/18/2020 11:30:00;35.00;P587221589;Pedro Barros Alves;pba123;PedroBarrosAlves@jourrapide.com;587221589;Praça da Liberdade;126;4000-322;Porto;41.14669666694425;-8.610808028094112
+INV/05/12/2020/11/30/00;05/12/2020 11:30:00;25.00;D681911380;David Pereira Alves;dpa123;DaviPereiraAlves@armyspy.com;681911380;Rua de Santa Catarina;506;4000-452;Porto;41.15064376691835;-8.605386063954407
+INV/03/23/2020/11/30/00;03/23/2020 11:30:00;15.00;D553443516;Diogo Barbosa Fernandes;dbf123;DiogoBarbosaFernandes@jourrapide.com;553443516;Rua de Sá da Bandeira;385;4000-270;Porto;41.14968339161862;-8.607612653227136
+INV/12/09/2020/11/30/00;12/09/2020 11:30:00;5.00;J752279268;Joao Martins Gomes;jmg123;JoaoMartinsGomes@dayrep.com;752279268;Rua da Galeria de Paris;56;4050-284;Porto;41.147132609313026;-8.614316280807227

@@ -1,0 +1,10 @@
+Pharmacy(String id, String designation, String email,String password, Adress adress)
+Sá da Bandeira;lapr3g029@gmail.com;Lapr32021;Rua de Sá da Bandeira;244;4000-428;Porto;41.14852;-8.60800
+Avenida;lapr3g029@gmail.com;Lapr32021;Rua de o Primeiro de Janeiro;232;4100-116;Porto;41.16067;-8.64373
+Guifões;lapr3g029@gmail.com;Lapr32021;Rua Tourais;374;4460-033;Guifões;41.20008;-8.66609
+Central;lapr3g029@gmail.com;Lapr32021;Avenida 5 de Outubro;57;4440-452;Valongo;41.18993;-8.49788
+Sá;lapr3g029@gmail.com;Lapr32021;Rua de Vale Formoso;181;4200-512;Porto;41.16720;-8.61191
+Marques da Cunha;lapr3g029@gmail.com;Lapr32021;Rua Capela Aresta;198;4440-539;Valongo;41.19766;-8.49958
+Couto;lapr3g029@gmail.com;Lapr32021;Avenida da Republica;1412;4430-193;Vila Nova de Gaia;41.12632;-8.60597
+Sousa Torres;lapr3g029@gmail.com;Lapr32021;Lugar de Ardegães;135;4425-500;Maia;41.21971;-8.56086
+Farmacia de Fânzeres;lapr3g029@gmail.com;Lapr32021;Rua Dr. Severiano;280;4510-554;Fânzeres;41.16129;-8.53142

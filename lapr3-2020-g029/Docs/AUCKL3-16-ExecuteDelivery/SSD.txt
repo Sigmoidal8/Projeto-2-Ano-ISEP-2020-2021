@@ -1,0 +1,42 @@
+@startuml
+hide footbox
+autonumber
+
+actor "Courier" as user
+participant ":System" as SIST
+
+activate user
+
+user -> SIST : Want to start a delivery
+activate SIST
+
+SIST -> user : shows the list of pharmacy and asks the courier to choose one
+deactivate SIST
+
+user -> SIST :  chooses the pharmacy
+activate SIST
+SIST -> user : shows the list of scooters and asks the courier to choose one
+deactivate SIST
+
+user -> SIST :  chooses the scooter
+activate SIST
+loop [ until the courier select all of the pretended deliveries ]
+SIST --> user : shows the list of deliveries of that pharmacy that are remaining and asks\n the courier to choose the deliveries that he wants to deliver
+deactivate SIST
+
+user -> SIST : choose the deliveries.
+
+activate SIST
+end
+    SIST --> user : shows to courier the most economic route between\n this deliveryies and the spend energy to this route.
+deactivate SIST
+
+user -> SIST : confirms the information.
+
+activate SIST
+    SIST --> user : Start the delivery.
+deactivate SIST
+
+deactivate user
+
+@enduml

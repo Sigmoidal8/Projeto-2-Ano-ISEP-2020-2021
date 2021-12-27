@@ -1,0 +1,57 @@
+@startuml
+package UI <<Folder>> {
+  class InsertParkingLotUI
+}
+
+package Controllers <<Folder>> {
+  class InsertParkingLotController
+}
+
+package Domain <<Folder>> {
+  class PharmacyList
+  class Pharmacy
+  class Platform
+  class ParkingLot
+}
+
+class InsertParkingLotUI {
+}
+
+class InsertParkingLotController {
+    +getPharmacy(pharmacyID)
+    +createParkingLot(parkingLotSpots,parkingLotChargeSpots,type)
+    +registerParkingLot()
+}
+
+class PharmacyList {
+    +getPharmacy(pharmacyID)
+}
+
+class Pharmacy {
+    +registerParkingLot(parkingLot)
+    +validateParkingLot(parkingLot)
+    +addParkingLot(parkingLot)
+}
+
+class Platform {
+    +getPharmacyList()
+}
+
+class ParkingLot {
+    +createParkingLot(parkingLotSpots,parkingLotChargeSpots,type)
+}
+
+InsertParkingLotUI ..> InsertParkingLotController
+
+InsertParkingLotController .> ParkingLot
+InsertParkingLotController .> Pharmacy
+InsertParkingLotController .> Platform
+InsertParkingLotController ..> PharmacyList
+
+Platform "1" -- "1" PharmacyList : has>
+
+PharmacyList "1" -- "*" Pharmacy : has>
+
+Pharmacy "1" -- "1..*" ParkingLot : has>
+
+@enduml

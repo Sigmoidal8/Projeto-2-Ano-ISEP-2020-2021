@@ -1,0 +1,9 @@
+PharmacyID,ScooterIDx,CourierID,DroneIDx;deliveriesUnitl0;(1 for Scooter,2 for Drone),0(sair do while)
+5;1;1;1;1;0;1;0
+5;2;2;2;1;2;0;1;0
+5;3;3;3;1;2;0;1;0
+8;1;4;1;1;2;0;1;0
+8;2;5;1;1;0;1;0
+2;1;2;1;1;2;3;0;1;0
+3;1;6;1;2;1;3;0;1;0
+1;1;1;1;1;2;0;1;0

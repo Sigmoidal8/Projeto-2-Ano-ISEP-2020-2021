@@ -1,0 +1,5 @@
+PharmacyID,CourierID,DroneIDx;deliveriesUnitl0;
+0;0;8;1;1;1;2;0;
+0;0;8;2;2;2;1;3;0;
+0;0;8;2;3;1;2;0;
+36;1;1;3;1;1;2;0;

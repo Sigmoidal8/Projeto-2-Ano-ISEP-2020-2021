@@ -1,0 +1,39 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+top to bottom direction
+
+
+class Platform{
+}
+
+class Courier{
+  -String NIF
+  -String name
+  -String socialSecurityNumber
+  -String email
+  -String password
+}
+
+class Pharmacy{
+  -String id
+  -String email
+  -String password
+  }
+
+class Scooter{
+  -int exclusiveNumber
+  -double fullCharge
+  -double currentCharge
+  -double power
+  -boolean operational
+  -double averageSpeed
+}
+
+
+Platform"1" -- "0..*"Pharmacy : contains >
+Platform"1" -- "0..*"Courier : has >
+
+Pharmacy"1" -- "0..*" Scooter : contains >
+
+@enduml

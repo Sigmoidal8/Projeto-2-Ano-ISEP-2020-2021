@@ -1,0 +1,20 @@
+@startuml
+hide footbox
+autonumber
+actor "Courier" as SC
+
+participant ":System" as SIST
+
+activate SC
+
+SC -> SIST : docks a scooter
+
+activate SIST
+    SIST --> SC : shows the list of scooters
+deactivate SIST
+SC -> SIST : selects a scooter
+activate SIST
+SIST --> SC : sends email and charges scooter
+deactivate SC
+
+@enduml

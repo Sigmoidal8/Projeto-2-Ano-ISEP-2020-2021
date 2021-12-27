@@ -1,0 +1,2 @@
+DeliveryData (Scooter cd; Drone cd; Scooter Area; Drone Area; Density; Rolling Coeficient, Gravity Force, Scooter Total Mass; Drone Total Mass; Wind Angle, Wind Speed,Lift Distance,Lift Speed)
+1.1;0.0464;0.3;0.03;1.225;0.5;9.8;130;3.3;0;0;100;6;

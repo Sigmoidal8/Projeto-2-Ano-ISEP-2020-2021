@@ -1,0 +1,16 @@
+email;idxProduto;quantidade;verify(loop até -1);0 para pagamento normal, 1 para créditos;ccInfo
+drumigas1302@gmail.com;0;1;-1;0;11111111/12:05:2024/1234;(Cenário C1.0)
+drumigas1302@gmail.com;1;1;-1;0;11111111/12:05:2024/1234;(Cenário C1.1)
+1190778@isep.ipp.pt;2;1;-1;0;11111111/12:05:2024/1234
+t27@outlook.pt;3;1;-1;0;11111111/12:05:2024/1234;(Cenário C1.2)
+sandromoura24@hotmail.com;4;1;-1;0;11111111/12:05:2024/1234
+raulreiscoelho2011@gmail.com;5;1;-1;0;11111111/12:05:2024/1234;(Cenário C2.0)
+ruiribeiro11111@gmail.com;6;1;-1;0;11111111/12:05:2024/1234
+123123@isep.ipp.pt;7;1;-1;0;11111111/12:05:2024/1234;(Cenário C2.1)
+tiagomaga16@gmail.com;1;1;-1;0;11111111/12:05:2024/1234;(Cenário C3.0)
+1190986@isep.ipp.pt;2;1;-1;0;11111111/12:05:2024/1234;(Carvalhido adicionado antes)
+miguelsilvadrag2001@gmail.com;8;1;-1;0;11111111/12:05:2024/1234;(Cenário 4.0)
+queroiraopowerpointonline@hotmail.com;0;1;-1;0;11111111/12:05:2024/1234
+sambrota567@gmail.com;1;1;-1;0;11111111/12:05:2024/1234
+1198951@isep.ipp.pt;2;1;-1;0;11111111/12:05:2024/1234;(Cenário 5.0)
+1191051@isep.ipp.pt;3;1;-1;0;11111111/12:05:2024/1234

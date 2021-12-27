@@ -1,0 +1,118 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package UI <<Folder>> {
+  class BuyAProductUI
+}
+
+package Controllers <<Folder>> {
+  class BuyAProductController
+}
+
+package Domain <<Folder>> {
+  class Platform
+  class Product
+  class PharmacyList
+  class Pharmacy
+  class ProductList
+  class ClientRegister
+  class Client
+  class Invoice
+  class Delivery
+}
+
+class BuyAProductUI {
+}
+
+class Client{
+-String id
+-String name
+-String password
+-String email
+-String NIF
+-String IBAN
+-double credits
+-Adress address
+
+}
+class BuyAProductController {
+  +getPharmacyList()
+  +getPharmacy(pharmacyID)
+  +getProductList()
+  +getProduct(productID)
+  +preencherMapa(pr,quantity)
+  +getClient()
+  +newInvoice(mp)
+  +generateId()
+  +getDate()
+  +calcPrice()
+  +getDeliveryList()
+  +registerDelivery()
+}
+
+class Platform {
+  +getPharmacyList()
+  +getClientRegister()
+  +getDeliveryList()
+}
+
+class ClientRegister {
+  +getClientByEmail()
+
+}
+
+class Product {
+  -String id
+  -String nome
+  -float price
+  -float weight
+}
+
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+  -Adress adress
+  -Integer parkLimit
+  +getProductList()
+}
+
+class PharmacyList{
+  +getPharmacy(pharmacyID)
+}
+
+class ProductList{
+  +getProduct(productID)
+}
+
+class Invoice{
+  -String id
+  -Date date
+  -float price
+}
+
+class Delivery{
+  -String id
+  -Date date
+  -float totalWeight
+
+}
+BuyAProductUI ..> BuyAProductController
+
+BuyAProductController ..> Platform
+BuyAProductController ..> PharmacyList
+
+BuyAProductController ..> ClientRegister
+Platform ..> ClientRegister
+
+PharmacyList"1" -- "1..*" Pharmacy : has>
+ProductList"1" -- "1..*" Product : has>
+Pharmacy"1" -- "1" ProductList : has>
+ClientRegister"1" -- "1..*" Client : has>
+
+Invoice"1..*".. "1" Client : references >
+
+Delivery"1".."1" Invoice : references >
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+autonumber
+actor "Administrator" as UNR
+
+activate UNR
+UNR -> ":System" : register product
+activate ":System"
+":System" --> UNR : asks for the data about the product \n(i.e. ID, name, price, weight, stock)
+deactivate ":System"
+
+UNR -> ":System" : enters the requested data
+activate ":System"
+":System" --> UNR : show the list of pharmacies and ask\nto choose one
+deactivate ":System"
+
+UNR -> ":System" : enters da pharmacy
+activate ":System"
+":System" --> UNR : displays the data, asking confirmation
+deactivate ":System"
+
+UNR -> ":System" : confirms
+activate ":System"
+":System" --> UNR : operation success
+deactivate ":System"
+
+deactivate UNR
+@enduml

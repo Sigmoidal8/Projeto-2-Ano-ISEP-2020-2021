@@ -1,0 +1,66 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package UI <<Folder>> {
+  class EditParkingLotCharacteristicsUI
+}
+
+package Controllers <<Folder>> {
+  class EditParkingLotCharacteristicsController
+}
+
+package Domain <<Folder>> {
+  class Platform
+  class PharmacyList
+  class Pharmacy
+  class ParkingLot
+}
+
+class EditParkingLotCharacteristicsUI {
+}
+
+class EditParkingLotCharacteristicsController {
+  +getPharmacyList()
+  +getPharmacy(pharmacyID)
+  +getParkingLotList()
+  +getParkingLot(parkingLotID)
+  +setTotalSpots(totalSpots)
+  +setChargeSpots(chargeSpots)
+}
+
+class Platform {
+  +getPharmacyList()
+}
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+  -Adress adress
+  +getParkingLotList()
+}
+
+class PharmacyList{
+  +getPharmacy(pharmacyID)
+}
+
+class ParkingLot{
+  -String id
+  -Integer totalSpots
+  -Integer chargeSpots
+  -String type
+  -setTotalSpots(totalSpots)
+  -setChargeSpots(chargeSpots)
+  -getType()
+}
+
+EditParkingLotCharacteristicsUI ..> EditParkingLotCharacteristicsController
+
+EditParkingLotCharacteristicsController ..> Platform
+EditParkingLotCharacteristicsController ..> PharmacyList
+
+PharmacyList"1" -- "1..*" Pharmacy : has>
+Pharmacy"1" -- "1..*" ParkingLot : has>
+
+
+@enduml

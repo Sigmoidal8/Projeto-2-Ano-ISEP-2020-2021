@@ -1,0 +1,63 @@
+@startuml
+autonumber
+
+actor "UnregisterClient" as c
+participant ":RegisterClientUI" as UI
+participant ":RegisterClientController" as CTRL
+participant ":Platform" as PLAT
+participant ":Adress" as ADRL
+participant "rclient\n:clientRegister" as RCLI
+participant "adress:Adress" as ADR
+participant "client\n:client" as CLI
+
+activate c
+c -> UI : start client registration
+activate UI
+
+UI --> c : requests all data (e.g.name, password, e-mail, NIF,street,\n doorNumber postalCode, locality, decimalDegree1, decimalDegree2).
+deactivate UI
+
+c -> UI : introduce data
+activate UI
+UI -> CTRL : newClient(name, password, e-mail, NIF, street, doorNumber,\npostalCode, locality, decimalDegree1, decimalDegree2).
+activate CTRL
+CTRL -> PLAT : rclient = getClientRegister()
+activate PLAT
+deactivate PLAT
+CTRL -> ADRL : adress = newAdress(street, doorNumber, postalCode,\n locality, decimalDegree1, decimalDegree2).
+activate ADRL
+ADRL --> ADR **: create(street, doorNumber, postalCode, locality,\n decimalDegree1, decimalDegree2).
+deactivate ADRL
+CTRL -> RCLI: client = newClient(name, password, e-mail, NIF, adress).
+activate RCLI
+RCLI -> RCLI : generateId(name,NIF)
+RCLI --> CLI **: create(id, name, password, e-mail, NIF, adress).
+deactivate RCLI
+CTRL -> RCLI: validateClientByEmail(email).
+activate RCLI
+deactivate RCLI
+deactivate CTRL
+deactivate RCLI
+UI --> c : shows client data and asks for confirmation.
+deactivate UI
+
+c -> UI : confirms
+activate UI
+
+UI -> CTRL: registerClient()
+activate CTRL
+CTRL -> RCLI: registerClient(Client)
+activate RCLI
+RCLI -> RCLI : validateClient(Client)
+ref over PLAT,RCLI
+AUCKL3-23 RegisterClientAsUser(withRole)
+end
+RCLI -> RCLI: addClient(Client)
+deactivate RCLI
+
+UI --> c: informs the UnregisterUser of the success of the operation
+
+deactivate CTRL
+deactivate UI
+
+@enduml

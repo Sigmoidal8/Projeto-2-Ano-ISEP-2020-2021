@@ -1,0 +1,4 @@
+Client(String name, String password, String email, String nif,Adress adress)
+Pedro Barros Alves;pba123;1190778@isep.ipp.pt;587221589;Avenida dos Descobrimentos;126;4400-103;Porto;41.11870;-8.62231
+David Pereira Alves;dpa123;1190780@isep.ipp.pt;681911380;Rua de Santa Catarina;506;4000-452;Porto;41.15064376691835;-8.605386063954407
+Diogo Barbosa Fernandes;dbf123;1191051@isep.ipp.pt;553443516;Rua de Sá da Bandeira;385;4000-270;Porto;41.14968339161862;-8.607612653227136

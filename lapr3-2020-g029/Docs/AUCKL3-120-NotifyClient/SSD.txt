@@ -1,0 +1,40 @@
+@startuml
+hide footbox
+autonumber
+
+actor "Client" as user
+participant ":System" as SIST
+
+activate user
+
+user -> SIST : Want to start an order
+activate SIST
+
+SIST -> user : shows the list of pharmacy and\nasks to choose one
+deactivate SIST
+
+user -> SIST :  chooses the pharmacy
+activate SIST
+loop [ until the client select all of\nthe pretended products ]
+SIST -> user : shows the list of products
+deactivate SIST
+
+user -> SIST :  chooses the products
+activate SIST
+
+end
+
+activate SIST
+
+SIST --> user : ask to confirm
+deactivate SIST
+
+user -> SIST : confirms the information.
+
+activate SIST
+SIST --> user : Start the delivery and send an email\nto the client.
+deactivate SIST
+
+deactivate user
+
+@enduml

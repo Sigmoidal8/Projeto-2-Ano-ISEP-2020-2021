@@ -1,0 +1,71 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package UI <<Folder>> {
+  class RegisterClientUI
+}
+
+package Controllers <<Folder>> {
+  class RegisterClientController
+}
+
+package Domain <<Folder>> {
+class Platform
+class ClientRegister
+class Client
+class Adress
+}
+class RegisterClientUI {
+}
+
+class RegisterClientController {
+  +newClient(name, password, e-mail, NIF, street, doorNumber, postalCode, locality, decimalDegree1, decimalDegree2)
+  +registerClient()
+}
+
+class Platform {
+  +getClientRegister()
+}
+
+class ClientRegister {
+  +newClient(name, password, e-mail, NIF, adress)
+  +generateId(name,NIF)
+  +validateClientByEmail(email)
+  +registerClient(Client)
+  +validateClient(Client)
+  +addClient(Client)
+}
+
+class Client{
+-String id
+-String name
+-String password
+-String email
+-String NIF
+-String IBAN
+-double credits
+-Adress address
+}
+
+class Adress{
+-String street
+-int doorNumber
+-String postalCode
+-String locality
+-double decimalDegree1
+-double decimalDegree2
+}
+
+RegisterClientUI ..> RegisterClientController
+
+RegisterClientController ..> Platform
+RegisterClientController ..> ClientRegister
+
+Platform ..> ClientRegister
+
+ClientRegister"1" -- "1..*" Client : has>
+
+Client"1" -- "1" Adress : has>
+
+
+@enduml

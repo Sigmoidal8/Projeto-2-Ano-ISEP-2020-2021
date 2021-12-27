@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="421px" preserveAspectRatio="none" style="width:559px;height:421px;" version="1.1" viewBox="0 0 559 421" width="559px" zoomAndPan="magnify"><defs><filter height="300%" id="f17paxya75jfnk" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="298.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="53" y="98.2969"/><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="506" y="119.4297"/><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="506" y="177.6953"/><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="44.2656" style="stroke:#A80036;stroke-width:1.0;" width="10" x="506" y="235.9609"/><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="506" y="309.3594"/><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="506" y="367.625"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="58" x2="58" y1="88.2969" y2="414.7578"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="510.5" x2="510.5" y1="88.2969" y2="414.7578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="5" y="84.9951">Administrator</text><ellipse cx="58" cy="15" fill="#FEFECE" filter="url(#f17paxya75jfnk)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M58,23 L58,50 M45,31 L71,31 M58,50 L45,65 M58,50 L71,65 " fill="none" filter="url(#f17paxya75jfnk)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f17paxya75jfnk)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="73" x="472.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="479.5" y="72.9951">:System</text><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="298.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="53" y="98.2969"/><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="506" y="119.4297"/><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="506" y="177.6953"/><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="44.2656" style="stroke:#A80036;stroke-width:1.0;" width="10" x="506" y="235.9609"/><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="506" y="309.3594"/><rect fill="#FFFFFF" filter="url(#f17paxya75jfnk)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="506" y="367.625"/><polygon fill="#A80036" points="494,115.4297,504,119.4297,494,123.4297,498,119.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="500" y1="119.4297" y2="119.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="70" y="114.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="155" x="83" y="114.3638">Start parking lot update.</text><polygon fill="#A80036" points="74,144.5625,64,148.5625,74,152.5625,70,148.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="68" x2="510" y1="148.5625" y2="148.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="80" y="143.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="391" x="93" y="143.4966">Shows the list of Pharmacies, asking for the selection of one.</text><polygon fill="#A80036" points="494,173.6953,504,177.6953,494,181.6953,498,177.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="500" y1="177.6953" y2="177.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="8" x="70" y="172.6294">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131" x="82" y="172.6294">Selects a pharmacy.</text><polygon fill="#A80036" points="74,202.8281,64,206.8281,74,210.8281,70,206.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="68" x2="510" y1="206.8281" y2="206.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="80" y="201.7622">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="380" x="93" y="201.7622">Shows the list of parking lots and asks the selection of one.</text><polygon fill="#A80036" points="494,231.9609,504,235.9609,494,239.9609,498,235.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="500" y1="235.9609" y2="235.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="70" y="230.895">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150" x="83" y="230.895">Selects the parking lot .</text><polygon fill="#A80036" points="74,276.2266,64,280.2266,74,284.2266,70,280.2266" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="68" x2="510" y1="280.2266" y2="280.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="80" y="267.5942">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="360" x="93" y="260.0278">Shows the information of that parking lot and asks what</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="190" x="97" y="275.1606">attribute he wants to change.</text><polygon fill="#A80036" points="494,305.3594,504,309.3594,494,313.3594,498,309.3594" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="500" y1="309.3594" y2="309.3594"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="70" y="304.2935">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="138" x="83" y="304.2935">Selects the attribute .</text><polygon fill="#A80036" points="74,334.4922,64,338.4922,74,342.4922,70,338.4922" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="68" x2="510" y1="338.4922" y2="338.4922"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="80" y="333.4263">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="406" x="93" y="333.4263">asks the administrator to insert the new value for the attribute.</text><polygon fill="#A80036" points="494,363.625,504,367.625,494,371.625,498,367.625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="500" y1="367.625" y2="367.625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="70" y="362.5591">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="142" x="83" y="362.5591">inserts the new value.</text><polygon fill="#A80036" points="69,392.7578,59,396.7578,69,400.7578,65,396.7578" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="63" x2="510" y1="396.7578" y2="396.7578"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="19" x="75" y="391.6919">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="332" x="98" y="391.6919">saves the data and presents it to the administrator.</text><!--MD5=[ff38f45cbb8a1c7b64440123a565cac4]
+@startuml
+hide footbox
+autonumber
+actor "Administrator" as AD
+
+participant ":System" as SIST
+
+activate AD
+
+AD -> SIST : Start parking lot update.
+
+activate SIST
+    SIST - -> AD : Shows the list of Pharmacies, asking for the selection of one.
+deactivate SIST
+
+AD -> SIST : Selects a pharmacy.
+
+activate SIST
+    SIST - -> AD : Shows the list of parking lots and asks the selection of one.
+deactivate SIST
+
+AD -> SIST : Selects the parking lot .
+
+
+activate SIST
+    SIST - -> AD : Shows the information of that parking lot and asks what\n attribute he wants to change.
+deactivate SIST
+
+AD -> SIST : Selects the attribute .
+
+activate SIST
+    SIST - -> AD : asks the administrator to insert the new value for the attribute.
+deactivate SIST
+
+AD -> SIST : inserts the new value.
+
+activate SIST
+    SIST - -> AD : saves the data and presents it to the administrator.
+deactivate SIST
+
+deactivate AD
+@enduml
+
+PlantUML version 1.2020.27beta8(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

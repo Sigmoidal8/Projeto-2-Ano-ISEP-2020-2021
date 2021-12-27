@@ -1,0 +1,65 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+class Client{
+  -String id
+  -String name
+  -String password
+  -String email
+  -Integer NIF
+  -String street
+  -String postalCode
+  -String locality
+  -double decimalDegree1
+  -double decimalDegree2
+  -double credits
+
+}
+class Platform{
+}
+
+class Product{
+  -String id
+  -String nome
+  -float price
+  -float weight
+}
+
+class Invoice{
+  -String id
+  -Date date_invoice
+  -float price
+
+
+}
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+}
+
+class Delivery{
+ -String id
+ -Date dateDelivey
+ -double totalWeight
+
+
+
+}
+
+Platform"1" -- "1..*"Pharmacy : contains >
+
+Pharmacy"1" -- "0..*"Product : has >
+
+Platform"1" -- "0..*"Client : contains >
+
+Product"0..*" -- "0..*"Invoice : contains <
+
+Client"1" -- "0..*"Invoice : receives >
+
+Delivery"1" -- "1"Invoice : has >
+
+@enduml

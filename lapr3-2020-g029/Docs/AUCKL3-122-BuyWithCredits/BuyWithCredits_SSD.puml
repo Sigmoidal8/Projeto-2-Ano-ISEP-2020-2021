@@ -1,0 +1,42 @@
+
+
+@startuml
+hide footbox
+autonumber
+actor "Client" as CL
+
+participant ":System" as SIST
+
+activate CL
+
+CL -> SIST : Start Buying Procedure.
+
+activate SIST
+    SIST --> CL : Shows the list of Pharmacies, asking for the selection of one.
+deactivate SIST
+
+CL -> SIST : Selects a pharmacy.
+
+activate SIST
+loop
+    SIST --> CL : Shows the list of products of the pharmacy, asking for the selection of one \n and it's quantity.
+deactivate SIST
+
+
+CL -> SIST : Selects a product and inserts the quantity.
+activate SIST
+end
+
+activate SIST
+    SIST --> CL : shows the products selected and asks if he wants to pay with credits
+deactivate SIST
+
+CL -> SIST : selects the payment method
+
+activate SIST
+    SIST --> CL : informs about the sucess of the operation
+deactivate SIST
+
+deactivate CL
+
+@enduml

@@ -1,0 +1,52 @@
+
+@startuml
+title <AUCKL3-17> SD_Calculate most economic route
+autonumber
+
+participant "DeliveryList" as DL
+participant "grphalg:GraphAlgorithms" as GA
+participant "inv:Invoice" as I
+participant "cl:Client" as C
+participant "ad:Adress" as A
+participant "ga:Graph" as G
+
+
+
+DL -> GA : ga =  getGraphALgorithm()
+activate DL
+activate GA
+deactivate GA
+
+loop [ until end of list]
+DL -> I : inv = getInvoice()
+activate I
+deactivate I
+
+DL -> C : client = getClient(inv)
+activate C
+deactivate C
+
+DL -> A : ad = getAdress(client)
+activate A
+deactivate A
+
+DL -> DL : addAdressList(ad)
+end
+
+DL -> GA : combinationsGraph = graphAllCombinations(AdressList)
+activate GA
+
+
+GA --> G **: createNewGraph(AdressList)
+deactivate GA
+
+
+ DL -> GA :  mostEconomicPath = SuggestionMostEconomicPath(combinationsGraph,A);
+activate GA
+deactivate GA
+
+DL -> DL : mostEconomicPath
+
+DL -> DL : getDistance()
+
+@enduml

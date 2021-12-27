@@ -1,0 +1,5 @@
+AerealScenarious(distance;powerDrone;droneCharge;windangle;windSpeed;totalWeigth);
+15000;3000;63;0;0;7.0
+30000;3000;63;0;0;7.0
+10000;3000;63;0.0;0;7.0
+2500;3000;63;36;0;7.0

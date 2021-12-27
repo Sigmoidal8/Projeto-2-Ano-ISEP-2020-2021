@@ -1,0 +1,60 @@
+@startuml
+autonumber
+
+actor "Administrator" as UNR
+participant ":Register\nCourierUI" as UI
+participant ":RegisterCourier\nController" as CTRL
+participant ":Platform" as PLAT
+participant "cl:\nCourierList" as COURL
+participant "cour:Courier" as COUR
+
+activate UNR
+UNR -> UI : register courier
+activate UI
+UI --> UNR : asks for the data about the courier\n(i.e. name, NIF, Social Security number, email)
+deactivate UI
+
+UNR -> UI : enters the requested data
+activate UI
+
+UI -> CTRL : newCourier(name, NIF, Social Security number, email)
+activate CTRL
+
+CTRL -> PLAT: cl = getCourierList()
+activate PLAT
+deactivate PLAT
+
+CTRL -> COURL: cour = newCourier(name, NIF, Social Security number, email)
+activate COURL
+
+
+
+COURL --> COUR ** : create(name, NIF, Social Security number, email)
+deactivate COURL
+
+CTRL -> COURL : validateCourier(cour)
+activate COURL
+deactivate COURL
+
+deactivate CTRL
+UI --> UNR : displays the data, asking confirmation
+deactivate UI
+
+UNR -> UI : confirms
+activate UI
+
+UI -> CTRL: registerCourier()
+activate CTRL
+CTRL -> COURL: registerCourier(cour)
+activate COURL
+
+COURL -> COURL: validateCourier(cour)
+COURL -> COURL: addOrganization(org)
+deactivate COURL
+
+deactivate CTRL
+UI --> UNR : operation sucess
+deactivate UI
+
+deactivate UNR
+@enduml

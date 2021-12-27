@@ -1,0 +1,33 @@
+@startuml
+
+left to right direction
+
+class Platform{
+}
+
+class Administrator{
+  -String id
+  -String name
+  -String password
+}
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+}
+
+
+class ParkingLot {
+  -String id
+  -int totalSpots
+  -int chargeSpots
+}
+
+Platform"1" -- "*"Pharmacy : contains >
+Platform"1" -- "*"Administrator : contains >
+
+Pharmacy"1" -- "1..*" ParkingLot : contains >
+
+
+@enduml

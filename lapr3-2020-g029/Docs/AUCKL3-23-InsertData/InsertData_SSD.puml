@@ -1,0 +1,30 @@
+@startuml
+hide footbox
+autonumber
+actor "UnregisterUser" as user
+
+participant ":System" as SIST
+
+activate user
+
+user -> SIST : start client registration
+
+activate SIST
+    SIST --> user : requests all data (e.g.name, password, e-mail, NIF, street,\n doorNumber, postalCode, locality, decimalDegree1, decimalDegree2)
+deactivate SIST
+
+user -> SIST : Introduce data.
+
+activate SIST
+    SIST --> user : shows client data and asks for confirmation.
+deactivate SIST
+
+user -> SIST : confirms.
+
+activate SIST
+    SIST --> user : informs the unregisterUser of the success of the operation.
+deactivate SIST
+
+deactivate user
+
+@enduml

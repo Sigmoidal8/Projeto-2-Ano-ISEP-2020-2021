@@ -1,0 +1,29 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+
+class Platform{
+}
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+  -Adress adress
+  -Integer parkLimit
+}
+
+class Product {
+  -String id
+  -String name
+  -float price
+  -float weight
+
+}
+
+Platform"1" -- "*"Pharmacy : contains >
+Pharmacy"1" -- "*"Product : contains >
+
+@enduml

@@ -1,0 +1,7 @@
+Courier(String name, String nif, String socialSecurityNumber, String email, String password)
+Guilherme Sousa Melo;90817654;276665084;1191047@isep.ipp.pt;gsm123
+Guilherme Alves Ribeiro;18242161;184009246;guilhermeRibeiro@gmail.com;gar123
+Fabio Barros Azevedo;120422627;967583152;FabioBarrosAzevedo@dayrep.com;fba123
+Melissa Rodrigues Correia;989938039;85707158;MelissaRodriguesCorreia@jourrapide.com;mrc123
+Jose Barros Cabral;362308706;133092096;JoseBarrosCa@jourrapide.com;jnc123
+Amanda Fernandes Correia;362308707;551321908;AmandaFernandesCorreia@dayrep.com;afc123

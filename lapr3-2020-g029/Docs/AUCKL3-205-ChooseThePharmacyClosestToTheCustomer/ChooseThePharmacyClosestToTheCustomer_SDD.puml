@@ -1,0 +1,15 @@
+@startuml
+autonumber
+actor "Client" as CL
+
+activate CL
+CL -> ":System" : wants to perform a online delivery
+activate ":System"
+":System" --> CL :  suggests the closest pharmacy to his location and asks for confirmation
+deactivate ":System"
+CL -> ":System" : confirms
+activate ":System"
+":System" --> CL :  successful task
+deactivate ":System"
+deactivate CL
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+activate ADM
+ADM -> ":System" : start a delivery
+activate ":System"
+LOOP
+":System" --> ADM : show the list of deliveries remaining and ask\nthe administrator to choose the deliveries that\nhe wants the drone to deliver
+deactivate ":System"
+
+ADM -> ":System" : choose the deliveries
+activate ":System"
+END
+":System" --> ADM : show to the courier the list of available drones\nand asks the administrator to choose one
+deactivate ":System"
+
+ADM -> ":System" : chooses the drone
+activate ":System"
+":System" --> ADM : show to the courier the most economic rout\nbetween this deliveries and the sepend\nenergy to this route
+deactivate ":System"
+
+ADM -> ":System" : confirms the information
+activate ":System"
+":System" --> ADM : start the delivery
+deactivate ":System"
+
+deactivate ADM
+@enduml

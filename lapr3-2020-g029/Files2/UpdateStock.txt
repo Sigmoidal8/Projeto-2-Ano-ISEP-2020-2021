@@ -1,0 +1,2 @@
+pharmacyID,productID,stock
+1;Pfizer6;10

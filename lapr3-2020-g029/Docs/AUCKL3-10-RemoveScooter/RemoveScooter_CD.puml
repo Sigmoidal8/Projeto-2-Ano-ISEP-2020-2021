@@ -1,0 +1,77 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package UI <<Folder>> {
+  class RemoveScooterUI
+}
+
+package Controllers <<Folder>> {
+  class RemoveScooterController
+}
+
+package Domain <<Folder>> {
+  class Platform
+  class Scooter
+  class AvailaleScooterList
+  class PharmacyList
+  class Pharmacy
+}
+
+class RemoveScooterUI {
+}
+
+class RemoveScooterController {
+  +getPharmacyList()
+  +getPharmacy(pharmacyID)
+  +getAvailableScooterList(pharmacy)
+  +getScooter(scooterID)
+  +removeScooterFromAvailableScooterList(scooter,pharmacy)
+}
+
+class Platform {
+  +getPharmacyList()
+  +getPharmacy(pharmacyID)
+  +removeScooterFromAvailableScooterList(scooter,pharmacy)
+}
+
+class Scooter {
+-Integer exclusiveNumber
+-Double currentCharge
+-Double fullCharge
+-Boolean operational
+-crCode
+}
+
+class AvailaleScooterList{
+  +getAvailableScooterList(pharmacy)
+  +getScooter(scooterID)
+  +removeScooterFromAvailableScooterList(scooter,pharmacy)
+}
+
+class PharmacyList{
+  +getPharmacyList()
+  +getPharmacy(pharmacyID)
+}
+
+class Pharmacy{
+  -String id
+  -String designation
+  -String email
+  -Adress adress
+  -ParkingLot pl
+  +getAvailableScooterList(pharmacy)
+}
+
+RemoveScooterUI ..> RemoveScooterController
+
+RemoveScooterController ..> Platform
+RemoveScooterController ..> AvailaleScooterList
+
+
+AvailaleScooterList"1" -- "1..*" Scooter : has>
+Platform"1" -- "1" PharmacyList : has>
+PharmacyList"1" -- "1..*" Pharmacy : has>
+Pharmacy"1" -- "1" AvailaleScooterList : has>
+
+
+@enduml

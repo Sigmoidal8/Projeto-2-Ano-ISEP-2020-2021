@@ -1,0 +1,66 @@
+@startuml
+skinparam classAttributeIconSize 0
+top to bottom direction
+
+package UI <<Folder>> {
+  class DockScooterUI
+}
+
+package Controller <<Folder>> {
+  class DockScooterController
+  class AplicationPOT
+}
+
+package Model <<Folder>> {
+	class Platform
+  class ScooterList
+  class Scooter
+  class CourierList
+  class Courier
+}
+
+class DockScooterController{
+  +getScooterList()
+  +getCourierList()
+  +getCourier(email)
+  +getScooter(number)
+  +createFiles()
+}
+
+class Platform {
+  +getScooterList()
+  +getCourierList()
+}
+
+class AplicationPOT {
+  +getUserEmail()  
+}
+
+class ScooterList {
+	+getScooter(number)
+}
+
+class CourierList {
+  +getCourier(email)
+}
+
+class Scooter {
+}
+
+class Courier
+
+
+DockScooterUI ..>  DockScooterController
+DockScooterUI ..> AplicationPOT
+
+DockScooterController ..> Platform
+DockScooterController ..> ScooterList
+DockScooterController ..> CourierList
+
+Platform "1" --> "1" CourierList : has >
+Platform "1" --> "1" ScooterList : has >
+
+CourierList "1" --> "0..*" Courier : contains >
+ScooterList "1" --> "0..*" Scooter : contains >
+
+@enduml

@@ -1,0 +1,149 @@
+@startuml
+autonumber
+
+actor "Administrator" as USER
+participant ":DeliveryStatisticsUI" as UI
+participant ":MakeDeliveryController" as CTRL
+participant ":Platform" as PLAT
+participant "pl\n:PharmacyList" as PL
+participant "p\n:Pharmacy" as P
+participant "sl\n:AvailableScooterList" as SL
+participant "cl\n:RegisterCourier" as CL
+participant "dl\n:DroneList" as DL
+participant "list\n:ArrayList" as LIST
+participant "rDeli\n:deliveryList" as RDELI
+participant "Delivery\n:Delivery" as DLI
+
+activate USER
+USER -> UI : Want to simutate the costs of a delivery between a drone and a scooter
+activate UI
+UI ->CTRL : getPharmacyList()
+activate CTRL
+CTRL -> PLAT : pl = getPharmacyList()
+activate PLAT
+deactivate PLAT
+deactivate CTRL
+UI -> USER : shows the list of pharmacy and asks the courier to choose one
+deactivate UI
+
+USER -> UI :  chooses the pharmacy
+activate UI
+UI -> CTRL : getPharmacy(pharmacyID)
+activate CTRL
+CTRL -> PL : p = getPharmacy(pharmacyID)
+activate PL
+deactivate PL
+deactivate CTRL
+UI -> CTRL : getScooterList()
+activate CTRL
+CTRL -> PL : getAvailableScooterList(p)
+activate PL
+deactivate PL
+CTRL -> SL : sl = getScooterList(p)
+activate SL
+deactivate SL
+deactivate CTRL
+UI -> USER : Shows the list of scooters and asks the administrator to choose one
+deactivate UI
+
+USER -> UI :  chooses the scooter
+activate UI
+UI -> CTRL : getscooter(ExclusiveNumber)
+activate CTRL
+CTRL -> SL : s = getscooter(ExclusiveNumber)
+activate SL
+deactivate SL
+deactivate CTRL
+UI -> CTRL : getCouriersList()
+activate CTRL
+CTRL -> PLAT : cl = getCourierList()
+activate PLAT
+deactivate PLAT
+deactivate CTRL
+UI -> USER : shows the list of couriers and asks the administrator to choose one
+deactivate UI
+
+USER -> UI :  chooses the courier
+activate UI
+UI -> CTRL : getcourier(nif)
+activate CTRL
+CTRL -> CL : c = getcourier(nif)
+activate CL
+deactivate CL
+deactivate CTRL
+UI -> CTRL : getDroneList()
+activate CTRL
+CTRL -> PL : getDroneList()
+activate PL
+deactivate PL
+CTRL -> DL : dl = getDroneList()
+activate DL
+deactivate DL
+deactivate CTRL
+UI -> USER : shows the list of Drones and asks the administrator to choose one
+deactivate UI
+
+USER -> UI :  chooses the drone
+activate UI
+UI -> CTRL : getDrone(id)
+activate CTRL
+CTRL -> DL : d = getDrone(id)
+activate DL
+deactivate DL
+deactivate CTRL
+UI -> CTRL : getDeliveryList()
+activate CTRL
+CTRL -> PLAT : rDeli = getDeliveryList()
+activate PLAT
+deactivate PLAT
+CTRL -> RDELI : getDeliveryListPharmacy(p);
+activate RDELI
+deactivate RDELI
+deactivate CTRL
+loop [ until the dministrator select all of the pretended deliveries ]
+UI --> USER : Shows the list of deliveries of the pharmacy, neraby to the client\n adress, that are remaining and asks the courier to choose the\n deliveries that he wants to deliver
+deactivate UI
+
+USER -> UI : chooses the deliveries.
+activate UI
+UI -> CTRL : getChoosenDelivery(id)
+activate CTRL
+CTRL -> RDELI : delivery = verifyDelivery(id)
+activate RDELI
+deactivate RDELI
+CTRL -> LIST:  addDeliverySelected(delivery,scooter,courier)
+activate LIST
+deactivate LIST
+CTRL -> LIST:  addDeliverySelected(delivery,drone)
+activate LIST
+deactivate LIST
+end
+activate RDELI
+deactivate RDELI
+
+ref over PLAT, LIST, RDELI, DLI
+  AUCKL3-17_SD Calculate most economic route
+end ref
+
+note over PLAT, LIST : The above reference will return the shortest path\n and also its distance, which distance will be used in the next step
+
+CTRL -> RDELI : getEnergySpentInScooterDelivery(listDelivery, distance, scooter)
+activate RDELI
+deactivate RDELI
+CTRL -> RDELI : getEnergySpentInDroneDelivery(listDelivery, distance, drone)
+activate RDELI
+deactivate RDELI
+deactivate CTRL
+
+UI -->USER :Shows to administrator the most economic route between\n this deliveryies and the spend energy to this route for\n both veicheles (scooters and drones) .
+deactivate UI
+
+USER -> UI : confirms the information.
+activate UI
+
+UI --> USER: Ends the simulation.
+
+deactivate CTRL
+deactivate UI
+
+@enduml

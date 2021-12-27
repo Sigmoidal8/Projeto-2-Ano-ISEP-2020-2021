@@ -1,0 +1,70 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package UI <<Folder>> {
+  class UpdateStockUI
+}
+
+package Controllers <<Folder>> {
+  class UpdateStockController
+}
+
+package Domain <<Folder>> {
+  class Platform
+  class Product
+  class PharmacyList
+  class Pharmacy
+  class ProductList
+}
+
+class UpdateStockUI {
+}
+
+class UpdateStockController {
+  +getPharmacyList()
+  +getPharmacy(pharmacyID)
+  +getProductList()
+  +getProduct(productID)
+  +setStock(stock)
+}
+
+class Platform {
+  +getPharmacyList()
+}
+
+class Product {
+  -String id
+  -String nome
+  -float price
+  -float weight
+  +setStock(stock)
+}
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+  -Adress adress
+  -Integer parkLimit
+  +getProductList()
+}
+
+class PharmacyList{
+  +getPharmacy(pharmacyID)
+}
+
+class ProductList{
+  +getProduct(productID)
+}
+
+UpdateStockUI ..> UpdateStockController
+
+UpdateStockController ..> Platform
+UpdateStockController ..> PharmacyList
+
+PharmacyList"1" -- "1..*" Pharmacy : has>
+ProductList"1" -- "1..*" Product : has>
+Pharmacy"1" -- "1" ProductList : has>
+
+
+@enduml

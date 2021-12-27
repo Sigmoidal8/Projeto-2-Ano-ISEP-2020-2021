@@ -1,0 +1,25 @@
+Client(String name, String password, String email, String nif,Adress adress)
+Centro Comercial Plaza;lapr32021;123123@isep.ipp.pt;587227889;Rua Eng. Duarte Pacheco;126;4470-332;Maia;41.23339;-8.62153
+Fishisco Pescada LDA;lapr32021;1190780@isep.ipp.pt;681911380;Rua Faia;13;4300-326;Porto;41.14431;-8.57521
+Centro Comercial Stop;lapr32021;1191051@isep.ipp.pt;553443516;Rua do Heroismo;329;4300-096;Porto;41.14604;-8.59493
+Tecofix Porto;lapr32021;1191091@isep.ipp.pt;558543516;Rua Pedro Jose Ferreira;221;4510-706;Fânzeres;41.15396;-8.54704
+Centro Comercial de Cedofeita;lapr32021;cedofeitacc@gmail.com;557853516;Rua de Cedofeita;451;4050-181;Porto;41.15460;-8.61913
+Shopping Bralisia;lapr32021;1190622@isep.ipp.pt;55349616;Praca de Mouzinho de Albuquerque;113;4100-359;Porto;41.15756;-8.62782
+Pereiro Post Office;lapr32021;1190986@isep.ipp.pt;73443516;Praca Afrânio Peixoto;100;4100-214;Porto;41.17253;-8.65489
+Centro Comercial do Carvalhido;lapr32021;t27@outlook.pt;853443516;Rua do Lugarinho;324;4250-116;Porto;41.16777;-8.63020
+CTT Campo Alegre;lapr32021;tiagomaga16@gmail.com;953443516;Rua do Campo alegre;254;4150-169;Porto;41.15291;-8.63108
+Centro Comercial New city;lapr32021;miguelsilvadrag2001@gmail.com;653443516;Avenida Serpa Pinto;487;4450-149;Matosinhos;41.18231543616445;-8.692753371192653
+CTT;lapr32021;sandromoura24@hotmail.com;353443516;Praca ve de Abril;49;4200-422;Porto;41.17157;-8.61281
+Centro Comercial Parque;lapr32021;sambrota567@gmail.com;153443516;Rua de Alfredo Cunha;155;4450-023;Matosinhos;41.1845035096369;-8.682053978237262
+Posto de Correios de Conde Ferreira;lapr32021;drumigas1302@gmail.com;853443516;Rua das Merces;152;4200-995;Porto;41.17124;-8.58816
+Traditional Shopping Street;lapr32021;josemiguelforno2001@gmail.com;253443516;Rua de Santa Catarina;258;4000-267;Porto;41.15350;-8.60473
+Posto de Correios Forno;lapr32021;raulreiscoelho2011@gmail.com;957443516;Urbanizacao Maos a Obra;6;4435-318;Rio Tinto;41.19263;-8.57587
+Mar Shopping;lapr32021;queroiraopowerpointonline@hotmail.com;559643516;Avenida Dr. Oscar Lopes;147;4450-337;Leça da Palmeira;41.209296306391764;-8.685698313569874
+Centro de Distruibuicao dos Correios de Ermesinde;lapr32021;ruiribeiro11111@gmail.com;553463516;Rua das Macieiras;159;4445-271;Ermesinde;41.20266;-8.54496
+Norte Shopping;lapr32021;calofdut.2105@gmail.com;554443516;Rua Sara Afonso;15;4460-841;Sra. da Hora;41.18095;-8.654566
+Post Office Valongo;lapr32021;1231051@isep.ipp.pt;553477716;Avenida 5 de Outubro;153;4440-999;Valongo;41.19013;-8.49760
+Alameda Shop;lapr32021;1190778@isep.ipp.pt;554443516;Rua Bairro do comercio;149;4350-149;Porto;41.163784;-8.58418
+Arrabida Shopping;lapr32021;11451051@isep.ipp.pt;588843516;Praceta de Henrique Moreira;244;4400-346;Vila Nova de Gaia;41.14151;-8.63643
+Shop;lapr32021;1191561@isep.ipp.pt;556663516;Praca de Carlos Alberto;109;4050-158;Porto;41.14794;-8.61583
+Praceta Salvador Caetano;lapr32021;11781051@isep.ipp.pt;522243516;Rua Jau;35;4430-999;Vila Nova de Gaia;41.13317;-8.60815
+Espiral Colossal;lapr32021;1198951@isep.ipp.pt;566643516;R. de Alexandre Herculano;134;4000-051;Porto;41.14367;-8.60340

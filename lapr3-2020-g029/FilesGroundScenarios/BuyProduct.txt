@@ -1,0 +1,11 @@
+email;idxProduto;quantidade;verify(loop até -1);0 para pagamento normal, 1 para créditos;ccInfo
+123123@isep.ipp.pt;0;1;-1;0;11111111/12:05:2024/1234;(Cenário A1.1)
+raulreiscoelho2011@gmail.com;1;1;-1;0;11111111/12:05:2024/1234
+raulreiscoelho2011@gmail.com;0;1;-1;0;11111111/12:05:2024/1234;(Cenário A2.1)
+ruiribeiro11111@gmail.com;1;1;-1;0;11111111/12:05:2024/1234
+1191051@isep.ipp.pt;0;1;-1;0;11111111/12:05:2024/1234;(Cenário A3.1)
+1198951@isep.ipp.pt;1;1;-1;0;11111111/12:05:2024/1234
+
+
+
+

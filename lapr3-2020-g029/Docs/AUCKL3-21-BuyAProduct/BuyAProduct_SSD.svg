@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="409px" preserveAspectRatio="none" style="width:637px;height:409px;" version="1.1" viewBox="0 0 637 409" width="637px" zoomAndPan="magnify"><defs><filter height="300%" id="f16jrzriho3mgp" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f16jrzriho3mgp)" height="286.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="39.5" y="98.2969"/><rect fill="#FFFFFF" filter="url(#f16jrzriho3mgp)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="569.5" y="119.4297"/><rect fill="#FFFFFF" filter="url(#f16jrzriho3mgp)" height="68.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="569.5" y="177.6953"/><rect fill="#FFFFFF" filter="url(#f16jrzriho3mgp)" height="51.2656" style="stroke:#A80036;stroke-width:1.0;" width="10" x="569.5" y="275.2266"/><rect fill="#FFFFFF" filter="url(#f16jrzriho3mgp)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="569.5" y="355.625"/><rect fill="#FFFFFF" filter="url(#f16jrzriho3mgp)" height="90.5313" style="stroke:#000000;stroke-width:2.0;" width="613" x="10" y="192.6953"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="44" x2="44" y1="88.2969" y2="402.7578"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="574" x2="574" y1="88.2969" y2="402.7578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="20" y="84.9951">Client</text><ellipse cx="44.5" cy="15" fill="#FEFECE" filter="url(#f16jrzriho3mgp)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M44.5,23 L44.5,50 M31.5,31 L57.5,31 M44.5,50 L31.5,65 M44.5,50 L57.5,65 " fill="none" filter="url(#f16jrzriho3mgp)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f16jrzriho3mgp)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="73" x="536" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="543" y="72.9951">:System</text><rect fill="#FFFFFF" filter="url(#f16jrzriho3mgp)" height="286.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="39.5" y="98.2969"/><rect fill="#FFFFFF" filter="url(#f16jrzriho3mgp)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="569.5" y="119.4297"/><rect fill="#FFFFFF" filter="url(#f16jrzriho3mgp)" height="68.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="569.5" y="177.6953"/><rect fill="#FFFFFF" filter="url(#f16jrzriho3mgp)" height="51.2656" style="stroke:#A80036;stroke-width:1.0;" width="10" x="569.5" y="275.2266"/><rect fill="#FFFFFF" filter="url(#f16jrzriho3mgp)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="569.5" y="355.625"/><polygon fill="#A80036" points="557.5,115.4297,567.5,119.4297,557.5,123.4297,561.5,119.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="49.5" x2="563.5" y1="119.4297" y2="119.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="56.5" y="114.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="69.5" y="114.3638">Start Buying Procedure.</text><polygon fill="#A80036" points="60.5,144.5625,50.5,148.5625,60.5,152.5625,56.5,148.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="54.5" x2="573.5" y1="148.5625" y2="148.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="66.5" y="143.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="391" x="79.5" y="143.4966">Shows the list of Pharmacies, asking for the selection of one.</text><polygon fill="#A80036" points="557.5,173.6953,567.5,177.6953,557.5,181.6953,561.5,177.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="49.5" x2="563.5" y1="177.6953" y2="177.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="8" x="56.5" y="172.6294">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131" x="68.5" y="172.6294">Selects a pharmacy.</text><path d="M10,192.6953 L88,192.6953 L88,199.6953 L78,209.6953 L10,209.6953 L10,192.6953 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="90.5313" style="stroke:#000000;stroke-width:2.0;" width="613" x="10" y="192.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="33" x="25" y="205.7622">loop</text><polygon fill="#A80036" points="60.5,242.0938,50.5,246.0938,60.5,250.0938,56.5,246.0938" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="54.5" x2="573.5" y1="246.0938" y2="246.0938"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="66.5" y="233.4614">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="479" x="79.5" y="225.895">Shows the list of products of the pharmacy, asking for the selection of one</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="107" x="83.5" y="241.0278">and it's quantity.</text><polygon fill="#A80036" points="557.5,271.2266,567.5,275.2266,557.5,279.2266,561.5,275.2266" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="49.5" x2="563.5" y1="275.2266" y2="275.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="56.5" y="270.1606">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="272" x="69.5" y="270.1606">Selects a product and inserts the quantity.</text><polygon fill="#A80036" points="60.5,322.4922,50.5,326.4922,60.5,330.4922,56.5,326.4922" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="54.5" x2="573.5" y1="326.4922" y2="326.4922"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="66.5" y="313.8599">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="332" x="79.5" y="306.2935">shows the products selected and asks for the credit</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="344" x="79.5" y="321.4263">card information(e.g. number, validity date and CCV).</text><polygon fill="#A80036" points="557.5,351.625,567.5,355.625,557.5,359.625,561.5,355.625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="49.5" x2="563.5" y1="355.625" y2="355.625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="56.5" y="350.5591">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="222" x="69.5" y="350.5591">inserts the credit card information.</text><polygon fill="#A80036" points="55.5,380.7578,45.5,384.7578,55.5,388.7578,51.5,384.7578" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="49.5" x2="573.5" y1="384.7578" y2="384.7578"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="61.5" y="379.6919">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="270" x="74.5" y="379.6919">informs about the sucess of the operation</text><!--MD5=[668d264ed9335f8c34230ef3f96a835c]
+@startuml
+hide footbox
+autonumber
+actor "Client" as CL
+
+participant ":System" as SIST
+
+activate CL
+
+CL -> SIST : Start Buying Procedure.
+
+activate SIST
+    SIST - -> CL : Shows the list of Pharmacies, asking for the selection of one.
+deactivate SIST
+
+CL -> SIST : Selects a pharmacy.
+
+activate SIST
+loop
+    SIST - -> CL : Shows the list of products of the pharmacy, asking for the selection of one \n and it's quantity.
+deactivate SIST
+
+
+CL -> SIST : Selects a product and inserts the quantity.
+activate SIST
+end
+
+activate SIST
+    SIST - -> CL : shows the products selected and asks for the credit \ncard information(e.g. number, validity date and CCV).
+deactivate SIST
+
+CL -> SIST : inserts the credit card information.
+
+activate SIST
+    SIST - -> CL : informs about the sucess of the operation
+deactivate SIST
+
+deactivate CL
+@enduml
+
+PlantUML version 1.2020.27beta7(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

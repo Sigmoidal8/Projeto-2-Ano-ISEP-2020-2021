@@ -1,0 +1,65 @@
+@startuml
+
+package UI <<Folder>> {
+  class InsertPharmacyDataUI
+}
+
+package Controllers <<Folder>> {
+  class InsertPharmacyDataController
+}
+
+package Domain <<Folder>> {
+  class PharmacyList
+  class Pharmacy
+  class Adress
+  class Platform
+  class ParkingLot
+}
+
+class InsertPharmacyDataUI {
+}
+
+class InsertPharmacyDataController {
+    +createAdress(street,locality,postalCode,decimalDegree1,decimalDegree2)
+    +createPharmacy(designation,email,emailPassword)
+    +createParkingLot(parkingLotSpots,parkingLotChargeSpots,type)
+    +registerPharmacy()
+}
+
+class PharmacyList {
+    +createPharmacy(designation,email,emailPassword,adress,parkingLot)
+    +validatePharmacy(pharmacy)
+    +addPharmacy(pharmacy)
+}
+
+class Adress {
+    +createAdress(street,locality,postalCode,decimalDegree1,decimalDegree2)
+}
+
+class Pharmacy {
+    +createPharmacy(designation,email,emailPassword,adress)
+}
+
+class Platform {
+    +getPharmacyList()
+}
+
+class ParkingLot {
+    +createParkingLot(parkingLotSpots,parkingLotChargeSpots,type)
+}
+
+InsertPharmacyDataUI ..> InsertPharmacyDataController
+
+InsertPharmacyDataController .> ParkingLot
+InsertPharmacyDataController .> Adress
+InsertPharmacyDataController .> Platform
+InsertPharmacyDataController ..> PharmacyList
+
+Platform "1" -- "1" PharmacyList : has>
+
+PharmacyList "1" -- "*" Pharmacy : has>
+
+Pharmacy "1" -- "1" Adress : has>
+Pharmacy "1" - "1..*" ParkingLot : has>
+
+@enduml

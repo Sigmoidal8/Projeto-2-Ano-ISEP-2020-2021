@@ -1,0 +1,105 @@
+@startuml
+autonumber
+
+actor "Courier" as c
+participant ":MakeDeliveryUI" as UI
+participant ":MakeDeliveryController" as CTRL
+participant ":Platform" as PLAT
+participant "pl\n:PharmacyList" as PL
+participant "sl\n:AvailableScooterList" as SL
+participant "list\n:ArrayList" as LIST
+participant "rDeli\n:deliveryList" as RDELI
+participant "Delivery\n:Delivery" as DLI
+
+activate c
+c -> UI : Wants to start a delivery
+activate UI
+UI ->CTRL : getPharmacyList()
+activate CTRL
+CTRL -> PLAT : pl = getPharmacyList()
+activate PLAT
+deactivate PLAT
+deactivate CTRL
+UI -> c : shows the list of pharmacy and asks the courier to choose one
+deactivate UI
+
+c -> UI :  chooses the pharmacy
+activate UI
+UI -> CTRL : getPharmacy()
+activate CTRL
+CTRL -> PL : p = getPharmacy()
+activate PL
+deactivate PL
+deactivate CTRL
+UI -> CTRL : getScooterList()
+activate CTRL
+CTRL -> PLAT : sl = getScooterList()
+activate PLAT
+deactivate PLAT
+deactivate CTRL
+UI -> c : shows the list of scooters and asks the courier to choose one
+deactivate UI
+
+c -> UI :  chooses the scooter
+activate UI
+UI -> CTRL : getScooter(exclusiveNumber)
+activate CTRL
+CTRL -> SL : S = getScooter(exclusiveNumber)
+activate SL
+deactivate SL
+deactivate CTRL
+UI -> CTRL : getDeliveryList()
+activate CTRL
+CTRL -> PLAT : rDeli = getDeliveryList()
+activate PLAT
+deactivate PLAT
+CTRL -> RDELI : getDeliveryListPharmacy(p);
+activate RDELI
+deactivate RDELI
+deactivate CTRL
+loop [ until the courier select all of the pretended deliveries ]
+UI --> c : shows the list of deliveries of that pharmacy that are remaining and asks\n the courier to choose the deliveries that he wants to deliver
+deactivate UI
+
+c -> UI : chooses the deliveries.
+activate UI
+UI -> CTRL : getChoosenDelivery(id)
+activate CTRL
+CTRL -> RDELI : delivery = verifyDelivery(id)
+activate RDELI
+deactivate RDELI
+alt [ if the weight sum of products of that delivery is less than the courier's max weight backpack ]
+CTRL -> LIST:  addDeliverySelected(delivery)
+activate LIST
+deactivate LIST
+CTRL -> RDELI:  removeDeliveryFormList(delivery)
+activate RDELI
+deactivate RDELI
+end
+end
+activate RDELI
+deactivate RDELI
+
+ref over PLAT, LIST, RDELI, DLI
+  AUCKL3-17_SD Calculate most economic route
+end ref
+
+note over PLAT, LIST : The above reference will return the shortest path\n and also its distance, which distance will be used in the next step
+
+CTRL -> RDELI : getEnergySpentInDelivery(listDelivery, distance, scooter)
+activate RDELI
+deactivate RDELI
+deactivate CTRL
+
+UI --> c : shows to courier the most economic route between\n this deliveries and the energy spent on this route.
+deactivate UI
+
+c -> UI : confirms the information.
+activate UI
+
+UI --> c: start the delivery.
+
+deactivate CTRL
+deactivate UI
+
+@enduml

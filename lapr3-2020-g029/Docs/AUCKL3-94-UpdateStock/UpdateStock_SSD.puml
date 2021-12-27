@@ -1,0 +1,37 @@
+
+@startuml
+hide footbox
+autonumber
+actor "Administrator" as AD
+
+participant ":System" as SIST
+
+activate AD
+
+AD -> SIST : Start stock update.
+
+activate SIST
+    SIST --> AD : Shows the list of Pharmacies, asking for the selection of one.
+deactivate SIST
+
+AD -> SIST : Selects a pharmacy.
+
+activate SIST
+    SIST --> AD : Shows the list of products of that pharmacy, asking for the selection of one.
+deactivate SIST
+
+AD -> SIST : Selects a product .
+
+activate SIST
+    SIST --> AD : asks the administrator to insert the new stock for the product.
+deactivate SIST
+
+AD -> SIST : inserts the new stock.
+
+activate SIST
+    SIST --> AD : saves the data and presents it to the administrator.
+deactivate SIST
+
+deactivate AD
+
+@enduml

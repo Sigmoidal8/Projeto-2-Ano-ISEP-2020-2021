@@ -1,0 +1,62 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+
+class Platform{
+
+}
+
+class Delivery {
+  -String id
+  -date date_delivery 
+  -double totalWeight
+  -Invoice invoice
+  -Pharmacy pharmacy
+  
+}
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+  -Adress adress
+  -ParkingLot lotation
+}
+
+class Courier{
+-String NIF
+-String name
+-String password
+-String email
+-String socialSecurityNumber
+}
+
+class Scooter{
+-Integer exclusiveNumber
+-Double fullCharge
+-Double currentCharge
+-Double power
+-Boolean operational
+}
+
+class Drone{
+-Integer id
+-Double fullCharge
+-Double currentCharge
+-Double power
+}
+
+Platform"1" -- "0..*"Pharmacy : has >
+Platform"1" -- "0..*"Courier : has >
+
+Pharmacy"1" -- "0..*"Scooter : has >
+Pharmacy"1" -- "0..*"Drone : has >
+
+Courier"0..*" -- "0..*" Delivery : make >
+Courier"0..*" -- "0..*" Scooter : use >
+
+Drone"0..*" -- "0..*" Delivery : make >
+
+@enduml

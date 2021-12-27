@@ -1,0 +1,17 @@
+@startuml
+autonumber
+actor "Administrator" as UNR
+
+activate UNR
+UNR -> ":System" : wants to remove a scooter from the pharmacy with this id
+activate ":System"
+":System" --> UNR : shows the available scooter list of this pharmacy and\n asks to choose the scooter he wants to remove
+deactivate ":System"
+
+UNR -> ":System" : chooses the scooter he wants to remove
+activate ":System"
+":System" --> UNR : removes the scooter from the list
+deactivate ":System"
+
+deactivate UNR
+@enduml

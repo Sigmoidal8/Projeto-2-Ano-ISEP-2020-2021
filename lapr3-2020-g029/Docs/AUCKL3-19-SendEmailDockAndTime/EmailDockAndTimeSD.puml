@@ -1,0 +1,57 @@
+@startuml
+autonumber
+
+actor "Courier" as C
+participant ":DockScooterUI" as UI
+participant ":DockScooterController" as CTRL
+participant ":Platform" as PLAT
+participant ":AplicationPOT" as POT
+participant "sl\n:ScooterList" as SL
+participant "cl\n:CourierList" as CL
+participant "s\n:Scooter" as S
+participant "c\n:Courier" as Cl
+
+
+activate C
+C -> UI : docks a scooter
+activate UI
+UI -> CTRL : sl = getScooterList()
+activate CTRL
+CTRL -> PLAT : sl = getScooterList()
+activate PLAT
+deactivate PLAT
+deactivate CTRL
+UI -> CTRL : cl = getCourierList()
+activate CTRL
+CTRL -> PLAT : cl = getCourierList()
+activate PLAT
+deactivate PLAT
+deactivate CTRL
+UI --> C : shows the list of scooters and\n asks the user to select the docked one
+deactivate UI
+
+C -> UI : selects the scooter
+activate UI
+UI -> POT : email = getUserEmail()
+activate POT
+deactivate POT
+UI -> CTRL : cl = getCourier(email)
+activate CTRL 
+CTRL -> CL : c = getCourier(email)
+activate CL 
+deactivate CL
+deactivate CTRL
+UI -> CTRL : s = getScooter(number)
+activate CTRL
+CTRL -> SL : s = getScooter(number)
+activate SL
+deactivate SL
+deactivate CTRL
+UI -> CTRL : createFiles()
+activate CTRL
+deactivate CTRL
+UI --> C : email sent
+deactivate UI
+
+deactivate C
+@enduml

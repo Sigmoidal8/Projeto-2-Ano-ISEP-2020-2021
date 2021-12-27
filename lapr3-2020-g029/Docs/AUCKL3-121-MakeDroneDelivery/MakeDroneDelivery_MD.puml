@@ -1,0 +1,62 @@
+@startuml
+
+left to right direction
+
+class Platform{
+}
+
+class Administrator{
+  -String id
+  -String name
+  -String password
+}
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+}
+
+class Adress {
+  -String id
+  -String doorNumber
+  -String street
+  -String locality
+  -String postalCode
+  -Double DecimalDegree1
+  -Double DecimalDegree2
+}
+
+class ParkingLot {
+  -String id
+  -int totalSpots
+  -int chargeSpots
+}
+
+class Drone {
+  -Integer id
+  -Double fullCharge
+  -Double currentCharge
+  -Double power
+}
+
+class Delivery {
+  -String id
+  -Date dateDelivery
+  -double totalWeight
+}
+
+
+Platform"1" -- "*"Pharmacy : contains >
+Platform"1" -- "*"Administrator : contains >
+
+Pharmacy"1" -- "1..*" ParkingLot : contains >
+Pharmacy"1" -- "1" Adress : contains >
+Pharmacy"1" -- "0..*" Drone : has >
+Pharmacy"1" -- "0..*" Delivery : has >
+
+Administrator"1" - "1" Pharmacy : registers >
+
+
+
+@enduml

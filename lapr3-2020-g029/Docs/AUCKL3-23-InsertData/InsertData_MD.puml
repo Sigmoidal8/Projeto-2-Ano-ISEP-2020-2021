@@ -1,0 +1,35 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+
+class Platform{
+
+}
+
+class Adress {
+ -String street
+ -int doorNumber
+ -String postalCode
+ -String locality
+ -Float decimalDegree1
+ -Float decimalDegree2
+}
+
+class Client{
+-String id
+-String name
+-String password
+-String email
+-String NIF
+-String IBAN
+-double credits
+-Adress address
+}
+
+Platform"1" -- "0..*"Client : has >
+
+Client"1" -- "1" Adress : has >
+
+@enduml

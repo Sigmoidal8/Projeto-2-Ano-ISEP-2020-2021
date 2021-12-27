@@ -1,0 +1,55 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package UI <<Folder>> {
+  class AddPharmacyUI
+}
+
+package Controllers <<Folder>> {
+  class AddPharmacyController
+}
+
+package Domain <<Folder>> {
+class Platform
+class PharmacyList
+class Pharmacy
+}
+class AddPharmacyUI {
+}
+
+class AddPharmacyController {
+  +getPharmacyList()
+  +getPharmacy(pharmacyID)
+}
+
+class Platform {
+  +getPharmacyList()
+}
+
+class PharmacyList {
+  +getPharmacyList()
+  +getPharmacy(pharmacyID)
+  +removePharmacyFromList(pharmacy)
+}
+
+class Pharmacy{
+-String id
+-String designation
+-String password
+-String email
+-Adress address
+-ParkingLot park
+-ProductList pl
+-AvailableScooterList asl
+}
+
+AddPharmacyUI ..> AddPharmacyController
+
+AddPharmacyController ..> Platform
+AddPharmacyController ..> PharmacyList
+
+Platform ..> PharmacyList
+
+PharmacyList"1" -- "1..*" Pharmacy : has>
+
+@enduml

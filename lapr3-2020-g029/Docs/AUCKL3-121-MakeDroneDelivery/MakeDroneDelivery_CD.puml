@@ -1,0 +1,86 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package UI <<Folder>> {
+  class MakeDeliveryUI
+}
+
+package Controllers <<Folder>> {
+  class MakeDeliveryController
+}
+
+package Domain <<Folder>> {
+  class Platform
+  class DeliveryList
+  class Delivery
+  class AvailableDroneList
+  class PharmacyList
+  class Pharmacy
+}
+
+class MakeDeliveryUI {
+}
+
+class Pharmacy{
+  -String id
+  -String designation
+  -String email
+  -String password
+  -Adress adress
+  -ParkingLot park
+  -ProductList pl
+  -AvaivableDroneList asl
+}
+
+class MakeDeliveryController {
+  +getPharmacyList()
+  +getPharmacy()
+  +getDroneList()
+  +getDrone(id)
+  +getDeliveryList()
+  +getChoosenDelivery(id)
+  +addDeliverySelected(delivery)
+}
+
+class Platform {
+  +getPharmacyList()
+  +getDroneList()
+  +getDeliveryList()
+}
+
+class PharmacyList {
+  +getPharmacy()
+}
+
+class AvailableDroneList {
+  +getDrone(id)
+}
+
+class Delivery {
+  -String id
+  -date dateDelivery
+  -double totalWeight
+}
+
+class DeliveryList {
+  +getDeliveryListPharmacy(p)
+  +verifyDelivery(id)
+  +removeDeliveryFormList(delivery)
+  +getEnergySpentInDelivery(distance, deliveryListPharmacy)
+}
+
+MakeDeliveryUI ..> MakeDeliveryController
+
+MakeDeliveryController ..> Platform
+MakeDeliveryController ..> DeliveryList
+
+DeliveryList"1" -- "1..*" Delivery : has>
+
+Platform"1" -- "1" PharmacyList : has>
+
+PharmacyList"1" -- "0..*" Pharmacy : has>
+
+Pharmacy"1" -- "1" AvailableDroneList : has>
+Pharmacy"1" - "*" Delivery: has>
+
+@enduml

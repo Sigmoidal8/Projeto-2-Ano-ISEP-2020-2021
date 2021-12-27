@@ -1,0 +1,61 @@
+@startuml
+autonumber
+
+actor "Client" as CL
+participant ":BuyAProductUI" as UI
+participant ":BuyAProductController" as CTRL
+participant "AplicationPOT" as POT
+participant "app\n:AplicationPOT" as APOT
+participant "session\n:UserSession" as SES
+participant ":Platform" as PLAT
+participant "rcl\n:ClientRegister" as RCL
+participant "pl\n:PharmacyList" as PL
+participant "p\n:Pharmacy" as P
+participant "p\n:Client" as C
+
+
+activate CL
+CL -> UI :  Start Buying Procedure.
+activate UI
+
+
+UI -> CTRL : c = getCLient()
+activate CTRL
+CTRL -> POT : app = getInstance()
+activate POT
+deactivate POT
+CTRL -> APOT : session = getAtualSession()
+activate APOT
+deactivate APOT
+CTRL -> SES : email = getUserEmai()
+activate SES
+deactivate SES
+CTRL -> PLAT : rcl = getClientRegister()
+activate PLAT
+deactivate PLAT
+CTRL -> RCL : client = getClientByEmail(email)
+activate RCL
+deactivate RCL
+CTRL -> RCL : clientAdress = getAdress(client)
+activate RCL
+deactivate RCL
+deactivate CTRL
+
+UI -> CTRL : pl = getPharmacyList()
+activate CTRL
+CTRL -> PLAT : pl = getPharmacyList()
+activate PLAT
+deactivate PLAT
+deactivate CTRL
+UI --> CL : shows the recommend pharmacy and asks for confirmation
+
+UI -> CTRL : recommendPharmacy = fowardDeliveryToClosestPharmacy(pl, clientAdress)
+activate CTRL
+CTRL -> PL : recommendPharmacy = fowardDeliveryToClosestPharmacy(pl, clientAdress)
+activate PL
+deactivate PL
+deactivate CTRL
+UI --> CL : shows the recommend pharmacy and asks for confirmation
+
+deactivate UI
+deactivate CL

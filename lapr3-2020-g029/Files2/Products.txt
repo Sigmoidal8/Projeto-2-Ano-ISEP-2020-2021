@@ -1,0 +1,19 @@
+Product(String nome, float price, float weight,int stock,idxPharmacy)
+Avaxim;6.68;0.27;17;1
+Havrix;39.44;0.39;15;1
+Twinrix;34.42;0.69;16;1
+Stamaril;23.54;0.15;13;1
+Monovalente Rotarix;10.92;0.53;7;1
+Pentavalente Rotateq;33.89;0.92;9;1
+CanSino Biologics;26.73;0.64;10;1
+Pfizer;35.51;0.28;11;1
+AstraZeneca;28.29;0.93;12;1
+Avaxim;6.68;0.27;17;0
+Havrix;39.44;0.39;15;0
+Twinrix;34.42;0.69;16;0
+Stamaril;23.54;0.15;13;0
+Monovalente Rotarix;10.92;0.53;7;0
+Pentavalente Rotateq;33.89;0.92;9;0
+CanSino Biologics;26.73;0.64;10;0
+Pfizer;35.51;0.28;11;0
+AstraZeneca;28.29;0.93;12;0

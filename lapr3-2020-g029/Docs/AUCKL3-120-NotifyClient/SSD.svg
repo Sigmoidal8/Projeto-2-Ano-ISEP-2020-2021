@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="423px" preserveAspectRatio="none" style="width:382px;height:423px;" version="1.1" viewBox="0 0 382 423" width="382px" zoomAndPan="magnify"><defs><filter height="300%" id="f1mk67rk2l9523" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1mk67rk2l9523)" height="297.0703" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="40.5" y="96.2969"/><rect fill="#FFFFFF" filter="url(#f1mk67rk2l9523)" height="44.2656" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="319.5" y="117.4297"/><rect fill="#FFFFFF" filter="url(#f1mk67rk2l9523)" height="63.875" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="319.5" y="190.8281"/><rect fill="#FFFFFF" filter="url(#f1mk67rk2l9523)" height="36.1328" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="319.5" y="283.8359"/><rect fill="#FFFFFF" filter="url(#f1mk67rk2l9523)" height="44.2656" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="319.5" y="349.1016"/><rect fill="#FFFFFF" filter="url(#f1mk67rk2l9523)" height="86.0078" style="stroke: #000000; stroke-width: 2.0;" width="358.5" x="13" y="205.8281"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="45" x2="45" y1="86.2969" y2="411.3672"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="324.5" x2="324.5" y1="86.2969" y2="411.3672"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="39" x="23" y="82.9951">Client</text><ellipse cx="45.5" cy="13" fill="#FEFECE" filter="url(#f1mk67rk2l9523)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M45.5,21 L45.5,48 M32.5,29 L58.5,29 M45.5,48 L32.5,63 M45.5,48 L58.5,63 " fill="none" filter="url(#f1mk67rk2l9523)" style="stroke: #A80036; stroke-width: 2.0;"/><rect fill="#FEFECE" filter="url(#f1mk67rk2l9523)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="70" x="287.5" y="51"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="294.5" y="70.9951">:System</text><rect fill="#FFFFFF" filter="url(#f1mk67rk2l9523)" height="297.0703" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="40.5" y="96.2969"/><rect fill="#FFFFFF" filter="url(#f1mk67rk2l9523)" height="44.2656" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="319.5" y="117.4297"/><rect fill="#FFFFFF" filter="url(#f1mk67rk2l9523)" height="63.875" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="319.5" y="190.8281"/><rect fill="#FFFFFF" filter="url(#f1mk67rk2l9523)" height="36.1328" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="319.5" y="283.8359"/><rect fill="#FFFFFF" filter="url(#f1mk67rk2l9523)" height="44.2656" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="319.5" y="349.1016"/><polygon fill="#A80036" points="307.5,113.4297,317.5,117.4297,307.5,121.4297,311.5,117.4297" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="50.5" x2="313.5" y1="117.4297" y2="117.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="9" x="57.5" y="112.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="141" x="70.5" y="112.3638">Want to start an order</text><polygon fill="#A80036" points="61.5,157.6953,51.5,161.6953,61.5,165.6953,57.5,161.6953" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="55.5" x2="323.5" y1="161.6953" y2="161.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="9" x="67.5" y="149.063">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="198" x="80.5" y="141.4966">shows the list of pharmacy and</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="124" x="80.5" y="156.6294">asks to choose one</text><polygon fill="#A80036" points="307.5,186.8281,317.5,190.8281,307.5,194.8281,311.5,190.8281" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="50.5" x2="313.5" y1="190.8281" y2="190.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="9" x="57.5" y="185.7622">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="146" x="70.5" y="185.7622">chooses the pharmacy</text><path d="M13,205.8281 L90,205.8281 L90,212.8281 L80,222.8281 L13,222.8281 L13,205.8281 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="86.0078" style="stroke: #000000; stroke-width: 2.0;" width="358.5" x="13" y="205.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="32" x="28" y="218.895">loop</text><a href="" target="_top" title="" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title="" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="174" x="105" y="218.0386">until the client select all of</text></a><a href="" target="_top" title="" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title="" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="151" x="105" y="230.8433">the pretended products</text></a><polygon fill="#A80036" points="61.5,250.7031,51.5,254.7031,61.5,258.7031,57.5,254.7031" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="55.5" x2="323.5" y1="254.7031" y2="254.7031"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="9" x="67.5" y="249.6372">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="162" x="80.5" y="249.6372">shows the list of products</text><polygon fill="#A80036" points="307.5,279.8359,317.5,283.8359,307.5,287.8359,311.5,283.8359" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="50.5" x2="313.5" y1="283.8359" y2="283.8359"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="9" x="57.5" y="278.77">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="138" x="70.5" y="278.77">chooses the products</text><polygon fill="#A80036" points="61.5,315.9688,51.5,319.9688,61.5,323.9688,57.5,319.9688" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="55.5" x2="323.5" y1="319.9688" y2="319.9688"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="9" x="67.5" y="314.9028">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="91" x="80.5" y="314.9028">ask to confirm</text><polygon fill="#A80036" points="307.5,345.1016,317.5,349.1016,307.5,353.1016,311.5,349.1016" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="50.5" x2="313.5" y1="349.1016" y2="349.1016"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="9" x="57.5" y="344.0356">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="161" x="70.5" y="344.0356">confirms the information.</text><polygon fill="#A80036" points="56.5,389.3672,46.5,393.3672,56.5,397.3672,52.5,393.3672" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="50.5" x2="323.5" y1="393.3672" y2="393.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="9" x="62.5" y="380.7349">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="232" x="75.5" y="373.1685">Start the delivery and send an email</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="80" x="75.5" y="388.3013">to the client.</text><!--MD5=[52c6ee802c0d66d64eeb7a29ef6fcd28]
+@startuml
+hide footbox
+autonumber
+
+actor "Client" as user
+participant ":System" as SIST
+
+activate user
+
+user -> SIST : Want to start an order
+activate SIST
+
+SIST -> user : shows the list of pharmacy and\nasks to choose one
+deactivate SIST
+
+user -> SIST :  chooses the pharmacy
+activate SIST
+loop [ until the client select all of\nthe pretended products ]
+SIST -> user : shows the list of products
+deactivate SIST
+
+user -> SIST :  chooses the products
+activate SIST
+
+end
+
+activate SIST
+
+SIST - -> user : ask to confirm
+deactivate SIST
+
+user -> SIST : confirms the information.
+
+activate SIST
+SIST - -> user : Start the delivery and send an email\nto the client.
+deactivate SIST
+
+deactivate user
+@enduml
+
+PlantUML version 1.2019.11(Sun Sep 22 12:02:15 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 1.8.0_275-8u275-b01-0ubuntu1~16.04-b01
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,33 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+
+class Platform{
+}
+
+class Administrator{
+  -String id
+  -String name
+  -String password
+}
+
+class Scooter {
+  -boolean operacional
+}
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+  -Adress adress
+  -ParkingLot pl
+}
+
+Platform"1" -- "*"Pharmacy : contains >
+Platform"1" -- "*"Administrator : contains >
+Pharmacy"1" -- "*"Scooter : contains >
+
+
+@enduml

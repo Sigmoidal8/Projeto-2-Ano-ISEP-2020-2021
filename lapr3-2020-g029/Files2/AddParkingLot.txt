@@ -1,0 +1,6 @@
+ParkingLot(String id, int totalSpots, int chargeSpots,String parkingLotType)
+1;10;8;1
+1;15;10;0
+1;20;10;1
+2;7;7;0
+2;10;5;1

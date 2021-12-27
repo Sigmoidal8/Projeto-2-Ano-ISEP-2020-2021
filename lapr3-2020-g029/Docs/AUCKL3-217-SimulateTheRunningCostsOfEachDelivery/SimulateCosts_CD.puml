@@ -1,0 +1,142 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package UI <<Folder>> {
+  class MakeDeliveryUI
+}
+
+package Controllers <<Folder>> {
+  class MakeDeliveryController
+}
+
+package Domain <<Folder>> {
+  class Platform
+  class DeliveryList
+  class Delivery
+  class AvailableScooterList
+  class PharmacyList
+  class Pharmacy
+  class Scooter
+  class Courier
+  class Drone
+  class RegisterCourier
+  class DroneList
+}
+
+class MakeDeliveryUI {
+}
+
+class Pharmacy{
+  -String id
+  -String designation
+  -String email
+  -String password
+  -Adress adress
+  -ParkingLot park
+  -ProductList pl
+  -AvailableScooterList asl
+}
+
+class Courier{
+-String NIF
+-String name
+-String password
+-String email
+-String socialSecurityNumber
+}
+
+class Drone{
+-Integer id
+-Double fullCharge
+-Double currentCharge
+-Double power
+}
+
+class Scooter{
+-Integer exclusiveNumber
+-Double fullCharge
+-Double currentCharge
+-Double power
+-Boolean operational
+}
+
+class MakeDeliveryController {
+  +getPharmacyList()
+  +getPharmacy(parmacyID)
+  +getScooterList()
+  +getScooter(exclusiveNumber)
+  +getCourierList()
+  +getCourier(nif)
+  +getDroneList()
+  +getDrone(id)
+  +getDeliveryList()
+  +getChoosenDelivery(id)
+  +addDeliverySelected(delivery,scooter,courier)
+  +addDeliverySelected(delivery,drone)
+}
+
+class Platform {
+  +getPharmacyList()
+  +getCourierList()
+  +getDeliveryList()
+}
+
+class PharmacyList {
+  +getPharmacy(pharmacyID)
+  +getAvailableScooterList(p)
+  +getDroneList()
+}
+
+class AvailableScooterList {
+  +getScooterList()
+  +getScooter(exclusiveNumber)
+}
+
+class RegisterCourier {
+  +getCourier(nif)
+}
+
+class DroneList {
+  +getCourier(id)
+  +getCourierList()
+}
+
+class Delivery {
+  -String id
+  -date date_delivery 
+  -double totalWeight
+  -Invoice invoice
+  -Pharmacy pharmacy
+}
+
+class DeliveryList {
+  +getDeliveryListPharmacy(p)    
+  +verifyDelivery(id)
+  +getEnergySpentInScooterDelivery(distance, scooter, deliveryListPharmacy)
+  +getEnergySpentInDroneDelivery(distance, drone, deliveryListPharmacy)
+}
+
+MakeDeliveryUI ..> MakeDeliveryController
+
+MakeDeliveryController ..> Platform
+MakeDeliveryController ..> DeliveryList
+
+DeliveryList"1" -- "1..*" Delivery : has>
+
+Platform"1" -- "1" PharmacyList : has>
+Platform"1" -- "1" RegisterCourier : has>
+
+PharmacyList"1" -- "0..*" Pharmacy : has>
+
+RegisterCourier"1" -- "0..*" Courier : has>
+
+AvailableScooterList"1" -- "0..*" Scooter : has>
+
+Pharmacy"1" -- "1" AvailableScooterList : has>
+Pharmacy"1" -- "1" DroneList : has>
+
+DroneList"1" -- "0..*" Drone : has>
+
+
+
+@enduml

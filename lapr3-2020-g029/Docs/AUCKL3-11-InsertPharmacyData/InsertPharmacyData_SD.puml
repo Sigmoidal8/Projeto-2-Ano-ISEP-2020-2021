@@ -1,0 +1,103 @@
+@startuml
+autonumber
+
+actor "Administrator" as ADM
+participant ":InsertPharmacyDataUI" as UI
+participant ":InsertPharmacyDataController" as CTRL
+participant ":Adress" as ADR
+participant ":ParkingLot" as PKL
+participant ":Platform" as PLAT
+participant ":PharmacyList" as PL
+participant "adress \n:Adress" as _ADR
+participant "parkingLot \n:ParkingLot" as _PKL
+participant ":Pharmacy" as P
+participant "pharmacy \n:Pharmacy" as _P
+
+activate ADM
+ADM -> UI : initiates the insertion of a pharmacy data
+activate UI
+
+UI -> ADM : requests data about the pharmacy (designation, email)
+deactivate UI
+
+ADM -> UI : inserts the requested data
+activate UI
+
+UI -> ADM : requests data about the pharmacy adress (street, locality, postalCode)
+deactivate UI
+
+ADM -> UI : inserts the requested data
+activate UI
+
+UI -> CTRL : createAdress(doorNumber,street,locality,postalCode,decimalDegree1,decimalDegree2)
+activate CTRL
+
+CTRL -> ADR : adress = createAdress(doorNumber,street,locality,postalCode,decimalDegree1,decimalDegree2)
+activate ADR
+ADR -> _ADR ** : create(doorNumber,street,locality,postalCode,decimalDegree1,decimalDegree2)
+deactivate ADR
+deactivate CTRL
+
+UI -> CTRL : createPharmacy(designation, email, emailPassword)
+activate CTRL
+
+CTRL -> PLAT : pl = getPharmacyList()
+activate PLAT
+deactivate PLAT
+
+CTRL -> PL : pharmacy = createPharmacy(designation,email,emailPassword,adress,parkingLot)
+activate PL
+PL -> P : pharmacy = createPharmacy(designation,email,emailPassword,adress,parkingLot)
+activate P
+P -> _P ** : create(designation,email,emailPassword,adress,parkingLot)
+deactivate P
+deactivate PL
+
+CTRL -> PL : validatePharmacy(pharmacy)
+activate PL
+deactivate PL
+
+deactivate CTRL
+
+loop
+UI -> ADM : requests data about the pharmacy parking lot(s) (parkingLotSpots,parkingLotChargeSpots,type)
+deactivate UI
+
+ADM -> UI : inserts the requested data
+activate UI
+
+UI -> CTRL : createParkingLot(parkingLotSpots,parkingLotChargeSpots,type)
+activate CTRL
+CTRL -> PKL : parkingLot = createParkingLot(parkingLotSpots,parkingLotChargeSpots,type)
+activate PKL
+PKL -> _PKL ** : create(parkingLotSpots,parkingLotChargeSpots,type)
+deactivate PKL
+CTRL -> P : addParkingLot(parkingLot)
+activate P
+deactivate P
+deactivate CTRL
+end loop
+
+UI -> ADM : shows the inserted data and requests confirmation
+deactivate UI
+
+ADM -> UI : confirms
+activate UI
+
+UI -> CTRL : registerPharmacy()
+activate CTRL
+
+CTRL -> PL  : registerPharmacy(pharmacy)
+activate PL
+PL -> PL : validatePharmacy(pharmacy)
+PL -> PL : addPharmacy(pharmacy)
+deactivate PL
+deactivate CTRL
+
+UI -> ADM : informs the success of the operation
+deactivate UI
+
+deactivate ADM
+
+
+@enduml

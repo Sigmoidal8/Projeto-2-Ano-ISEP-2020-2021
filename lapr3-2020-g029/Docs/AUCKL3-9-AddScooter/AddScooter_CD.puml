@@ -1,0 +1,88 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package UI <<Folder>> {
+  class AddScooterUI
+}
+
+package Controllers <<Folder>> {
+  class AddScooterController
+}
+
+package Domain <<Folder>> {
+  class Platform
+  class Scooter
+  class ScooterList
+  class AvailaleScooterList
+  class Pharmacy
+  class PharmacyList
+
+}
+
+class AddScooterUI {
+}
+
+class AddScooterController {
+  +getScooterList()
+  +getScooter(scooterID)
+  +getPharmacyList()
+  +getPharmacy(pharmacyID)
+  +getAvailableScooterList(pharmacy)
+  +addAvailableScooterList(scooter,pharmacy)
+  +setPharmacy(pharmacy,scooter)
+}
+
+class Platform {
+  +getScooterList()
+  +getPharmacyList()
+  +addAvailableScooterList(scooter)
+}
+
+class Scooter {
+-Integer exclusiveNumber
+-Double currentCharge
+-Double fullCharge
+-Boolean operational
+-crCode
++setPharmacy(pharmacy,scooter)
+}
+
+class ScooterList{
+  +getScooterList()
+  +getScooter(scooterID)
+}
+
+class AvailaleScooterList{
+  +addAvailableScooterList(scooter)
+}
+
+class Pharmacy{
+  -String id
+  -String designation
+  -String email
+  -Adress adress
+  -ParkingLot pl
+  +getAvailableScooterList(pharmacy)
+}
+
+class PharmacyList{
+  +getPharmacyList()
+  +getPharmacy(pharmacyID)
+}
+
+AddScooterUI ..> AddScooterController
+AddScooterController ..> Platform
+AddScooterController ..> ScooterList
+AddScooterController ..> AvailaleScooterList
+AddScooterController ..> PharmacyList
+AddScooterController ..> Pharmacy
+AddScooterController ..> Scooter
+
+Platform"1" -- "1" PharmacyList : has>
+Platform"1" -- "1" ScooterList : has>
+PharmacyList"1" -- "1..*" Pharmacy : has>
+Pharmacy"1" -- "1" AvailaleScooterList : has>
+ScooterList"1" -- "1..*" Scooter : has>
+AvailaleScooterList"1" -- "1..*" Scooter : has>
+
+@enduml

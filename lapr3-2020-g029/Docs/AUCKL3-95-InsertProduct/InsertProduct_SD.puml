@@ -1,0 +1,73 @@
+@startuml
+autonumber
+
+actor "Administrator" as UNR
+participant ":Register\nProductUI" as UI
+participant ":RegisterProduct\nController" as CTRL
+participant ":Platform" as PLAT
+participant "phl\n:PharmacyList" as PHARL
+participant "phar\n:Pharmacy" as PHAR
+participant "pl\n:ProductList" as LPROD
+participant "prd :Product" as PRD
+
+
+activate UNR
+UNR -> UI : starts registering a product.
+activate UI
+UI --> UNR : asks for the data about the product \n(i.e. ID, name, price, weight, stock)
+deactivate UI
+
+UNR -> UI : enters the requested data
+activate UI
+
+deactivate CTRL
+UI --> UNR : show the list of pharmacies and ask\nto choose one
+deactivate UI
+
+UNR -> UI : enters da pharmacy
+activate UI
+
+UI -> CTRL : newProduct(ID, name, price, weight, pharmacyID)
+activate CTRL
+
+CTRL -> PLAT: phl = getPharmacyList()
+activate PLAT
+
+PLAT -> PHARL: phar = getPharmacy(pharmacyID)
+activate PHARL
+deactivate PLAT
+
+PHARL -> PHAR: pl = getProductList()
+activate PHAR
+deactivate PHAR
+deactivate PHARL
+
+CTRL -> LPROD: prod = newProduct(ID, name, price, weight)
+activate LPROD
+deactivate PHAR
+
+LPROD --> PRD** : create(ID, name, price, weight)
+deactivate LPROD
+
+deactivate CTRL
+UI --> UNR : displays the data, asking confirmation
+deactivate UI
+
+UNR -> UI : confirms
+activate UI
+
+UI -> CTRL: registerProduct()
+activate CTRL
+CTRL -> LPROD: registerProduct(prod)
+activate LPROD
+
+LPROD -> LPROD: validateProduct(prod)
+LPROD -> LPROD: addProduct(prod)
+deactivate LPROD
+
+deactivate CTRL
+UI --> UNR : operation sucess
+deactivate UI
+
+deactivate UNR
+@enduml

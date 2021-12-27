@@ -1,0 +1,52 @@
+@startuml
+hide footbox
+autonumber
+
+actor "Administrator" as user
+participant ":System" as SIST
+
+activate user
+
+user -> SIST : Want to simutate the costs of a delivery between a drone and a scooter 
+activate SIST
+
+SIST -> user : Shows the list of pharmacies and asks the administrator to choose one
+deactivate SIST
+
+user -> SIST :  Chooses the pharmacy
+
+SIST -> user : Shows the list of scooters and asks the administrator to choose one
+deactivate SIST
+
+user -> SIST :  Chooses the scooter
+activate SIST
+SIST -> user : Shows the list of couriers and asks the administrator to choose one
+deactivate SIST
+
+user -> SIST :  Chooses the courier
+activate SIST
+SIST -> user : Shows the list of drones and asks the administrator to choose one
+deactivate SIST
+
+user -> SIST :  Chooses the drone
+activate SIST
+loop [ until the courier select all of the pretended deliveries ]
+SIST --> user : Shows the list of deliveries of the pharmacy, neraby to the client\n adress, that are remaining and asks the courier to choose the\n deliveries that he wants to deliver
+deactivate SIST
+
+user -> SIST : Choose the deliveries.
+
+activate SIST
+end
+    SIST --> user : Shows to administrator the most economic route between\n this deliveryies and the spend energy to this route for\n both veicheles (scooters and drones) .
+deactivate SIST
+
+user -> SIST : Confirms the information.
+
+activate SIST
+    SIST --> user : Ends the simulation.
+deactivate SIST
+
+deactivate user
+
+@enduml

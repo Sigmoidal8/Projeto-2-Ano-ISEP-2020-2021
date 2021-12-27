@@ -1,0 +1,44 @@
+
+@startuml
+hide footbox
+autonumber
+actor "Administrator" as AD
+
+participant ":System" as SIST
+
+activate AD
+
+AD -> SIST : Start parking lot update.
+
+activate SIST
+    SIST --> AD : Shows the list of Pharmacies, asking for the selection of one.
+deactivate SIST
+
+AD -> SIST : Selects a pharmacy.
+
+activate SIST
+    SIST --> AD : Shows the list of parking lots and asks the selection of one.
+deactivate SIST
+
+AD -> SIST : Selects the parking lot .
+
+
+activate SIST
+    SIST --> AD : Shows the information of that parking lot and asks what\n attribute he wants to change.
+deactivate SIST
+
+AD -> SIST : Selects the attribute .
+
+activate SIST
+    SIST --> AD : asks the administrator to insert the new value for the attribute.
+deactivate SIST
+
+AD -> SIST : inserts the new value.
+
+activate SIST
+    SIST --> AD : saves the data and presents it to the administrator.
+deactivate SIST
+
+deactivate AD
+
+@enduml

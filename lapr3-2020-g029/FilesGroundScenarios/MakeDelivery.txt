@@ -1,0 +1,2 @@
+PharmacyID,ScooterIDx,CourierID,DroneIDx;deliveriesUnitl0;(1 for Scooter,2 for Drone),0(sair do while)
+

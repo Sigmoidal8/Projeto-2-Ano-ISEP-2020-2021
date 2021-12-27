@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="163px" preserveAspectRatio="none" style="width:546px;height:163px;" version="1.1" viewBox="0 0 546 163" width="546px" zoomAndPan="magnify"><defs><filter height="300%" id="f1xcyykcy4h7mm" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[99b8db98afdc2c8404e39242ef4c1e65]
+class Platform--><rect codeLine="6" fill="#FEFECE" filter="url(#f1xcyykcy4h7mm)" height="40" id="Platform" style="stroke:#A80036;stroke-width:1.5;" width="80" x="7" y="58"/><ellipse cx="22" cy="74" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M24.3438,69.6719 C23.4063,69.2344 22.8125,69.0938 21.9375,69.0938 C19.3125,69.0938 17.3125,71.1719 17.3125,73.8906 L17.3125,75.0156 C17.3125,77.5938 19.4219,79.4844 22.3125,79.4844 C23.5313,79.4844 24.6875,79.1875 25.4375,78.6406 C26.0156,78.2344 26.3438,77.7813 26.3438,77.3906 C26.3438,76.9375 25.9531,76.5469 25.4844,76.5469 C25.2656,76.5469 25.0625,76.625 24.875,76.8125 C24.4219,77.2969 24.4219,77.2969 24.2344,77.3906 C23.8125,77.6563 23.125,77.7813 22.3594,77.7813 C20.3125,77.7813 19.0156,76.6875 19.0156,74.9844 L19.0156,73.8906 C19.0156,72.1094 20.2656,70.7969 22,70.7969 C22.5781,70.7969 23.1875,70.9531 23.6563,71.2031 C24.1406,71.4844 24.3125,71.7031 24.4063,72.1094 C24.4688,72.5156 24.5,72.6406 24.6406,72.7656 C24.7813,72.9063 25.0156,73.0156 25.2344,73.0156 C25.5,73.0156 25.7656,72.875 25.9375,72.6563 C26.0469,72.5 26.0781,72.3125 26.0781,71.8906 L26.0781,70.4688 C26.0781,70.0313 26.0625,69.9063 25.9688,69.75 C25.8125,69.4844 25.5313,69.3438 25.2344,69.3438 C24.9375,69.3438 24.7344,69.4375 24.5156,69.75 L24.3438,69.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="48" x="36" y="78.1543">Platform</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="86" y1="90" y2="90"/><!--MD5=[b35291ba1c8cd17b5117d9f7197fc21c]
+class Adress--><rect codeLine="10" fill="#FEFECE" filter="url(#f1xcyykcy4h7mm)" height="116.8281" id="Adress" style="stroke:#A80036;stroke-width:1.5;" width="143" x="389" y="19.5"/><ellipse cx="434.75" cy="35.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M437.0938,31.1719 C436.1563,30.7344 435.5625,30.5938 434.6875,30.5938 C432.0625,30.5938 430.0625,32.6719 430.0625,35.3906 L430.0625,36.5156 C430.0625,39.0938 432.1719,40.9844 435.0625,40.9844 C436.2813,40.9844 437.4375,40.6875 438.1875,40.1406 C438.7656,39.7344 439.0938,39.2813 439.0938,38.8906 C439.0938,38.4375 438.7031,38.0469 438.2344,38.0469 C438.0156,38.0469 437.8125,38.125 437.625,38.3125 C437.1719,38.7969 437.1719,38.7969 436.9844,38.8906 C436.5625,39.1563 435.875,39.2813 435.1094,39.2813 C433.0625,39.2813 431.7656,38.1875 431.7656,36.4844 L431.7656,35.3906 C431.7656,33.6094 433.0156,32.2969 434.75,32.2969 C435.3281,32.2969 435.9375,32.4531 436.4063,32.7031 C436.8906,32.9844 437.0625,33.2031 437.1563,33.6094 C437.2188,34.0156 437.25,34.1406 437.3906,34.2656 C437.5313,34.4063 437.7656,34.5156 437.9844,34.5156 C438.25,34.5156 438.5156,34.375 438.6875,34.1563 C438.7969,34 438.8281,33.8125 438.8281,33.3906 L438.8281,31.9688 C438.8281,31.5313 438.8125,31.4063 438.7188,31.25 C438.5625,30.9844 438.2813,30.8438 437.9844,30.8438 C437.6875,30.8438 437.4844,30.9375 437.2656,31.25 L437.0938,31.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="43" x="455.25" y="39.6543">Adress</text><line style="stroke:#A80036;stroke-width:1.5;" x1="390" x2="531" y1="51.5" y2="51.5"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="395" y="65.7104">-String street</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="92" x="395" y="78.5151">-int doorNumber</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="105" x="395" y="91.3198">-String postalCode</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="81" x="395" y="104.1245">-String locality</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="395" y="116.9292">-Float decimalDegree1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="395" y="129.7339">-Float decimalDegree2</text><!--MD5=[ed6624c6556d5e7b1bd23032162d20b7]
+class Client--><rect codeLine="19" fill="#FEFECE" filter="url(#f1xcyykcy4h7mm)" height="142.4375" id="Client" style="stroke:#A80036;stroke-width:1.5;" width="106" x="185" y="7"/><ellipse cx="218.45" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M220.7938,18.6719 C219.8563,18.2344 219.2625,18.0938 218.3875,18.0938 C215.7625,18.0938 213.7625,20.1719 213.7625,22.8906 L213.7625,24.0156 C213.7625,26.5938 215.8719,28.4844 218.7625,28.4844 C219.9813,28.4844 221.1375,28.1875 221.8875,27.6406 C222.4656,27.2344 222.7938,26.7813 222.7938,26.3906 C222.7938,25.9375 222.4031,25.5469 221.9344,25.5469 C221.7156,25.5469 221.5125,25.625 221.325,25.8125 C220.8719,26.2969 220.8719,26.2969 220.6844,26.3906 C220.2625,26.6563 219.575,26.7813 218.8094,26.7813 C216.7625,26.7813 215.4656,25.6875 215.4656,23.9844 L215.4656,22.8906 C215.4656,21.1094 216.7156,19.7969 218.45,19.7969 C219.0281,19.7969 219.6375,19.9531 220.1063,20.2031 C220.5906,20.4844 220.7625,20.7031 220.8563,21.1094 C220.9188,21.5156 220.95,21.6406 221.0906,21.7656 C221.2313,21.9063 221.4656,22.0156 221.6844,22.0156 C221.95,22.0156 222.2156,21.875 222.3875,21.6563 C222.4969,21.5 222.5281,21.3125 222.5281,20.8906 L222.5281,19.4688 C222.5281,19.0313 222.5125,18.9063 222.4188,18.75 C222.2625,18.4844 221.9813,18.3438 221.6844,18.3438 C221.3875,18.3438 221.1844,18.4375 220.9656,18.75 L220.7938,18.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="33" x="236.55" y="27.1543">Client</text><line style="stroke:#A80036;stroke-width:1.5;" x1="186" x2="290" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="51" x="191" y="53.2104">-String id</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="191" y="66.0151">-String name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="94" x="191" y="78.8198">-String password</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="191" y="91.6245">-String email</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="58" x="191" y="104.4292">-String NIF</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="68" x="191" y="117.2339">-String IBAN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="191" y="130.0386">-double credits</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="92" x="191" y="142.8433">-Adress address</text><!--MD5=[6f4f5a959b7eecf0b4982552d890dec0]
+link Platform to Client--><path codeLine="30" d="M87.1609,78 C115.489,78 154.062,78 184.976,78 " fill="none" id="Platform-Client" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="127,69.5664,117.9549,66.6275,117.9549,72.5053,127,69.5664" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="131" y="74.0669">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="95.0271" y="91.4147">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="154.1121" y="90.9624">0..*</text><!--MD5=[5e2a77ac8cb2ce8495915d4213d8353b]
+link Client to Adress--><path codeLine="32" d="M291.255,78 C320.419,78 357.152,78 388.849,78 " fill="none" id="Client-Adress" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="331,69.5664,321.9549,66.6275,321.9549,72.5053,331,69.5664" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="335" y="74.0669">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="298.9486" y="91.0542">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="373.0475" y="90.856">1</text><!--MD5=[f054ae2f26de2d0cadb3db879295f61b]
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+
+class Platform{
+
+}
+
+class Adress {
+ -String street
+ -int doorNumber
+ -String postalCode
+ -String locality
+ -Float decimalDegree1
+ -Float decimalDegree2
+}
+
+class Client{
+-String id
+-String name
+-String password
+-String email
+-String NIF
+-String IBAN
+-double credits
+-Adress address
+}
+
+Platform"1" - - "0..*"Client : has >
+
+Client"1" - - "1" Adress : has >
+@enduml
+
+PlantUML version 1.2020.27beta8(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

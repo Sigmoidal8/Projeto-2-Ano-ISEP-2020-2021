@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="483px" preserveAspectRatio="none" style="width:677px;height:483px;" version="1.1" viewBox="0 0 677 483" width="677px" zoomAndPan="magnify"><defs><filter height="300%" id="fm2pe3y2kj7is" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="283.3281" style="stroke:#A80036;stroke-width:1.0;" width="10" x="53" y="98.2969"/><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="624" y="119.4297"/><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="624" y="177.6953"/><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="624" y="235.9609"/><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="624" y="294.2266"/><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="624" y="352.4922"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="58" x2="58" y1="88.2969" y2="399.625"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="628.5" x2="628.5" y1="88.2969" y2="399.625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="5" y="84.9951">Administrator</text><ellipse cx="58" cy="15" fill="#FEFECE" filter="url(#fm2pe3y2kj7is)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M58,23 L58,50 M45,31 L71,31 M58,50 L45,65 M58,50 L71,65 " fill="none" filter="url(#fm2pe3y2kj7is)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="5" y="411.6201">Administrator</text><ellipse cx="58" cy="424.9219" fill="#FEFECE" filter="url(#fm2pe3y2kj7is)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M58,432.9219 L58,459.9219 M45,440.9219 L71,440.9219 M58,459.9219 L45,474.9219 M58,459.9219 L71,474.9219 " fill="none" filter="url(#fm2pe3y2kj7is)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#fm2pe3y2kj7is)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="73" x="590.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="597.5" y="72.9951">:System</text><rect fill="#FEFECE" filter="url(#fm2pe3y2kj7is)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="73" x="590.5" y="398.625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="597.5" y="418.6201">:System</text><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="283.3281" style="stroke:#A80036;stroke-width:1.0;" width="10" x="53" y="98.2969"/><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="624" y="119.4297"/><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="624" y="177.6953"/><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="624" y="235.9609"/><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="624" y="294.2266"/><rect fill="#FFFFFF" filter="url(#fm2pe3y2kj7is)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="624" y="352.4922"/><polygon fill="#A80036" points="612,115.4297,622,119.4297,612,123.4297,616,119.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="618" y1="119.4297" y2="119.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="234" x="70" y="114.3638">initiates the insertion of a parking lot</text><polygon fill="#A80036" points="74,144.5625,64,148.5625,74,152.5625,70,148.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="68" x2="628" y1="148.5625" y2="148.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="249" x="80" y="143.4966">requests data about the pharmacy (id)</text><polygon fill="#A80036" points="612,173.6953,622,177.6953,612,181.6953,616,177.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="618" y1="177.6953" y2="177.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="170" x="70" y="172.6294">inserts the requested data</text><polygon fill="#A80036" points="74,202.8281,64,206.8281,74,210.8281,70,206.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="68" x2="628" y1="206.8281" y2="206.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="366" x="80" y="201.7622">shows the selected pharmacy and requests confirmation</text><polygon fill="#A80036" points="612,231.9609,622,235.9609,612,239.9609,616,235.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="618" y1="235.9609" y2="235.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="56" x="70" y="230.895">confirms</text><polygon fill="#A80036" points="74,261.0938,64,265.0938,74,269.0938,70,265.0938" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="68" x2="628" y1="265.0938" y2="265.0938"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="537" x="80" y="260.0278">requests data about the parking lot (parkingLotSpots, parkingLotChargeSpots, type)</text><polygon fill="#A80036" points="612,290.2266,622,294.2266,612,298.2266,616,294.2266" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="618" y1="294.2266" y2="294.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="170" x="70" y="289.1606">inserts the requested data</text><polygon fill="#A80036" points="74,319.3594,64,323.3594,74,327.3594,70,323.3594" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="68" x2="628" y1="323.3594" y2="323.3594"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="328" x="80" y="318.2935">shows the inserted data and requests confirmation</text><polygon fill="#A80036" points="612,348.4922,622,352.4922,612,356.4922,616,352.4922" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="63" x2="618" y1="352.4922" y2="352.4922"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="56" x="70" y="347.4263">confirms</text><polygon fill="#A80036" points="69,377.625,59,381.625,69,385.625,65,381.625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="63" x2="628" y1="381.625" y2="381.625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="236" x="75" y="376.5591">informs the success of the operation</text><!--MD5=[e82b63327ef42333509757ddee4474ca]
+@startuml
+actor "Administrator" as ADM
+participant ":System" as SYS
+
+activate ADM
+ADM -> SYS : initiates the insertion of a parking lot
+
+activate SYS
+SYS - -> ADM : requests data about the pharmacy (id) 
+deactivate SYS
+
+ADM -> SYS : inserts the requested data
+
+activate SYS
+SYS - -> ADM : shows the selected pharmacy and requests confirmation
+deactivate SYS
+
+ADM -> SYS : confirms
+
+activate SYS
+SYS -> ADM : requests data about the parking lot (parkingLotSpots, parkingLotChargeSpots, type)
+deactivate SYS
+
+ADM -> SYS : inserts the requested data
+
+activate SYS
+SYS - -> ADM : shows the inserted data and requests confirmation
+deactivate SYS
+
+ADM -> SYS : confirms
+
+activate SYS
+SYS - -> ADM : informs the success of the operation
+deactivate SYS
+deactivate ADM
+@enduml
+
+PlantUML version 1.2021.01beta3(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

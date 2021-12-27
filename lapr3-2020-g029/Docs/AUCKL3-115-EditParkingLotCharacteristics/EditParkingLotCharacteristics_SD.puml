@@ -1,0 +1,87 @@
+@startuml
+autonumber
+
+actor "Administrator" as ADM
+participant ":EditParkingLotCharacteristicsUI" as UI
+participant ":EditParkingLotCharacteristicsController" as CTRL
+participant ":Platform" as PLAT
+participant "prkl \n:ParkingLot" as PRKL
+participant "pl \n:PharmacyList" as PL
+participant "p \n:Pharmacy" as P
+
+activate ADM
+ADM -> UI :  Start parking lot update
+activate UI
+UI -> CTRL : pl = getPharmacyList()
+activate CTRL
+CTRL -> PLAT : pl = getPharmacyList()
+activate PLAT
+deactivate PLAT
+deactivate CTRL
+UI --> ADM : Shows the list of Pharmacies, asking for the selection of one
+deactivate UI
+
+
+
+
+
+ADM -> UI :  chooses the pharmacy
+activate UI
+UI -> CTRL : p = getPharmacy(pharmacyID)
+activate CTRL
+activate PL
+CTRL -> PL : p = getPharmacy(pharmacyID)
+deactivate PL
+deactivate CTRL
+UI -> CTRL : prklL = getParkingLotList()
+activate CTRL
+activate P
+CTRL -> P : prklL = getParkingLotList()
+deactivate P
+deactivate CTRL
+UI --> ADM : shows the list of parking lots and asks the selection of one
+deactivate UI
+
+
+ADM -> UI : Selects the parking lot
+activate UI
+UI -> CTRL : prkl = getParkingLot(parkingLotID)
+activate CTRL
+
+deactivate CTRL
+UI --> ADM : Shows the information of that parking lot and asks what\n attribute he wants to change.
+deactivate UI
+
+
+ADM -> UI : Selects the attribute
+activate UI
+
+UI --> ADM : asks the administrator to insert the new value for the attribute
+deactivate UI
+
+ADM -> UI : inserts the new value
+activate UI
+alt update total spots
+
+UI -> CTRL : setTotalSpots(totalSpots)
+activate CTRL
+CTRL -> PRKL : setTotalSpots(totalSpots)
+activate PRKL
+deactivate PRKL
+deactivate CTRL
+else update charge spots
+
+
+UI -> CTRL : setChargeSpots(chargeSpots)
+activate CTRL
+CTRL -> PRKL : setChargeSpots(chargeSpots)
+activate PRKL
+deactivate PRKL
+
+end
+
+deactivate CTRL
+UI --> ADM : saves the data and presents it to the administrator
+deactivate UI
+
+@enduml

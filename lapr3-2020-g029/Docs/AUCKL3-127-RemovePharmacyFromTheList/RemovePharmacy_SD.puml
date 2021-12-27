@@ -1,0 +1,47 @@
+@startuml
+autonumber
+
+actor "Administrator" as ADM
+participant ":RemovePharmacyUI" as UI
+participant ":RemovePharmacyController" as CTRL
+participant ":Platform" as PLAT
+participant "pl \n:PharmacyList" as PL
+participant "p \n:Pharmacy" as P
+
+activate ADM
+ADM -> UI :   wants to remove a pharmacy from the system
+activate UI
+UI -> CTRL : getPharmacyList()
+activate CTRL
+CTRL -> PLAT : pl = getPharmacyList()
+activate PLAT
+deactivate PLAT
+CTRL -> PL : p = getPharmacyList()
+activate PL
+deactivate PL
+deactivate CTRL
+UI --> ADM : shows the list of pharmacies already in the system and\n asks to choose the pharmacy he wants to remove
+deactivate UI
+
+
+ADM -> UI :  chooses the pharmacy he wants to remove
+activate UI
+UI -> CTRL : getPharmacy(pharmacyID)
+activate CTRL
+CTRL -> PL : pharmacy = getPharmacy(pharmacyID)
+activate PL
+deactivate PL
+CTRL -> PL : removePharmacyFromList(pharmacy)
+activate PL
+deactivate PL
+deactivate CTRL
+UI --> ADM : removes the pharmacy from the list
+deactivate UI
+
+ADM --> UI : confirms
+activate UI
+UI --> ADM : informs the Administrator of the success of the operation.
+deactivate UI
+deactivate ADM
+
+@enduml

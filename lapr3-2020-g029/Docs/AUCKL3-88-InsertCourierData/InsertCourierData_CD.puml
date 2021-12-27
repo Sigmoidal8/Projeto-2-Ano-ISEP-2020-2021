@@ -1,0 +1,40 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class RegisterCourierUI {
+}
+
+class RegisterCourierController {
+  +newCourier(name, NIF, Social Security number, email)
+  +registerFreelancer()
+}
+
+class Platform {
+  + getCourierList()
+}
+
+class CourierList {
+  +newCourier(name, NIF, Social Security number, email)
+  +validateCourier(cour)
+  +registerCourier(cour)
+  +validateCourier(cour)
+  +addCourier(cour)
+}
+
+class Courier{
+  -String name
+  -int NIF
+  -int SocialSecurityNumber
+  -String email
+}
+
+RegisterCourierUI ..> RegisterCourierController
+
+RegisterCourierController ..> Platform
+RegisterCourierController ..> CourierList
+
+Platform "1" --> "1" CourierList
+
+CourierList "1" -- "1..*" Courier : has>
+
+@enduml

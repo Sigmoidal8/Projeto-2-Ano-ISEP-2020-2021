@@ -1,0 +1,69 @@
+@startuml
+autonumber
+
+actor "Administrator" as ADM
+participant ":UpdateStockUI" as UI
+participant ":UpdateStockController" as CTRL
+participant ":Platform" as PLAT
+participant "prl \n:ProductList" as PRL
+participant "pr \n:Product" as PR
+participant "pl \n:PharmacyList" as PL
+participant "p \n:Pharmacy" as P
+
+activate ADM
+ADM -> UI :  chooses to update a stock
+activate UI
+UI -> CTRL : pl = getPharmacyList()
+activate CTRL
+CTRL -> PLAT : pl = getPharmacyList()
+activate PLAT
+deactivate PLAT
+deactivate CTRL
+UI --> ADM : shows the list of pharmacy and asks the administrator\nto choose one
+deactivate UI
+
+
+
+
+
+ADM -> UI :  chooses the pharmacy
+activate UI
+UI -> CTRL : p = getPharmacy(pharmacyID)
+activate CTRL
+activate PL
+CTRL -> PL : p = getPharmacy(pharmacyID)
+deactivate PL
+deactivate CTRL
+UI -> CTRL : prl = getProductList()
+activate CTRL
+activate P
+CTRL -> P : prl = getProductList()
+deactivate P
+deactivate CTRL
+UI --> ADM : shows the list of products and asks the administrator\nto choose one
+deactivate UI
+
+
+ADM -> UI : selects a product
+activate UI
+UI -> CTRL : pr = getProduct(productID)
+activate CTRL
+CTRL -> PRL : pr = getProduct(productID)
+activate PRL
+deactivate PRL
+deactivate CTRL
+UI --> ADM : shows the product data and asks the administrator to\n insert the new stock
+deactivate UI
+
+ADM -> UI : inserts the new stock
+activate UI
+UI -> CTRL : setStock(stock)
+activate CTRL
+CTRL -> PR : setStock(stock)
+activate PR
+deactivate PR
+deactivate CTRL
+UI --> ADM : shows the value of the new stock for the product and confirms
+deactivate UI
+
+@enduml

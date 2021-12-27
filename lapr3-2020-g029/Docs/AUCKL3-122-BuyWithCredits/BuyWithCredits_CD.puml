@@ -1,0 +1,142 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package UI <<Folder>> {
+  class BuyAProductUI
+}
+
+package Controllers <<Folder>> {
+  class BuyAProductController
+}
+
+package Domain <<Folder>> {
+  class Platform
+  class Product
+  class PharmacyList
+  class Pharmacy
+  class ProductList
+  class ClientRegister
+  class Client
+  class Invoice
+  class Delivery
+  class DeliveryList
+}
+
+class BuyAProductUI {
+}
+
+class DeliveryList{
+  +newDelivery()
+  +registerDelivery(del)
+  +generateId()
+  +getDate()
+  +calcWeight()
+  +addDelivery(del)
+
+
+}
+
+class Client{
+-String id
+-String name
+-String password
+-String email
+-String NIF
+-String IBAN
+-double credits
+-Adress address
+
+}
+class BuyAProductController {
+  +getPharmacyList()
+  +getPharmacy(pharmacyID)
+  +getProductList()
+  +getProduct(productID)
+  +preencherMapa(pr,quantity)
+  +updateStock()
+  +getClient()
+  +newInvoice(mp)
+  +generateId()
+  +getDate()
+  +calcPrice()
+  +newDelivery()
+  +calcCredits(inv)
+  +verifyCredits(inv)
+  +addCredits(credits)
+  +buyWithCredits(inv)
+  +registerDelivery()
+  +sendEmail(inv,p)
+}
+
+class Platform {
+  +getPharmacyList()
+  +getClientRegister()
+  +getDeliveryList()
+}
+
+class ClientRegister {
+  +getClientByEmail()
+
+}
+
+class Product {
+  -String id
+  -String nome
+  -float price
+  -float weight
+}
+
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+  -Adress adress
+  -Integer parkLimit
+  +getProductList()
+}
+
+class PharmacyList{
+  +getPharmacy(pharmacyID)
+}
+
+class ProductList{
+  +getProduct(productID)
+}
+
+class Invoice{
+  -String id
+  -Date date
+  -float price
+}
+
+class Delivery{
+  -String id
+  -Date date
+  -float totalWeight
+
+}
+BuyAProductUI ..> BuyAProductController
+
+BuyAProductController ..> Platform
+BuyAProductController ..> PharmacyList
+
+BuyAProductController ..> ClientRegister
+Platform --> ClientRegister
+
+PharmacyList"1" -- "1..*" Pharmacy : has >
+ProductList"1" -- "1..*" Product : has >
+Pharmacy"1" -- "1" ProductList : has>
+ClientRegister"1" -- "1..*" Client : has >
+
+Invoice"1..*"-- "1" Client : references >
+
+Delivery"1"--"1" Invoice : references >
+
+Delivery"0..*"--"1" DeliveryList : has <
+
+Platform"1"--"1" DeliveryList : has >
+
+Platform"1"--"1" PharmacyList : has >
+
+@enduml

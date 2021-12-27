@@ -1,0 +1,70 @@
+@startuml
+autonumber
+
+actor "Courier" as c
+participant ":MakeDeliveryUI" as UI
+participant ":MakeDeliveryController" as CTRL
+participant ":Platform" as PLAT
+participant "phl\n:PharmacyList" as PL
+participant "p\n:Pharmacy" as PHAR
+participant "pl\n:ProductList" as SL
+participant "list\n:ArrayList" as LIST
+participant "rDeli\n:deliveryList" as RDELI
+participant "Delivery\n:Delivery" as DLI
+
+activate c
+c -> UI : Want to start an order
+activate UI
+
+UI ->CTRL : getPharmacyList()
+activate CTRL
+
+CTRL -> PLAT : phl = getPharmacyList()
+activate PLAT
+deactivate PLAT
+deactivate CTRL
+
+UI -> c : shows the list of pharmacy and\nasks to choose one
+deactivate UI
+
+c -> UI :  chooses the pharmacy
+activate UI
+
+UI -> CTRL : getPharmacy()
+activate CTRL
+
+CTRL -> PL : p = getPharmacy()
+activate PL
+deactivate PL
+deactivate CTRL
+
+UI -> CTRL : getProductList(p)
+activate CTRL
+
+CTRL -> PHAR : pl = getProductList()
+activate PHAR
+deactivate PHAR
+deactivate CTRL
+
+loop [ until the courier select all of the pretended deliveries ]
+
+UI -> c : shows the list of products
+deactivate UI
+
+c -> UI : chooses the products
+activate UI
+
+end
+
+UI --> c : ask to confirm
+deactivate UI
+
+c -> UI : confirms the information.
+activate UI
+
+UI --> c: Start the delivery and send an email\nto the client.
+
+deactivate CTRL
+deactivate UI
+
+@enduml

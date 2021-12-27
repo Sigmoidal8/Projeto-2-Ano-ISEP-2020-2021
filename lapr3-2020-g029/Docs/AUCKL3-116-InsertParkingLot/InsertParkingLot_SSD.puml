@@ -1,0 +1,36 @@
+@startuml
+actor "Administrator" as ADM
+participant ":System" as SYS
+
+activate ADM
+ADM -> SYS : initiates the insertion of a parking lot
+
+activate SYS
+SYS --> ADM : requests data about the pharmacy (id) 
+deactivate SYS
+
+ADM -> SYS : inserts the requested data
+
+activate SYS
+SYS --> ADM : shows the selected pharmacy and requests confirmation
+deactivate SYS
+
+ADM -> SYS : confirms
+
+activate SYS
+SYS -> ADM : requests data about the parking lot (parkingLotSpots, parkingLotChargeSpots, type)
+deactivate SYS
+
+ADM -> SYS : inserts the requested data
+
+activate SYS
+SYS --> ADM : shows the inserted data and requests confirmation
+deactivate SYS
+
+ADM -> SYS : confirms
+
+activate SYS
+SYS --> ADM : informs the success of the operation
+deactivate SYS
+deactivate ADM
+@enduml

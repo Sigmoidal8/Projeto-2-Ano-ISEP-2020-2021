@@ -1,0 +1,57 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class RegisterProductController {
+    +newProduct(ID, name, price, weight, stock, pharmacyID)
+    +registerProduct()
+}
+
+class RegisterproductUI {
+}
+
+class Platform {
+  + getPharmacyList()
+}
+
+class PharmacyList {
+	+ phar = getPharmacy(pharmacyID)
+}
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+  -Adress adress
+  -int parkLimit
+  +getProductList()
+}
+
+class ProductList {
+  +newProduct(name, price, weight, pharmacyID)
+  +registerProduct(prod)
+  +validateProduct(prod)
+  +addProduct(prod)
+}
+
+class Product {
+  -String ID
+  -String nome
+  -float price
+  -float weight
+  -int stock
+}
+
+
+RegisterproductUI ..> RegisterProductController
+
+RegisterProductController ..> Pharmacy
+RegisterProductController ..> Platform
+RegisterProductController ..> Product
+
+Platform "1" --> "1" PharmacyList : has
+PharmacyList "1" --> "0..*" Pharmacy : has
+Pharmacy "1" --> "1" ProductList
+ProductList "1" --> "0..*" Product : has
+
+
+@enduml

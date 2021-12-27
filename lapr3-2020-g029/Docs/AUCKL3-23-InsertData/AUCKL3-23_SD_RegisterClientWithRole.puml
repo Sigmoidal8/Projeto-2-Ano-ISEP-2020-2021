@@ -1,0 +1,32 @@
+@startuml
+title <AUCKL3-23> SD_RegisterClientAsUser
+autonumber
+
+participant "rcli:Register\nClients" as RO
+participant "client:Client" as C
+participant ":Platform" as PLAT
+participant "aut:Autorization\nFacade" as AUT
+
+RO -> RO: registerClientAsUser(client)
+activate RO
+
+RO -> C: name = getName()
+activate C
+deactivate C
+RO -> C: email = getEmail()
+activate C
+deactivate C
+RO -> C: password = getpassword()
+activate C
+deactivate C
+
+RO -> PLAT : aut = getAutorizationFacade()
+activate PLAT
+deactivate PLAT
+
+RO -> AUT: registerUserWithRole(name,email,password,"Client")
+activate AUT
+deactivate AUT
+
+deactivate RO
+@enduml

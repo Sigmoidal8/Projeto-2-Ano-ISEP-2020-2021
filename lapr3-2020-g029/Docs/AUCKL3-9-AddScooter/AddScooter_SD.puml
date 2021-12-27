@@ -1,0 +1,78 @@
+@startuml
+autonumber
+
+actor "Administrator" as ADM
+participant ":AddScooterUI" as UI
+participant ":AddScooterController" as CTRL
+participant ":Platform" as PLAT
+participant "sl \n:ScooterList" as SL
+participant "asl \n:AvailaleScooterList" as ASL
+participant "scooter \n:Scooter" as S
+participant "pl \n:PharmacyList" as PL
+participant "p \n:Pharmacy" as P
+participant "list \n:ArrayList" as list
+
+activate ADM
+ADM -> UI :  wants to add a scooter to the available scooter list of one pharmacy
+activate UI
+UI -> CTRL : sc = getScooterList()
+activate CTRL
+CTRL -> PLAT : sc = getScooterList()
+activate PLAT
+PLAT -> SL : sc = getScooterListWithNoFarmacy()
+activate SL
+deactivate SL
+deactivate PLAT
+deactivate CTRL
+UI --> ADM : shows the list of scooters registered, but with no pharmacy related
+deactivate UI
+ADM -> UI : selects the scooter he wants to add
+activate UI
+UI -> CTRL : scooter = getScooter(scooterID)
+activate CTRL
+CTRL -> SL : scooter = getScooter(scooterID)
+activate SL
+deactivate SL
+deactivate CTRL
+UI -> CTRL : phList = getPharmacyList()
+activate CTRL
+CTRL -> PLAT : phList = getPharmacyList()
+activate PLAT
+PLAT -> PL : pharmacyList = getPharmacyList()
+activate PL
+deactivate PL
+deactivate PLAT
+deactivate CTRL
+UI --> ADM : shows the list of pharmacys and asks to choose the one\n he wants to add a scooter
+deactivate UI
+ADM -> UI :  inserts the pharmacy id where he wants to add the scooter choosen
+activate UI
+UI -> CTRL : pharmacy = getPharmacy(pharmacyID)
+activate CTRL
+CTRL -> PL : pharmacy = getPharmacy(pharmacyID)
+activate PL
+deactivate PL
+deactivate CTRL
+UI -> CTRL : asl = getAvailableScooterList(pharmacy)
+activate CTRL
+CTRL -> P : asl = getAvailableScooterList(pharmacy)
+activate P
+deactivate P
+deactivate CTRL
+UI -> CTRL : addAvailableScooterList(scooter,pharmacy)
+activate CTRL
+CTRL -> ASL : addAvailableScooterList(scooter,pharmacy)
+activate ASL
+deactivate ASL
+deactivate CTRL
+UI -> CTRL : setPharmacy(pharmacy,scooter)
+activate CTRL
+CTRL -> S : setPharmacy(pharmacy,scooter)
+activate S
+deactivate S
+deactivate CTRL
+UI --> ADM : adds the scooter choosen to the pharmacy choosen
+deactivate UI
+deactivate ADM
+
+@enduml

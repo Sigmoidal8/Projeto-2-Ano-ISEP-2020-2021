@@ -1,0 +1,76 @@
+@startuml
+
+actor "Administrator" as ADM
+participant ":InsertParkingLotUI" as UI
+participant ":InsertParkingLotController" as CTRL
+participant ":Platform" as PLAT
+participant ":PharmacyList" as PL
+participant ":ParkingLot" as PKL
+participant "parkingLot \n:ParkingLot" as _PKL
+participant ":Pharmacy" as P
+
+
+activate ADM
+ADM -> UI : initiates the insertion of a parking lot
+activate UI
+
+UI -> ADM : requests data about the pharmacy (id)
+deactivate UI
+
+ADM -> UI : inserts the requested data
+activate UI
+
+UI -> CTRL : getPharmacy(pharmacyID)
+activate CTRL
+CTRL -> PLAT : pl = getPharmacyList()
+activate PLAT
+deactivate PLAT
+CTRL -> PL : pharmacy = getPharmacy(pharmacyID)
+activate PL
+deactivate PL
+deactivate CTRL
+
+UI -> ADM : shows the selected pharmacy and requests confirmation
+deactivate UI
+
+ADM -> UI : confirms
+activate UI
+
+UI -> ADM : requests data about the parking lot (parkingLotSpots,parkingLotChargeSpots,type)
+deactivate UI
+
+ADM -> UI : inserts the requested data
+activate UI
+
+UI -> CTRL : createParkingLot(parkingLotSpots,parkingLotChargeSpots,type)
+activate CTRL
+CTRL -> PKL : parkingLot = createParkingLot(parkingLotSpots,parkingLotChargeSpots,type)
+activate PKL
+PKL -> _PKL ** : create(parkingLotSpots,parkingLotChargeSpots,type)
+deactivate PKL
+CTRL -> P : validateParkingLot(parkingLot)
+activate P
+deactivate P
+deactivate CTRL
+
+UI -> ADM : shows the insert data and requests confirmation
+deactivate UI
+
+ADM -> UI : confirms
+activate UI
+
+UI -> CTRL : registerParkingLot()
+activate CTRL
+
+CTRL -> P : registerParkingLot(parkingLot)
+activate P
+P -> P : validateParkingLot(parkingLot)
+P -> P : addParkingLot(parkingLot)
+deactivate P
+deactivate CTRL
+
+UI -> ADM : informs the success of the operation
+deactivate UI
+
+deactivate ADM 
+@enduml

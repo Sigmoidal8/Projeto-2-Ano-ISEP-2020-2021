@@ -1,0 +1,64 @@
+@startuml
+autonumber
+
+actor "Administrator" as ADM
+participant ":RemoveScooterUI" as UI
+participant ":RemoveScooterController" as CTRL
+participant ":Platform" as PLAT
+participant "asl \n:AvailaleScooterList" as ASL
+participant "s \n:Scooter" as S
+participant "pl \n:PharmacyList" as PL
+participant "p \n:Pharmacy" as P
+
+activate ADM
+ADM -> UI :   wants to remove a scooter from the pharmacy with this id
+activate UI
+UI -> CTRL : phList = getPharmacyList()
+activate CTRL
+CTRL -> PLAT : phList = getPharmacyList()
+activate PLAT
+PLAT -> PL : pharmacyList = getPharmacyList()
+activate PL
+deactivate PL
+deactivate PLAT
+deactivate CTRL
+UI -> CTRL : pharmacy = getPharmacy(pharmacyID)
+activate CTRL
+CTRL -> PLAT : pharmacy = getPharmacy(pharmacyID)
+activate PLAT
+PLAT -> PL : pharmacy = getPharmacy(pharmacyID)
+activate PL
+deactivate PL
+deactivate PLAT
+deactivate CTRL
+UI -> CTRL : asl = getAvailableScooterList(pharmacy)
+activate CTRL
+CTRL -> ASL : asl = getAvailableScooterList(pharmacy)
+activate ASL
+deactivate ASL
+deactivate CTRL
+UI --> ADM : shows the available scooter list of this pharmacy and\n asks to choose the scooter he wants to remove
+deactivate UI
+ADM -> UI :  chooses the scooter he wants to remove
+activate UI
+UI -> CTRL : scooter = getScooter(scooterID)
+activate CTRL
+CTRL -> ASL : scooter = getScooter(scooterID)
+activate ASL
+deactivate ASL
+deactivate CTRL
+UI -> CTRL : removeScooterFromAvailableScooterList(scooter,pharmacy)
+activate CTRL
+CTRL -> PLAT : removeScooterFromAvailableScooterList(scooter,pharmacy)
+activate PLAT
+PLAT -> ASL : removeScooterFromAvailableScooterList(scooter,pharmacy)
+activate ASL
+deactivate ASL
+deactivate PLAT
+deactivate CTRL
+UI --> ADM : removes the scooter from the list
+deactivate UI
+deactivate ADM
+
+
+@enduml

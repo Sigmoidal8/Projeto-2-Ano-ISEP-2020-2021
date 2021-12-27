@@ -1,0 +1,28 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+
+class Platform{
+
+}
+
+class Administator{
+}
+
+class Courier {
+  -String name
+  -String NIF
+  -String SocialSecurityNumber
+  -String email
+}
+
+
+Platform"1" -- "*"Administator : has >
+Platform"1" -- "1"Courier : has >
+
+Administator "1" -- "*" Courier : register >
+
+
+@enduml

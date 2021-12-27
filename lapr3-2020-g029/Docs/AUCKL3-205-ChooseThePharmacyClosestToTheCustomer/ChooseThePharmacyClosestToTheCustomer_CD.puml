@@ -1,0 +1,78 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package UI <<Folder>> {
+  class BuyAProductUI
+}
+
+package Controllers <<Folder>> {
+  class BuyAProductController
+}
+
+package Domain <<Folder>> {
+  class Platform
+  class PharmacyList
+  class Pharmacy
+  class ClientRegister
+  class Client
+}
+
+class BuyAProductUI {
+}
+
+class BuyAProductController {
+  +getCLient()
+  +getPharmacyList()
+  +fowardDeliveryToClosestPharmacy(pl, clientAdress)
+}
+
+class Platform {
+  +getClientRegister()
+  +getPharmacyList()
+}
+
+class Client{
+-String id
+-String name
+-String password
+-String email
+-String NIF
+-String IBAN
+-double credits
+-Adress address
+
+}
+
+class ClientRegister {
+  +getClientByEmail()
+  +getAdress(client)
+}
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+  -Adress adress
+  -Integer parkLimit
+  +getProductList()
+}
+
+class PharmacyList{
+  +fowardDeliveryToClosestPharmacy(pl, clientAdress)
+}
+
+BuyAProductUI ..> BuyAProductController
+
+BuyAProductController ..> Platform
+BuyAProductController ..> PharmacyList
+
+ClientRegister"1" -- "1..*" Client : has>
+
+
+BuyAProductController ..> ClientRegister
+Platform ..> ClientRegister
+
+PharmacyList"1" -- "1..*" Pharmacy : has>
+
+
+@enduml

@@ -1,0 +1,82 @@
+Product(String nome, float price, float weight,int stock,idxPharmacy)
+Avaxim;6.68;0.27;17;1
+Havrix;39.44;0.39;15;1
+Twinrix;34.42;0.69;16;1
+Stamaril;23.54;0.15;13;1
+Monovalente Rotarix;10.92;0.53;7;1
+Pentavalente Rotateq;33.89;0.92;9;1
+CanSino Biologics;26.73;0.64;10;1
+Pfizer;35.51;0.28;11;1
+AstraZeneca;28.29;0.93;12;1
+Avaxim;6.68;0.27;17;0
+Havrix;39.44;0.39;15;0
+Twinrix;34.42;0.69;16;0
+Stamaril;23.54;0.15;13;0
+Monovalente Rotarix;10.92;0.53;7;0
+Pentavalente Rotateq;33.89;0.92;9;0
+CanSino Biologics;26.73;0.64;10;0
+Pfizer;35.51;0.28;11;0
+AstraZeneca;28.29;0.93;12;0
+Avaxim;6.68;0.27;17;2
+Havrix;39.44;0.39;15;2
+Twinrix;34.42;0.69;16;2
+Stamaril;23.54;0.15;13;2
+Monovalente Rotarix;10.92;0.53;7;2
+Pentavalente Rotateq;33.89;0.92;9;2
+CanSino Biologics;26.73;0.64;10;2
+Pfizer;35.51;0.28;11;2
+AstraZeneca;28.29;0.93;12;2
+Avaxim;6.68;0.27;17;3
+Havrix;39.44;0.39;15;3
+Twinrix;34.42;0.69;16;3
+Stamaril;23.54;0.15;13;3
+Monovalente Rotarix;10.92;0.53;7;3
+Pentavalente Rotateq;33.89;0.92;9;3
+CanSino Biologics;26.73;0.64;10;3
+Pfizer;35.51;0.28;11;3
+AstraZeneca;28.29;0.93;12;3
+Avaxim;6.68;0.27;17;4
+Havrix;39.44;0.39;15;4
+Twinrix;34.42;0.69;16;4
+Stamaril;23.54;0.15;13;4
+Monovalente Rotarix;10.92;0.53;7;4
+Pentavalente Rotateq;33.89;0.92;9;4
+CanSino Biologics;26.73;0.64;10;4
+Pfizer;35.51;0.28;11;4
+AstraZeneca;28.29;0.93;12;4
+Avaxim;6.68;0.27;17;5
+Havrix;39.44;0.39;15;5
+Twinrix;34.42;0.69;16;5
+Stamaril;23.54;0.15;13;5
+Monovalente Rotarix;10.92;0.53;7;5
+Pentavalente Rotateq;33.89;0.92;9;5
+CanSino Biologics;26.73;0.64;10;5
+Pfizer;35.51;0.28;11;5
+AstraZeneca;28.29;0.93;12;5
+Avaxim;6.68;0.27;17;6
+Havrix;39.44;0.39;15;6
+Twinrix;34.42;0.69;16;6
+Stamaril;23.54;0.15;13;6
+Monovalente Rotarix;10.92;0.53;7;6
+Pentavalente Rotateq;33.89;0.92;9;6
+CanSino Biologics;26.73;0.64;10;6
+Pfizer;35.51;0.28;11;6
+AstraZeneca;28.29;0.93;12;6
+Avaxim;6.68;0.27;17;7
+Havrix;39.44;0.39;15;7
+Twinrix;34.42;0.69;16;7
+Stamaril;23.54;0.15;13;7
+Monovalente Rotarix;10.92;0.53;7;7
+Pentavalente Rotateq;33.89;0.92;9;7
+CanSino Biologics;26.73;0.64;10;7
+Pfizer;35.51;0.28;11;7
+AstraZeneca;28.29;0.93;12;7
+Avaxim;6.68;0.27;17;8
+Havrix;39.44;0.39;15;8
+Twinrix;34.42;0.69;16;8
+Stamaril;23.54;0.15;13;8
+Monovalente Rotarix;10.92;0.53;7;8
+Pentavalente Rotateq;33.89;0.92;9;8
+CanSino Biologics;26.73;0.64;10;8
+Pfizer;35.51;0.28;11;8
+AstraZeneca;28.29;0.93;12;8

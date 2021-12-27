@@ -1,0 +1,3 @@
+pharmacyID,optionTotalOrCharge,Spots,indexPark
+1;1;11;0
+2;2;16;0

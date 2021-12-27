@@ -1,0 +1,52 @@
+@startuml
+
+usecase UC1 as "AUCKL3-9 - Add Scooter to a list"
+usecase UC2 as "AUCKL3-10 - Remove Scooter from a list"
+usecase UC3 as "AUCKL3-11 - Insert pharmacy data"
+usecase UC4 as "AUCKL3-12 - Register Scooter"
+usecase UC5 as "AUCKL3-16 - Execute a delivery"
+usecase UC6 as "AUCKL3-19 - Charge the Scooter"
+usecase UC7 as "AUCKL3-21 - Buy a product"
+usecase UC8 as "AUCKL3-23 - Insert Client data"
+usecase UC9 as "AUCKL3-88 - Insert courier data"
+usecase UC10 as "AUCKL3-94 - Update stock"
+usecase UC11 as "AUCKL3-95 - Insert product"
+usecase UC12 as "AUCKL3-112 - Register Pharmacies"
+usecase UC13 as "AUCKL3-115 - Edit Parking Lot characteristics"
+usecase UC14 as "AUCKL3-116 - Insert Parking Lot"
+usecase UC15 as "AUCKL3-117 - Register Drone"
+usecase UC16 as "AUCKL3-118 - Add Drone to Pharmacy"
+usecase UC17 as "AUCKL3-119 - Remove Drone from Pharmacy"
+usecase UC18 as "AUCKL3-121 - Make Drone Delivery"
+
+
+actor "Administrator" as ADM
+actor "Client" as MAN
+actor "Courier" as CO
+actor "Unregistered User" as UU
+
+left to right direction
+
+ADM -->(UC1)
+ADM -->(UC2)
+ADM -->(UC3)
+ADM -->(UC4)
+ADM -->(UC5)
+ADM -->(UC9)
+ADM -->(UC10)
+ADM -->(UC11)
+ADM -->(UC12)
+ADM -->(UC13)
+ADM -->(UC14)
+ADM -->(UC15)
+ADM -->(UC16)
+ADM -->(UC17)
+ADM -->(UC18)
+
+MAN -->(UC7)
+
+CO -->(UC6)
+
+UU -->(UC8)
+
+@enduml

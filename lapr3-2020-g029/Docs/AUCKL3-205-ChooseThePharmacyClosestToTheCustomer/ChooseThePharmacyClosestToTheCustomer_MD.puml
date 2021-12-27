@@ -1,0 +1,57 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+left to right direction
+
+class Client{
+  -String id
+  -String name
+  -String password
+  -String email
+  -Integer NIF
+  -String street
+  -String postalCode
+  -String locality
+  -double decimalDegree1
+  -double decimalDegree2
+  -double credits
+
+}
+class Platform{
+}
+
+class Pharmacy {
+  -String id
+  -String designation
+  -String email
+}
+
+class Delivery {
+  -String id
+  -date date_delivery
+  -double totalWeight
+  -Invoice invoice
+  -Pharmacy pharmacy
+
+}
+
+class Courier{
+-String NIF
+-String name
+-String password
+-String email
+-String socialSecurityNumber
+
+}
+
+Platform"1" -- "0..*"Courier : has >
+
+Courier"0..*" -- "0..*" Delivery : make >
+
+Platform"1" -- "1"Pharmacy : contains >
+
+Platform"1" -- "0..*"Client : contains >
+
+Delivery"0..*" -- "1"Pharmacy: forwarded to>
+
+@enduml

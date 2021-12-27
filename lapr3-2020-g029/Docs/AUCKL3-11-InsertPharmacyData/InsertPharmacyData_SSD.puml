@@ -1,0 +1,40 @@
+@startuml
+autonumber
+actor "Administrator" as ADM
+participant ":System" as SYS
+
+activate ADM
+ADM -> SYS : initiates the insertion of a pharmacy data
+
+activate SYS
+SYS --> ADM : requests data about the pharmacy (designation, email, emailPassword) 
+deactivate SYS
+
+ADM -> SYS : inserts the requested data
+
+SYS -> ADM : requests data about the pharmacy adress (doorNumber, street, locality,\n postalCode, decimalDegree1, decimalDegree2)
+deactivate SYS
+
+ADM -> SYS : inserts the requested data
+
+loop
+activate SYS
+SYS --> ADM : requests data about the pharmacy parking lot(s) (parkingLotSpots,\n parkingLotChargeSpots, type)
+deactivate SYS
+
+ADM -> SYS : inserts the requested data
+
+activate SYS
+end loop
+
+activate SYS
+SYS --> ADM : shows the inserted data and requests confirmation
+deactivate SYS
+
+ADM -> SYS : confirms
+
+activate SYS
+SYS --> ADM : informs the success of the operation
+deactivate SYS
+deactivate ADM
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+autonumber
+
+actor "Administrator" as A
+participant ":System" as SIST
+
+activate A
+A -> SIST : wants to remove a pharmacy from the system
+activate SIST
+SIST --> A : shows the list of pharmacies already in the system and\n asks to choose the pharmacy he wants to remove
+deactivate SIST
+
+A -> SIST : chooses the pharmacy he wants to remove
+activate SIST
+SIST --> A : removes the pharmacy from the list
+deactivate SIST
+
+A -> SIST : confirms.
+activate SIST
+    SIST --> A : informs the Administrator of the success of the operation.
+deactivate SIST
+deactivate A
+
+@enduml
